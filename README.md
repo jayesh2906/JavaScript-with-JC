@@ -1,6 +1,6 @@
 # JavaScript-with-JC
 In "JavaScript-with-JC", We will be covering all advanced JavaScript concepts mentioned below :-
-* Polyfill( map, reduce, forEach, filter, slice, find, flat, etc... ),
+* Polyfill ( map, reduce, forEach, filter, slice, find, flat, etc... ),
 * Closure,
 * Call, Apply, Bind ( Polyfill ),
 * Currying, Infinite currying,
