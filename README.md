@@ -21,6 +21,6 @@ In "JavaScript-with-JC", We will be covering all advanced JavaScript concepts me
 * Hoisting,
 * Memoization,
 * Event Loop, CallStack, Callback Queue, Microtask Queue,
-* Higher order functions
+* Higher order functions,
 * Event Bubbling, Capturing, delegation,
 * Set, Map, WeakSet, WeakMap and many more...
