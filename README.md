@@ -1,7 +1,5 @@
 # JavaScript-with-JC
-It's time for Season 2 - "JavaScript-with-JC" where I will be sharing JavaScript content with you all.
-
-I will be covering all advanced JavaScript concepts mentioned below :-
+In "JavaScript-with-JC", We will be covering all advanced JavaScript concepts mentioned below :-
 * Polyfill( map, reduce, forEach, filter, slice, find, flat, etc... ),
 * Closure,
 * Call, Apply, Bind ( Polyfill ),
