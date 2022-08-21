@@ -16,7 +16,7 @@ In "JavaScript-with-JC", We will be covering all advanced JavaScript concepts me
 * Prototype, Prototype Inheritance,
 * Class object,
 * Composition vs Inheritance,
-* Flat an Object.
+* Flatten Object.
 * This keyword,
 * Hoisting,
 * Memoization,
