@@ -3,6 +3,7 @@
 map is a higher order function in javascript that iterates through 
 each element of an array and can modify each element of an array.
 
+💡Example -
 const numbers = [1, 2, 3, 4, 5];
 
 const square = (element, index, array) => {
@@ -12,10 +13,10 @@ const square = (element, index, array) => {
 const doubleNumbers = numbers.map(square);
 console.log("doubleNumbers", doubleNumbers); => [2, 4, 6, 8, 10]
 
-map function takes callback function as an argument, This Callback takes 3 parameters 
+💡map function takes callback function as an argument, This Callback takes 3 parameters 
 current element, current index and array, Callback function runs for each element of an array
 
-💡Note - map does not mutate the original array, Always returns new copy of an mutated array.
+💡Note - map does not mutate the original array, Always returns new copy of a mutated array.
 
 💡Use Cases -
 1) displaying list of data in UI.
@@ -48,8 +49,7 @@ o/p - updatedTodos [
   { id: 3, task: 'Do code' }
 ]
 
-Please share other use cases of map function in comment section.
-Wait, It's not an end, We can create our own custom map ( Polyfill of map ) Check code snippet below.  
+Wait, It's not an end, We can create our own custom map( Polyfill of map ) Check code snippet below.  
   */
 
 const numbers = [1, 2, 3, 4, 5];
