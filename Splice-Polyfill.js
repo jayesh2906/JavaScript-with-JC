@@ -68,15 +68,16 @@ console.log("deletedNumbers", deletedNumbers);
 
 Array.prototype.customSplice = function (start, deleteCount) {
   let array = this;
+
+  if (start !== undefined && deleteCount === undefined) {
+    deleteCount = array.length;
+  }
   start = Number(start);
   if (start < 0) {
     start = array.length + start;
   }
   if (isNaN(start)) {
     start = 0;
-  }
-  if (deleteCount === undefined) {
-    deleteCount = array.length;
   }
   if (isNaN(deleteCount) || deleteCount < 0) {
     deleteCount = 0;
