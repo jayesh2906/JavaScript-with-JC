@@ -27,11 +27,8 @@ Function.prototype.customApply = function (context, args = []) {
   }
   let currentContext = context || globalThis;
 
-  let newProp = Math.random();
-
-  while (currentContext[newProp] !== undefined) {
-    newProp = Math.random();
-  }
+  // Symbol() ensures that new method won't override existing methods of currentContext
+  let newProp = Symbol();
 
   currentContext[newProp] = this;
   let result = currentContext[newProp](...args);

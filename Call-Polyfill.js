@@ -47,12 +47,8 @@ Function.prototype.customCall = function (context, ...args) {
   // context is first argument, if no argument passed then assign global window object
   let currentContext = context || globalThis; // passed object or global object
 
-  // now we are creating new unique method for the currentContext
-  // math.random() and while loop ensure that new method won't override existing methods of currentContext
-  let newProp = Math.random();
-  while (currentContext[newProp] !== undefined) {
-    newProp = Math.random();
-  }
+  // Symbol() ensures that new method won't override existing methods of currentContext
+  let newProp = Symbol();
 
   currentContext[newProp] = this; // assigning this ( getPlayerInfo ) to newProp of currentContext
 

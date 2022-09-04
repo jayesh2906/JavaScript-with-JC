@@ -43,11 +43,10 @@ console.log(player2FullInfo(28));
 // 👉 1) build from scratch
 Function.prototype.customBind = function (context, ...args) {
   let currentContext = context || globalThis;
-  let newProp = Math.random();
 
-  while (currentContext.hasOwnProperty(newProp)) {
-    newProp = Math.random();
-  }
+  // Symbol() ensures that new method won't override existing methods of currentContext
+  let newProp = Symbol();
+
   currentContext[newProp] = this;
   return function (...outerArgs) {
     let result = currentContext[newProp](...args, ...outerArgs);
