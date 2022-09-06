@@ -1,0 +1,112 @@
+<!-- 💡"JavaScript-with-JC" - 16 #javascriptdaily
+👉 Debouncing Implementation
+Debouncing is a technique used to improve the performance of applications by reducing the rate of functions call
+
+👉 If the function is getting called continuously, We can delay the function call for some time 
+with the help of debouncing to optimize the performance of applications
+
+
+💡Let's take an example search input value-
+
+💡Other use cases :-
+👉 Continous button click event function call can be delay.
+👉 Resize of window event function call can be delay.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: grid; place-items: center; min-height: 50vh;">
+        <div>
+            <label for="normalSearch">Normal Search</label>
+            <input id="normalSearch" onkeyup="normalFunction()" />
+        </div>
+        <div>
+            <label for="debounceSearch">Debouced Search</label>
+            <input id="debounceSearch" onkeyup="debouncedFunction()" />
+        </div>
+    </div>
+
+    <script>
+        let normalCount = 0
+        let deboucedCount = 0
+
+        // 💡 1) simple debounce method
+        const debounce = function (callback, delay) {
+            let timer;
+
+            // debounce 👇 returns a  new anonymous function (closure)
+            return function () {
+                const context = this
+                const args = arguments
+
+                // 👇 clearing previous timeout 
+                clearTimeout(timer)
+
+                timer = setTimeout(() => {
+                    callback.apply(context, args)
+                }, delay)
+            }
+        }
+
+        // 💡 2) debounce with immediate flag
+        const debounceImmediate = function (callback, delay, immediate) {
+            let timer;
+
+            // debounce 👇 returns a new anonymous function (closure)
+            return function () {
+                const context = this
+                const args = arguments
+
+                // If in immediate mode and no timeout is set then call callback fn
+                const callNow = immediate && !timer
+
+                // 👇 clearing previous timeout 
+                clearTimeout(timer)
+
+                timer = setTimeout(() => {
+
+                    // 👇 making timer null for next call in immediate mode 
+                    timer = null
+
+                    // 👇 only call this when not in immediate mode
+                    if (!immediate) {
+                        callback.apply(context, args)
+                    }
+                }, delay)
+
+                if (callNow) { callback.apply(this, arguments) }
+            }
+
+        }
+
+        // 👇 debouced function will be called after a delay time without it being called
+        const searchData = () => {
+            deboucedCount++
+            const searchValue = document.getElementById('debounceSearch').value
+            console.log("Debounced Search for....", searchValue, "count", deboucedCount);
+        }
+
+        const debouncedFunction = debounce(searchData, 500)
+        // const debouncedFunction = debounceImmediate(searchData, 500, true)
+
+
+        // 👇 normal function will be called for each onkeyup event
+        const normalFunction = () => {
+            normalCount++
+            const searchValue = document.getElementById('normalSearch').value
+            console.log("Normal Search for....", searchValue, "count", normalCount);
+        }
+    </script>
+</body>
+
+</html>
