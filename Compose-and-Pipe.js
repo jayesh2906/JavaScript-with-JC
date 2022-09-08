@@ -54,7 +54,7 @@ const pipe = function (...functions) {
   };
 };
 
-// 👇 Wrapping all the functions in one pipe ( HOC ) function to avoid nested function calls
+// 👇 Wrapping all the functions in one pipe ( HOF ) function to avoid nested function calls
 let pipedPlayerName = pipe(
   getAllPlayers,
   getFirstPlayer,
@@ -97,7 +97,7 @@ const compose = function (...functions) {
   };
 };
 
-// 👇 Wrapping all the functions in one compose ( HOC ) function to avoid nested function calls
+// 👇 Wrapping all the functions in one compose ( HOF ) function to avoid nested function calls
 const composedPlayerName = compose(
   capitalizeName,
   getFirstName,
