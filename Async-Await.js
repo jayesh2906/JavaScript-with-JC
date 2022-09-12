@@ -7,7 +7,7 @@ async/await allows promise-based behavior to be written in a cleaner way,
  1) Sequentially
  2) Concurrently 
 
-// 💡Let's take an simple Example -
+// 💡Let's take a simple Example -
 
 // generateNumber 👇 is a promise that is created by promise constructor
  const generateNumber = new Promise((resolve, reject) => {
