@@ -1,0 +1,180 @@
+<!-- 💡"JavaScript-with-JC" - 24 #javascriptdaily
+👉 Mutation Observer  
+The MutationObserver API allows you to continuously monitor the changes being made to the DOM tree. 
+When the DOM nodes change, you can invoke a callback function to detect the changes.
+
+💡Let's take an Example of Observing Changes in List of Items  👇
+
+        Html Part 👇
+
+        <ul id="itemsList">
+            <li class="item">First Item</li>
+            <li class="item">Second Item</li>
+            <li class="item">Third Item</li>
+        </ul>
+        <button class="btn" onclick="deleteFirstItem()">Delete First Item</button>
+
+        JavaScript Part 👇
+
+        const itemsList = document.querySelector("#itemsList")
+
+        MutationObserver takes callBack Function 👇
+        const observer = new MutationObserver((mutations) => {
+        console.log("Changes in Item List", mutations);
+        })
+        
+        observer.observe(itemsList, {
+        childList: true
+        })
+        
+        function deleteFirstItem() {
+        if (itemsList?.children?.length > 0) { itemsList.children[0].remove() }
+        }
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutation Observer</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: powderblue;
+            padding: 30px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .item {
+            padding: 15px;
+            background-color: blanchedalmond;
+            list-style-type: none;
+            margin: 15px 0px;
+            width: 50vh;
+            font-size: 25px;
+        }
+
+        .btn {
+            background-color: red;
+            color: azure;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:active {
+            background-color: azure;
+            color: black
+        }
+
+        .box {
+            padding: 20px;
+            background-color: blanchedalmond;
+            list-style-type: none;
+            margin: 15px 0px;
+            width: 60vh;
+            font-size: 25px;
+        }
+
+        .colorBox {
+            padding: 20px;
+            background-color: blanchedalmond;
+            list-style-type: none;
+            margin: 15px 0px;
+            width: 60vh;
+            font-size: 25px;
+            height: 200px;
+            width: 200px;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>#JavaScript-with-JC</h1>
+        <h1>Mutation Observer</h1>
+        <h1>💡Example 1:- Observing Changes in color of box</h1>
+        <div class="colorBox" contenteditable>Random Color Box</div>
+        <button class="btn" style="background-color: blue;" onclick="ChangeColor()">Change color of box</button>
+    </div>
+
+    <div class="container">
+        <h1>💡Example 2:- Observing Changes in List of Items </h1>
+        <ul id="itemsList">
+            <li class="item">First Item</li>
+            <li class="item">Second Item</li>
+            <li class="item">Third Item</li>
+        </ul>
+        <button class="btn" onclick="deleteFirstItem()">Delete First Item</button>
+    </div>
+
+    <div class="container">
+        <h1>💡Example 3:- Observing Changes in content of box</h1>
+        <div class="box" contenteditable>Editable Box, Try to edit</div>
+    </div>
+
+
+    <script>
+        // First example
+        const colorBox = document.querySelector(".colorBox")
+
+        const colorBoxObserver = new MutationObserver((mutations) => {
+            console.log("Change in Color Box", mutations);
+        })
+
+        colorBoxObserver.observe(colorBox, {
+            attributes: true
+        })
+
+        function ChangeColor() {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            colorBox.style.backgroundColor = "#" + randomColor;
+        }
+
+        // Second example
+        const itemsList = document.querySelector("#itemsList")
+        const observer = new MutationObserver((mutations) => {
+            console.log("Changes in Item List", mutations);
+        })
+
+        observer.observe(itemsList, {
+            childList: true
+        })
+
+        function deleteFirstItem() {
+            if (itemsList?.children?.length > 0) { itemsList.children[0].remove() }
+        }
+
+        // Third example
+        const box = document.querySelector(".box")
+
+        const boxObserver = new MutationObserver((mutations) => {
+            console.log("Change in Content of box", mutations);
+        })
+
+        boxObserver.observe(box.childNodes[0], {
+            characterData: true,
+            characterDataOldValue: true
+        })
+
+
+
+    </script>
+</body>
+
+</html>
