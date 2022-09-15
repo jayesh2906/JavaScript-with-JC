@@ -8,8 +8,6 @@ and position of a DOM element relative to the specified root element or viewport
 👉 1) Implementation of infinite scrolling. 
 👉 2) lazy-loading images on scroll. 
 👉 3) Auto-pause video when it’s out of view
-
-👇 Please Check the below Github Link for Implementation of infinite scrolling and lazy loading.
 -->
 
 <!DOCTYPE html>
@@ -95,7 +93,7 @@ and position of a DOM element relative to the specified root element or viewport
                     }
                 })
             }, {
-                threshold: 1,
+                threshold: 1, // 100% of the target is visible
                 // rootMargin: "50px"
             })
 
