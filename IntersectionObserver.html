@@ -1,0 +1,126 @@
+<!-- 💡"JavaScript-with-JC" - 25 #javascriptdaily
+👉 Intersection Observer  
+An Intersection Observer API provides a way to observe the visibility 
+and position of a DOM element relative to the specified root element or viewport.
+💡Note - Intersection Observer API is asynchronous, Performs operations in the Microtask queue.
+
+💡Use Cases :-
+👉 1) Implementation of infinite scrolling. 
+👉 2) lazy-loading images on scroll. 
+👉 3) Auto-pause video when it’s out of view
+
+👇 Please Check the below Github Link for Implementation of infinite scrolling and lazy loading.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intersection Observer</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .item {
+            padding: 5px;
+            background-color: aqua;
+            list-style-type: none;
+            margin: 15px 0px;
+            font-size: 25px;
+            transform: translateX(10px);
+            width: 70vw;
+            opacity: 0;
+            transition: 300ms;
+        }
+
+        .show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>#JavaScript-with-JC</h1>
+        <h1>Intersection Observer</h1>
+        <h1>💡Example :- Infinite Scrolling with Animation</h1>
+    </div>
+    <script>
+
+        // get todos
+        let limit = 10
+        let pageCount = 1
+        let todoCount = 1
+
+        const getTodos = () => {
+            console.log("pageCount", pageCount);
+            fetch(`https://jsonplaceholder.typicode.com/todos?_page=${pageCount}$_limit=${limit}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("data", data);
+                    data.forEach((todo) => {
+                        const htmlItem = `<div class="item">
+                            <p><b>${todo.id}</b>. ${todo.title} </p>
+                        </div>`
+                        document.querySelector('.container').insertAdjacentHTML('beforeend', htmlItem)
+                    })
+                    observeItems()
+                }
+                )
+                .catch(error => console.log(error))
+        }
+        getTodos();
+
+
+        // scroll animation and lazy loading...
+        const observeItems = function () {
+            const items = document.querySelectorAll('.item')
+
+            const observer = new IntersectionObserver((records) => {
+                records.forEach(record => {
+                    record.target.classList.toggle('show', record.isIntersecting)
+                    if (record.isIntersecting) {
+                        observer.unobserve(record.target)
+                    }
+                })
+            }, {
+                threshold: 1,
+                // rootMargin: "50px"
+            })
+
+            items.forEach(item => {
+                observer.observe(item)
+            })
+
+
+            // Lazy loading...
+            const lastItem = document.querySelector(".item:last-child")
+            const lastItemObserver = new IntersectionObserver(records => {
+                const lastItem = records[0]
+                if (!lastItem?.isIntersecting) return
+                loadNewItems()
+                lastItemObserver.unobserve(lastItem.target)
+            })
+            lastItemObserver.observe(lastItem)
+
+            const loadNewItems = function () {
+                pageCount++
+                getTodos()
+            }
+        }
+
+    </script>
+</body>
+
+</html>
