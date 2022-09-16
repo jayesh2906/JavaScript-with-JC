@@ -7,7 +7,7 @@ Every object includes __proto__ property that points to prototype object of a fu
 
 👇 function constructor, Person.prototype => Object.prototype => null
 const Person = function (name, age) {
-  👇 instance members created for each object seperately consume extra memory
+  👇 instance members created for each object separately consume extra memory
   this.name = name;
   this.age = age;
   this.getName = function () {
@@ -21,7 +21,7 @@ jayesh.__proto__ => Person.prototype => Object.prototype => null
 console.log("jayesh", jayesh);
 output 👇
 age: 24;
-getName: ƒ(); => method created seperately for jayesh object consume extra memory
+getName: ƒ(); => method created separately for jayesh object consume extra memory
 name: "jayesh";
 
 jayesh.getName(); // name is jayesh
@@ -41,7 +41,7 @@ Person.prototype.getAge = function () {
 console.log("jayesh", jayesh);
 output 👇
 age: 24;
-getName: ƒ(); => method created seperately for jayesh object consume extra memory
+getName: ƒ(); => method created separately for jayesh object consume extra memory
 name: "jayesh";
 
 💡Difference between prototype and  __proto__
@@ -53,7 +53,7 @@ prototype is a property of a Function object. It is the prototype of objects con
 // 👉 Prototype
 // function constructor, Person.prototype => Object.prototype => null
 const Person = function (name, age) {
-  // instance members created for each object seperately consume extra memory
+  // instance members created for each object separately consume extra memory
   this.name = name;
   this.age = age;
   this.getName = function () {
@@ -66,7 +66,7 @@ const jayesh = new Person("jayesh", 24);
 console.log("jayesh", jayesh);
 /* output
 age: 24;
-getName: ƒ(); => method created seperately for jayesh object consume extra memory
+getName: ƒ(); => method created separately for jayesh object consume extra memory
 name: "jayesh";
 */
 jayesh.getName(); // name is jayesh
@@ -81,7 +81,7 @@ const sam = new Person("sam", 25);
 console.log("sam", sam);
 /* output
 age: 25;
-getName: ƒ(); => method created seperately for sam object consume extra memory
+getName: ƒ(); => method created separately for sam object consume extra memory
 name: "sam";
 */
 sam.getName(); // name is sam
@@ -95,13 +95,13 @@ console.log("After adding getAge fn as Prototype member");
 console.log("jayesh", jayesh);
 /* output
 age: 24;
-getName: ƒ(); => method created seperately for jayesh object consume extra memory
+getName: ƒ(); => method created separately for jayesh object consume extra memory
 name: "jayesh";
 */
 console.log("sam", sam);
 /* output
 age: 25;
-getName: ƒ(); => method created seperately for sam object consume extra memory
+getName: ƒ(); => method created separately for sam object consume extra memory
 name: "sam";
 */
 
