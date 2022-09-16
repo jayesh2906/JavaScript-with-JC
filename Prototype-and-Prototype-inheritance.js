@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 25 #javascriptdaily 
+/* 💡"JavaScript-with-JC" - 26 #javascriptdaily 
 👉 Prototype and Prototype Inheritance 
 The prototype is an object that is associated with every functions and objects by default in JavaScript,
 Every object includes __proto__ property that points to prototype object of a function that created the object.
