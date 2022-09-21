@@ -70,7 +70,7 @@ john.getInfo(); // name john age 24
 
 // 💡 Class Hoisting
 
-// Class Declaration hoisting ? => NO
+// Class Declaration hoisting ? => TDZ
 
 // const Ford = new Car("black"); // Uncaught ReferenceError: Cannot access 'Car' before initialization
 
@@ -80,7 +80,7 @@ john.getInfo(); // name john age 24
 //   }
 // }
 
-// // Class Expression hoisting ? => NO
+// // Class Expression hoisting ? => TDZ or undefined
 
 // const Ferrari = new Car("red"); // Uncaught ReferenceError: Cannot access 'Car' before initialization
 
