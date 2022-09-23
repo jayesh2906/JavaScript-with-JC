@@ -75,14 +75,14 @@ getNameTDZ(); // Jayesh
 // case 3:- Arrow function ( similar to function expression )
 // with "var" keyword
 // getNameArrow(); // Uncaught TypeError: getNameArrow is not a function ( getNameArrow is undefined here )
-var getNameArrow = function () {
+var getNameArrow = () => {
   console.log("Jayesh");
 };
 getNameArrow(); // Jayesh
 
 // with "let" or "const" keyword
 // getNameArrowTDZ(); // Uncaught ReferenceError: Cannot access 'getNameArrowTDZ' before initialization
-const getNameArrowTDZ = function () {
+const getNameArrowTDZ = () => {
   console.log("Jayesh");
 };
 getNameArrowTDZ(); // Jayesh
