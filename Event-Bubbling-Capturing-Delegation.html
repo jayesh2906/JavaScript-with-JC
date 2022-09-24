@@ -1,0 +1,230 @@
+<!-- 💡"JavaScript-with-JC" - 34 #javascriptdaily
+👉 Event Bubbling, Event Capturing, stopPropagation, and Event Delegation.
+
+💡Event Bubbling :- Event Bubbling is the method of event Propagation from child element to parent element,
+the event is first captured and handled by the innermost element and then propagated to outer elements.
+
+💡Event Capturing :- Event Capturing is the method of event Propagation from parent element to taget element,
+the event propagates from the outermost element to the target element.
+
+💡stopPropagation() :- stopPropagation() method prevents further propagation of the current event in the capturing and bubbling phases.
+
+💡Event Delegation :- Event Delegation is a pattern to handle events efficiently. Instead of adding an event listener to each and 
+every similar element, we can add an event listener to a parent element and call an event on a particular target using 
+the .target property of the event object.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling, Capturing and Delegation</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .grandParent {
+            background-color: skyblue;
+            width: 350px;
+            height: 350px;
+        }
+
+        .parent {
+            background-color: yellow;
+            width: 70%;
+            height: 70%;
+        }
+
+        .child {
+            background-color: pink;
+            width: 50%;
+            height: 50%;
+        }
+
+        .arrow {
+            font-size: 35px;
+        }
+
+        #category {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        #category>li {
+            width: 130px;
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: blanchedalmond;
+            cursor: pointer;
+            font-weight: 800;
+        }
+
+        #category>li:active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>#JavaScript-with-JC</h1>
+        <h1>💡Event Delegation Demo</h1>
+        <h1>💡Flipkart - Big Billion Days</h1>
+
+
+        <h1 id="selectedCategory"></h1>
+        <ul id="category">
+            <li id="offers">Top Offers</li>
+            <li id="mobiles">Mobiles</li>
+            <li id="fashion">Fashion</li>
+            <li id="electronics">Electronics</li>
+            <li id="beauty"> Beauty</li>
+            <li id="furniture">Furniture</li>
+            <li id="appliances">Appliances</li>
+            <li id="travel">Travel</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>#JavaScript-with-JC</h1>
+        <h1>💡Event Bubbling Demo</h1>
+
+        <div class="grandParent box">
+            <h3>Grand Parent <span class="arrow">&#8593;</span></h3>
+            <div class="parent box">
+                <h3>Parent <span class="arrow">&#8593;</span></h3>
+                <div class="child box">
+                    <h3>Child <span class="arrow">&#8593;</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h1>#JavaScript-with-JC</h1>
+        <h1>💡Event Capturing ( Trickling ) Demo</h1>
+
+        <div class="grandParent box grandParentCapture">
+            <h3>Grand Parent <span class="arrow">&#8595;</span></h3>
+            <div class="parent box parentCapture">
+                <h3>Parent <span class="arrow">&#8595;</span></h3>
+                <div class="child box childCapture">
+                    <h3>Child <span class="arrow">&#8595;</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>#JavaScript-with-JC</h1>
+        <h1>💡Stop Propagation Demo</h1>
+
+        <div class="grandParent box grandParentStop">
+            <h3>Grand Parent</h3>
+            <div class="parent box parentStop">
+                <h3>Parent</h3>
+                <div class="child box childStop">
+                    <h3>Child</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // 1) Event Bubbling Eample ( Bubble ups bottom to top ):-
+        const grandParentDiv = document.querySelector(".grandParent")
+        const parentDiv = document.querySelector(".parent")
+        const childDiv = document.querySelector(".child")
+
+        grandParentDiv.addEventListener("click", () => {
+            console.log("Grand Parent Clicked!");
+        })
+
+        parentDiv.addEventListener("click", () => {
+            console.log("Parent Clicked!");
+        })
+
+        childDiv.addEventListener("click", () => {
+            console.log("Child Clicked!");
+        })
+
+        // 2) Event Capturing Eample ( top to bottom ) :-
+        const grandParentDivCap = document.querySelector(".grandParentCapture")
+        const parentDivCap = document.querySelector(".parentCapture")
+        const childDivCap = document.querySelector(".childCapture")
+
+        grandParentDivCap.addEventListener("click", () => {
+            console.log("Grand Parent Clicked!");
+        }, true) // useCapture = true for Event Capturing
+
+        parentDivCap.addEventListener("click", () => {
+            console.log("Parent Clicked!");
+        }, true) // useCapture = true for Event Capturing
+
+        childDivCap.addEventListener("click", () => {
+            console.log("Child Clicked!");
+        }, true) // useCapture = true for Event Capturing
+
+        // 3) Stop Propagation :-
+        const grandParentDivStop = document.querySelector(".grandParentStop")
+        const parentDivStop = document.querySelector(".parentStop")
+        const childDivStop = document.querySelector(".childStop")
+
+        grandParentDivStop.addEventListener("click", () => {
+            console.log("Grand Parent Clicked!");
+        })
+
+        parentDivStop.addEventListener("click", (e) => {
+            e.stopPropagation() // stops event bubbling or capturing
+            console.log("Parent Clicked!");
+        })
+
+        childDivStop.addEventListener("click", (e) => {
+            e.stopPropagation() // stops event bubbling or capturing
+            console.log("Child Clicked!");
+        })
+
+        // 4) Event Delegation
+        const category = document.querySelector("#category")
+        const selectedCategory = document.querySelector("#selectedCategory")
+
+
+        category.addEventListener('click', (e) => {
+            const selectedValue = e.target.innerText;
+            console.log("Common Parent Clicked", selectedValue);
+            selectedCategory.innerText = "Selected Category : " + selectedValue
+        })
+
+    </script>
+</body>
+
+</html>
