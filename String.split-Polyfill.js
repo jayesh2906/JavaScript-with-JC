@@ -3,7 +3,7 @@
 
 const message = "This is the string with two the in it.";
 
-const result1 = message.split(" ");
+const result1 = message.split(" ", 4);
 console.log(message); // This is the string with two the in it.
 console.log(result1); // [ 'This', 'is', 'the',  'string', 'with', 'two', 'the',  'in', 'it.' ]
 
@@ -23,7 +23,7 @@ const result5 = message.split("not there");
 console.log(result5); // [ 'This is the string with two the in it.' ]
 
 // 👇 Polyfill of String.prototype.split
-String.prototype.customSplit = function (separator) {
+String.prototype.customSplit = function (separator, limit) {
   const string = this;
   const result = [];
 
@@ -32,6 +32,9 @@ String.prototype.customSplit = function (separator) {
   }
 
   const splitString = (str) => {
+    if (result.length >= limit) {
+      return;
+    }
     const index = str.indexOf(separator);
     if (index >= 0) {
       result.push(str.substring(0, index));
@@ -45,7 +48,7 @@ String.prototype.customSplit = function (separator) {
   return result;
 };
 
-const resultCustom1 = message.customSplit(" ");
+const resultCustom1 = message.customSplit(" ", 4);
 console.log(message); // This is the string with two the in it.
 console.log(resultCustom1); // [ 'This', 'is', 'the',  'string', 'with', 'two', 'the',  'in', 'it.' ]
 
