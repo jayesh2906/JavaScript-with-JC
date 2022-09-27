@@ -50,7 +50,7 @@ String.prototype.customSplit = function (separator, limit) {
 
 const resultCustom1 = message.customSplit(" ", 4);
 console.log(message); // This is the string with two the in it.
-console.log(resultCustom1); // [ 'This', 'is', 'the',  'string', 'with', 'two', 'the',  'in', 'it.' ]
+console.log(resultCustom1); // [ 'This', 'is', 'the',  'string' ]
 
 const resultCustom2 = message.customSplit("the");
 console.log(resultCustom2); // [ 'This is ', ' string with two ', ' in it.' ]
