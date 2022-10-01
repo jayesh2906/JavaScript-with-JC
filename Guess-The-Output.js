@@ -8,7 +8,7 @@ function MCQ1() {
       console.log("name1", this.name);
     },
     displayName2: () => {
-      console.log("name2", this);
+      console.log("name2", this.name);
     },
   };
   person.displayName1();
