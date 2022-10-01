@@ -1,6 +1,6 @@
 /* 💡"JavaScript-with-JC" - Guess the Output? */
 
-// MCQ-1
+// 👉 MCQ-1
 function MCQ1() {
   const person = {
     name: "Jayesh",
@@ -17,7 +17,7 @@ function MCQ1() {
   // 👍A) name1 Jayesh , name2 Jayesh
   // 💡B) name1 Jayesh , name2 undefined
   // 💖C) name1 Jayesh , name2
-  // 🤔D) name1 , name2 Jayesh
+  // 😀D) name1 , name2 Jayesh
 
   /* 
   In window browser answer is C) name1 Jayesh , name2 because arrow function inherits "this" from its outer function where "this" is window.
@@ -27,3 +27,22 @@ function MCQ1() {
   */
 }
 // MCQ1();
+
+// 👉 MCQ-2
+function MCQ2() {
+  let name = "Jayesh";
+  function printName() {
+    if (name === "Jayesh") {
+      let name = "JC";
+      console.log(name);
+    }
+    console.log(name);
+  }
+  printName();
+
+  // 👍A) Jayesh     💡B) Jayesh, JC
+  // 💖C) JC, JC     😀D) JC, Jayesh
+
+  /* Answer is D) JC, Jayesh because let variables are block scope, name inside if condition will shadow outer name*/
+}
+// MCQ2();
