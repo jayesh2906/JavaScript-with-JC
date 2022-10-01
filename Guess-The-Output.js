@@ -19,6 +19,6 @@ function MCQ1() {
   // 💖C) name1 Jayesh , name2
   // 🤔D) name1 , name2 Jayesh
 
-  /* Answer is C) name1 Jayesh , name2 because arrow function inherits "this" from its outer function where "this" is window.*/
+  /* Answer is C) name1 Jayesh , name2 in window browser because arrow function inherits "this" from its outer function where "this" is window.*/
 }
 // MCQ1();
