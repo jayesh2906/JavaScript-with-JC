@@ -19,6 +19,11 @@ function MCQ1() {
   // 💖C) name1 Jayesh , name2
   // 🤔D) name1 , name2 Jayesh
 
-  /* Answer is C) name1 Jayesh , name2 in window browser because arrow function inherits "this" from its outer function where "this" is window.*/
+  /* 
+  In window browser answer is C) name1 Jayesh , name2 because arrow function inherits "this" from its outer function where "this" is window.
+  and window has by default property name that is used for setting or returning the name of a window and in above case window.name is empty string.
+  
+  In other compilers answer is B) name1 Jayesh , name2 undefined because arrow function inherits "this" from its outer function where "this" refers to global object.
+  */
 }
 // MCQ1();
