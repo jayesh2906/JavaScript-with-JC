@@ -46,3 +46,26 @@ function MCQ2() {
   /* Answer is D) JC, Jayesh because let variables are block scope, name inside if condition will shadow outer name*/
 }
 // MCQ2();
+
+// 👉 MCQ-3
+function MCQ3() {
+  var player = "Virat";
+  function displayPlayer() {
+    if (player === "Virat") {
+      var player = "VK";
+      console.log(player);
+    }
+    console.log(player);
+  }
+  displayPlayer();
+
+  // 👍A) VK, Virat    💡B) VK, VK
+  // 💖C) undefined    😀D) VK, undefined
+
+  /* 
+   Answer is C) undefined because var variables are functional scope, When displayPlayer fn starts executing, Execution context of
+   displayPlayer will be created in callstack and at the memory creation phase var variable player is initialized as undefined. 
+   hence if condition will become false and It will print only undefined.
+*/
+}
+// MCQ3();
