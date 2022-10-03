@@ -69,3 +69,28 @@ function MCQ3() {
 */
 }
 // MCQ3();
+
+// 👉 MCQ-4
+function MCQ4() {
+  const person = {
+    name: "Jayesh",
+    age: 24,
+  };
+
+  const getAge = person.age;
+  delete person.age;
+
+  console.log(person);
+  console.log(getAge);
+
+  // 👍A) { name: 'Jayesh', age: 24 }, null
+  // 💡B) { name: 'Jayesh' }, 24
+  // 💖C) { name: 'Jayesh' }, undefined
+  // 😀D) { name: 'Jayesh', age: 24 }, 24
+
+  /*
+Answer is B) { name: 'Jayesh' }, 24 beacuse delete keyword deletes property of an object and does not delete property's value.
+Both person.age and getAge variable will refer to the same memory address.
+ */
+}
+// MCQ4();
