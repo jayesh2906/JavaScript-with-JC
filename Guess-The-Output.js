@@ -66,7 +66,7 @@ function MCQ3() {
    Answer is C) undefined because var variables are functional scope, When displayPlayer fn starts executing, Execution context of
    displayPlayer will be created in callstack and at the memory creation phase var variable player is initialized as undefined. 
    hence if condition will become false and It will print only undefined.
-*/
+  */
 }
 // MCQ3();
 
@@ -89,8 +89,7 @@ function MCQ4() {
   // 😀D) { name: 'Jayesh', age: 24 }, 24
 
   /*
-Answer is B) { name: 'Jayesh' }, 24 beacuse delete keyword deletes property of an object and does not delete property's value.
-Both person.age and getAge variable will refer to the same memory address.
+  Answer is B) { name: 'Jayesh' }, 24 beacuse delete keyword deletes property of an object and does not delete property's value.
  */
 }
 // MCQ4();
