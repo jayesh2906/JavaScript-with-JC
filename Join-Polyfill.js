@@ -1,12 +1,11 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.join and Its Polyfill 
-The join() method creates and returns a new string by concatenating all of the elements in 
-an array, separated by commas or a specified separator string. 
+The join() method creates and returns a new string by concatenating all of the elements in an array, separated by commas or a specified separator string. 
 
-💡Note - It does not mutate the original array, and returns a string value.
-  If the array has only one item, then that item will be returned without using the separator.
+💡Note - It does not mutate the original array, and returns a string value. 
+If the array has only one item, then that item will be returned without using the separator.
 
-👉 One Level Up :- We can create our own custom join( Polyfill of join ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom join( Polyfill of join ), Check out the code below.👇 
 */
 
 const names = ["jay", "sam", "john"];
