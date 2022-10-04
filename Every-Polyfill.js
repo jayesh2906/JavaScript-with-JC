@@ -1,11 +1,9 @@
-/* 
-👉Array.prototype.every and Its Polyfill 
-The every() method tests whether all elements in an array pass the 
-test implemented by the provided callback function. 
+/* 💡"JavaScript-with-JC"
+👉 Array.prototype.every and Its Polyfill 
+The every() method tests whether all elements in an array pass the test implemented by the provided callback function. 
 
-💡Note - It does not mutate the original array, and returns a Boolean value.
-
-👉 One Level Up :- We can create our own custom every( Polyfill of every ), Check out the code snippet below.👇 
+💡 Note - It does not mutate the original array, and returns a Boolean value.
+👉 One Level Up :- We can create our own custom every( Polyfill of every ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 3, 4, 5, 6];
