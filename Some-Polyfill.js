@@ -1,11 +1,9 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.some and Its Polyfill 
-The some() method tests whether at least one element in the array 
-passes the test implemented by the provided callback function.
+The some() method tests whether at least one element in the array passes the test implemented by the provided callback function.
 
 💡Note - It does not mutate the original array, and returns a Boolean value.
-
-👉 One Level Up :- We can create our own custom some( Polyfill of some ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom some( Polyfill of some ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 3, 4, 5, 6];
