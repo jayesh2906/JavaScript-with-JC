@@ -4,7 +4,7 @@ Promise.all() - It executes all passed promises concurrently and improves the pe
 
 💡Promise.all() Cases :-
 1) If all promises resolve, returns the array of results of all promises resolved.
-2) If any promise fails, return the rejected promise error.
+2) If any promise fails, returns the rejected promise error.
 3) If passed empty [], returns empty [].
 */
 const p1 = new Promise((resolve, reject) => {
