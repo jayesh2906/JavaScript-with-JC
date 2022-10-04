@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 28 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 Composition Vs Inheritance
 Composition is a pattern to write a reusable and more flexible code.
 Using the Composition pattern, you design your models for what they can do, 
