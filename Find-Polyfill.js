@@ -1,7 +1,6 @@
-/* 💡"JavaScript-with-JC" - 5 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.find and Its Polyfill 
-Array.prototype.find is a higher order function that returns the first element in the 
-an array that satisfies the condition of provided callback function and 
+Array.prototype.find is a higher order function that returns the first element in the an array that satisfies the condition of provided callback function and 
 if no values satisfy the condition of callback then returns undefined.
 
 💡Example -
