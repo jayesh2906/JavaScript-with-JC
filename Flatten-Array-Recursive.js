@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 9 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.flat and Its Polyfill 
 Array.prototype.flat method flattens a given array up to the given depth. By default, It takes depth as 1.
 
@@ -17,7 +17,7 @@ console.log(result3); => [ 1, 2, 3, 4, 5, 6, 7, [ 8, 9 ], 10 ]
 const result4 = numbers.flat(2); // depth 2
 console.log(result4); => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
-👉 We can create our own custom flat( Polyfill of flat ), Check out the code snippet below.👇 
+👉 We can create our own custom flat( Polyfill of flat ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 3, [4, 5], 6, [7, [8, 9], 10]];
