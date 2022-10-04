@@ -1,10 +1,9 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.reverse and Its Polyfill 
 The reverse() method reverses an array and returns the reference to the same array
 
 💡Note - It mutates the original array.
-
-👉 One Level Up :- We can create our own custom reverse( Polyfill of reverse ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom reverse( Polyfill of reverse ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 3, 4, 5];
