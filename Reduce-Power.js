@@ -1,7 +1,7 @@
 /* 💡"JavaScript-with-JC" - 10 #javascriptdaily 
-👉 Reduce method is one of the most powerful method in javascript, Let's check the power of reduce method, 
-   We can re-implement most of the javascript array methods using only reduce method
-   let's re-build map(), filter(), forEach(), some(), every(), find() methods using reduce. */
+👉 Reduce method is one of the most powerful method in javascript, Let's check the power of reduce method, We can re-implement most of 
+the javascript array methods using only reduce method. let's re-build forEach(), some(), find() and every() method using reduce. 
+*/
 
 // 👉 1) Implementation of forEach() using reduce method
 
@@ -44,7 +44,7 @@ console.log("reduceSomeResult", reduceSomeResult); // true
 
 // -------------------------------------------------------------------
 
-// 👉 3) Implementation of some() using reduce method
+// 👉 3) Implementation of find() using reduce method
 
 const findNumbers = [2, 4, 5, 6, 7, 9];
 
