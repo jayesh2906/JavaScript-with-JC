@@ -1,6 +1,6 @@
 /* 💡"JavaScript-with-JC" - 13 #javascriptdaily
 👉 bind method and Its Polyfill
-bind method in javascript is used for function borrowing,
+bind method in javascript is used for function borrowing, 
 bind method allows to use the methods of other objects or outside methods
 
 💡bind method takes first argument as object, and rest arguments individually 

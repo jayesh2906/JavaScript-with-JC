@@ -1,6 +1,6 @@
 /* 💡"JavaScript-with-JC"
 👉 apply method and Its Polyfill
-apply method allow us to use the methods of another object or outside methods, apply method is used for function borrowing.
+apply method allows us to use the methods of another object or outside methods, apply method is used for function borrowing.
 
 💡apply method takes first argument as object, and rest arguments as array.
 💡Note - apply method executes the borrowed function immediately unlike bind ().
