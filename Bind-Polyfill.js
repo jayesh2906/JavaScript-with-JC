@@ -1,13 +1,10 @@
-/* 💡"JavaScript-with-JC" - 13 #javascriptdaily
+/* 💡"JavaScript-with-JC"
 👉 bind method and Its Polyfill
-bind method in javascript is used for function borrowing, 
-bind method allows to use the methods of other objects or outside methods
+bind method in javascript is used for function borrowing, bind method allows us to use the methods of other objects or outside methods
 
-💡bind method takes first argument as object, and rest arguments individually 
-  and returns a new function ( copy of borrowed function ).
+💡bind method takes first argument as object, and rest arguments individually and returns a new function ( copy of borrowed function ).
 💡new function returned by bind takes arguments individually.
-💡Note - The bind() method returns a new function and does not execute the borrowed 
-  function immediately unlike call and apply.
+💡Note - The bind() method returns a new function and does not execute the borrowed function immediately unlike call and apply.
 */
 
 // 💡Example of bind () -
@@ -38,7 +35,7 @@ const player2FullInfo = getPlayerInfo.bind(player2, "All-Rounder", "India");
 console.log(player2FullInfo(28));
 // Hardik Pandya, All-Rounder from India, age : 28
 
-// 👉 polyfill for bind method
+// 💡 polyfill for bind method
 
 // 👉 1) build from scratch
 Function.prototype.customBind = function (context, ...args) {
@@ -56,20 +53,20 @@ Function.prototype.customBind = function (context, ...args) {
 };
 
 // 👉 2) Using apply method
-// Function.prototype.customBind = function (context, ...args) {
-//   let borrowedFunc = this;
-//   return function (...outerArgs) {
-//     return borrowedFunc.apply(context, [...args, ...outerArgs]);
-//   };
-// };
+Function.prototype.customBind = function (context, ...args) {
+  let borrowedFunc = this;
+  return function (...outerArgs) {
+    return borrowedFunc.apply(context, [...args, ...outerArgs]);
+  };
+};
 
 // 👉 3) Using call method
-// Function.prototype.customBind = function (context, ...args) {
-//   let borrowedFunc = this;
-//   return function (...outerArgs) {
-//     return borrowedFunc.call(context, ...args, ...outerArgs);
-//   };
-// };
+Function.prototype.customBind = function (context, ...args) {
+  let borrowedFunc = this;
+  return function (...outerArgs) {
+    return borrowedFunc.call(context, ...args, ...outerArgs);
+  };
+};
 
 const player1FullInfoCustom = getPlayerInfo.customBind(
   player1,
