@@ -1,11 +1,10 @@
-/* 💡"JavaScript-with-JC" - 38 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 Singleton Design Pattern
 The singleton design pattern is used in scenarios when we need exactly one instance of an interface (class or function).
-In a singleton design pattern, only one object is created for each interface (class or function) 
-and the same object is returned every time when called.
+In a singleton design pattern, only one object is created for each interface (class or function) and the same object is returned every time when called.
 
-singleton interface (class or function) ensures that it creates only one instance, 
-provides a global access point to the state, and makes sure that the instance is only created the first time.
+singleton interface (class or function) ensures that it creates only one instance, provides a global access point to the state, 
+and makes sure that the instance is only created the first time.
 
 💡Use Cases :-
 👉1) Configuration object across the system.
