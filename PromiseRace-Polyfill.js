@@ -5,6 +5,7 @@ Promise.race() - It executes all passed promises concurrently and returns the fi
 💡Promise.race() Case :-
 1) If passed empty [], forever pending.
 */
+
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("1st Promise resolved!");
