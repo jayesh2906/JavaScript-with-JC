@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 31 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 Hoisting
 Before diving into hoisting, Let's understand how does the javaScript engine work? 
 javaScript engine takes input code that goes through 3 major steps :-
@@ -14,12 +14,10 @@ Each context in callstack has two phases:-
 During Memory creation phase, JavaScript engine moves the variables and function declarations at the top of code, 
 and this is known as Hoisting. 
 
-💡 3 Things you should know about "Hoisting" ( Please check attached pdf for code )
+💡 3 Things you should know about "Hoisting"
 👉 Hoisting of Variables ( var, let, const and global ) ?
 👉 Hoisting of Functions ( declaration and expression ) ?
 👉 Hoisting of Classes ( declaration and expression ) ?
-
-
 */
 
 // Hoisting of Variables ?
@@ -34,19 +32,19 @@ console.log(name); // Jayesh
 // let and const are allocated in diffrent memory space ( script scope ) than global scope
 
 // let example
-// console.log(age); // Uncaught ReferenceError: Cannot access 'age' before initialization
+console.log(age); // Uncaught ReferenceError: Cannot access 'age' before initialization
 let age = 24;
 console.log(age); // 24
 
 // const example
-// console.log(language); // Uncaught ReferenceError: Cannot access 'language' before initialization
+console.log(language); // Uncaught ReferenceError: Cannot access 'language' before initialization
 const language = "javaScript";
 console.log(language); // javaScript
 
 // case 3:- global variables
-// console.log(a); // Uncaught ReferenceError: a is not defined
-// a = 4;
-// console.log(a); // 4
+console.log(a); // Uncaught ReferenceError: a is not defined
+a = 4;
+console.log(a); // 4
 
 // Hoisting of functions ?
 
@@ -59,14 +57,14 @@ displayName(); // Jc
 
 // case 2:- function expression
 // with "var" keyword
-// getName(); // Uncaught TypeError: getName is not a function ( getName is undefined here )
+getName(); // Uncaught TypeError: getName is not a function ( getName is undefined here )
 var getName = function () {
   console.log("Jayesh");
 };
 getName(); // Jayesh
 
 // with "let" or "const" keyword
-// getNameTDZ(); // Uncaught ReferenceError: Cannot access 'getNameTDZ' before initialization
+getNameTDZ(); // Uncaught ReferenceError: Cannot access 'getNameTDZ' before initialization
 const getNameTDZ = function () {
   console.log("Jayesh");
 };
@@ -74,14 +72,14 @@ getNameTDZ(); // Jayesh
 
 // case 3:- Arrow function ( similar to function expression )
 // with "var" keyword
-// getNameArrow(); // Uncaught TypeError: getNameArrow is not a function ( getNameArrow is undefined here )
+getNameArrow(); // Uncaught TypeError: getNameArrow is not a function ( getNameArrow is undefined here )
 var getNameArrow = () => {
   console.log("Jayesh");
 };
 getNameArrow(); // Jayesh
 
 // with "let" or "const" keyword
-// getNameArrowTDZ(); // Uncaught ReferenceError: Cannot access 'getNameArrowTDZ' before initialization
+getNameArrowTDZ(); // Uncaught ReferenceError: Cannot access 'getNameArrowTDZ' before initialization
 const getNameArrowTDZ = () => {
   console.log("Jayesh");
 };
@@ -106,7 +104,7 @@ console.log(jc); // Person { name: 'jc', age: 24 }
 // case 2:- class expression
 
 // with "var" keyword
-// var viru = new Player("viru"); // Uncaught TypeError: Player is not a constructor ( Player is undefined here )
+var viru = new Player("viru"); // Uncaught TypeError: Player is not a constructor ( Player is undefined here )
 
 var Player = class {
   constructor(name) {
@@ -119,7 +117,7 @@ console.log(virat); // Player { name: 'virat' }
 
 // with "let" or "const" keyword
 
-// const meow = new Animal("meow"); // Uncaught ReferenceError: Cannot access 'Animal' before initialization ( TDZ )
+const meow = new Animal("meow"); // Uncaught ReferenceError: Cannot access 'Animal' before initialization ( TDZ )
 
 const Animal = class {
   constructor(name) {
