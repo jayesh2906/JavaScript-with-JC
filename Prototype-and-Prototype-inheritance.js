@@ -1,53 +1,11 @@
-/* 💡"JavaScript-with-JC" - 26 #javascriptdaily 
+/* 💡"JavaScript-with-JC" 
 👉 Prototype and Prototype Inheritance 
 The prototype is an object that is associated with every functions and objects by default in JavaScript,
 Every object includes __proto__ property that points to prototype object of a function that created the object.
- 
-💡Let's take an Example -
-
-👇 function constructor, Person.prototype => Object.prototype => null
-const Person = function (name, age) {
-  👇 instance members created for each object separately consume extra memory
-  this.name = name;
-  this.age = age;
-  this.getName = function () {
-    console.log("name is", this.name);
-  };
-};
-
-const jayesh = new Person("jayesh", 24);
-jayesh.__proto__ => Person.prototype => Object.prototype => null
-
-console.log("jayesh", jayesh);
-output 👇
-age: 24;
-getName: ƒ(); => method created separately for jayesh object consume extra memory
-name: "jayesh";
-
-jayesh.getName(); // name is jayesh
-console.log(jayesh.__proto__); // Person.prototype
-console.log(jayesh.__proto__ === Person.prototype); // true
-console.log(Object.getPrototypeOf(jayesh) === Person.prototype); // true
-console.log(jayesh.__proto__.__proto__); // Object.prototype
-console.log(jayesh.__proto__.__proto__.__proto__); // null
-
-👇 Now, Let's create prototype member ( common parent inherit member for all objects ) saves memory.
-Person.prototype.getAge = function () {
-  console.log("age is", this.age);
-};
-
-👇 After adding getAge fn as Prototype member
-
-console.log("jayesh", jayesh);
-output 👇
-age: 24;
-getName: ƒ(); => method created separately for jayesh object consume extra memory
-name: "jayesh";
 
 💡Difference between prototype and  __proto__
 prototype is a property of a Function object. It is the prototype of objects constructed by that function.
  __proto__ is an internal property of an object, pointing to its prototype.
-
 */
 
 // 👉 Prototype
