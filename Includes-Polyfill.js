@@ -1,10 +1,9 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.includes and Its Polyfill 
 The includes() method determines whether an array includes a certain value among its entries, returning true or false.
 
 💡Note - It does not mutate the original array, and returns a Boolean value.
-
-👉 One Level Up :- We can create our own custom includes( Polyfill of includes ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom includes( Polyfill of includes ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 5, 3, 4, 5, 6];
