@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 19 #javascriptdaily
+/* 💡"JavaScript-with-JC"
 👉 Promise and Promise Chaining 
 Promise is an object that is used for handling asynchronous operations in JavaScript.
 
@@ -7,35 +7,6 @@ Promise is an object that is used for handling asynchronous operations in JavaSc
 👉 rejected: Action related to the promise failed (reject) => result in .catch().
 👉 pending: Promise is still pending i.e. not fulfilled or rejected yet.
 👉 settled: Promise has fulfilled or rejected => .finally().
-
-💡Let's take an Example -
-
-👇 promise constructor takes an executor callback function that takes two functions as arguments to resolve and reject the promise.
-const executor = (resolve, reject) => {
-    console.log("generating number...");
-    setTimeout(() => {
-      let number = Math.floor(Math.random() * 10);
-      if (number >= 5) {
-        resolve(`number generated successfully ${number}.`);
-      } else {
-        reject("problem in generating number!");
-      }
-    }, 1000);
-};
-
-generateNumber 👇 is a promise which is created by promise constructor
-const generateNumber = new Promise(executor);
-
-generateNumber.then((result) => {
-      console.log(result);
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-    .finally(() => {
-      console.log("Promise is settled, either fulfilled or rejected");
-    });
-}
 
 💡 Promise Chaining :-
 Promise chaining allows you to chain together multiple asynchronous tasks 
