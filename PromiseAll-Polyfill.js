@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 20 #javascriptdaily
+/* 💡"JavaScript-with-JC"
 👉 Polyfills of Promise.all, Promise.any, and Promise.race
 
 Promise.all() - It executes all passed promises parallelly and improves the performance of the application

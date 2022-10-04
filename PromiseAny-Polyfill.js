@@ -1,3 +1,12 @@
+/* 💡"JavaScript-with-JC"
+👉 Promise.any() and Its Polyfill
+Promise.any() - It executes all passed promises concurrently and returns the first resolved promise result.
+
+💡Promise.any() Cases :-
+1) If no promise passes, returns the AggregateError "All promises were rejected".
+2) If passed empty [], returns error.
+*/
+
 require("core-js");
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {

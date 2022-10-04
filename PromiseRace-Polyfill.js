@@ -1,3 +1,21 @@
+/* 💡"JavaScript-with-JC"
+👉 Polyfills of Promise.all, Promise.any, and Promise.race
+
+Promise.all() - It executes all passed promises parallelly and improves the performance of the application
+💡Promise.all() Cases :-
+1) If all promises resolve, returns the array of results of all promises resolved.
+2) If any promise fails, return the rejected promise error.
+3) If passed empty [], returns empty [].
+
+Promise.any() - It executes all passed promises parallelly and returns the first resolved promise result.
+💡Promise.any() Cases :-
+1) If no promise passes, returns the AggregateError "All promises were rejected".
+2) If passed empty [], returns error.
+
+Promise.race() - It executes all passed promises parallelly and returns the first resolved or rejected promise result.
+💡Promise.race() Case :-
+1) If passed empty [], forever pending.
+*/
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("1st Promise resolved!");
