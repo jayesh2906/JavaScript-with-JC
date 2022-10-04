@@ -64,7 +64,7 @@ const getItemDetails = (itemiId) => {
 getItemDetails(1);
 // o/p { id: 1, item: 'Nike Shoe Black', price: 3499 }
  
-👉 One Level Up :- We can create our own custom find( Polyfill of find ), Check out code snippet below.👇 
+👉 One Level Up :- We can create our own custom find( Polyfill of find ), Check out code below.👇 
 */
 
 const numbers = [2, 4, 5, 6, 7, 9];
