@@ -1,11 +1,9 @@
-/* 💡"JavaScript-with-JC" - 12 #javascriptdaily
-👉 call and apply methods Polyfill
-call and apply methods allow to use the methods of another object or outside methods.
-call and apply methods are used for function borrowing.
+/* 💡"JavaScript-with-JC"
+👉 call method and Its Polyfill
+call method allows us to use the methods of another object or outside methods, call method is used for function borrowing.
 
-💡call takes first argument as object, and rest arguments individually.
-💡apply takes first argument as object, and rest arguments as array.
-💡Note - call and apply execute the borrowed function immediately unlike bind ().
+💡call method takes first argument as object, and rest arguments individually.
+💡Note - call method executes the borrowed function immediately unlike bind ().
 */
 
 // 💡Example of call () -
@@ -41,8 +39,7 @@ getPlayerInfo.call(player1, "Batsman", "India");
 getPlayerInfo.call(player2, "All-Rounder", "India");
 // Hardik Pandya, All-Rounder from India
 
-// polyfill for call method
-
+// 💡 polyfill for call method
 Function.prototype.customCall = function (context, ...args) {
   // context is first argument, if no argument passed then assign global window object
   let currentContext = context || globalThis; // passed object or global object
