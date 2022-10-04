@@ -1,9 +1,8 @@
-/* 💡"JavaScript-with-JC" - 14 #javascriptdaily
+/* 💡"JavaScript-with-JC"
 👉 Currying Implementation and Infinite Currying
 Currying is a technique to convert multiple arguments function into a single argument functions (unary functions) in a sequence.
 
-💡Note - While converting regular func to currying, 
-  Number of unary functions should be greater than or equal to Number of arguments of a regular function .
+💡Note - While converting regular func to currying, Number of unary functions should be greater than or equal to Number of arguments of a regular function .
 
 💡Two ways to perform currying :-
 // 1) Using Closures
