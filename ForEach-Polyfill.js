@@ -1,7 +1,7 @@
-/* 💡"JavaScript-with-JC" - 4 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.forEach and Its Polyfill 
-Array.prototype.forEach is a higher order function that iterates through 
-each element of an array and executes a callback function once for each element.
+Array.prototype.forEach is a higher order function that iterates through each element of an array and executes a callback 
+function once for each element.
 
 💡Example -
 const todos = [
@@ -43,7 +43,7 @@ current element, current index and array, Callback function runs for each elemen
 💡Use Case -
 👉 Displaying a list of data on Ui 
  
-👉 One Level Up :- We can create our own custom forEach( Polyfill of forEach ), Check out code snippet below.👇 
+👉 One Level Up :- We can create our own custom forEach( Polyfill of forEach ), Check out code below.👇 
 */
 
 const todos = [
