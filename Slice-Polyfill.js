@@ -1,10 +1,8 @@
-/* 💡"JavaScript-with-JC" - 6 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.slice and Its Polyfill 
-Array.prototype.slice returns a shallow copy of an original array slicing it from given 
-start index to end index (excluding end index) i.e start to end-1.
+Array.prototype.slice returns a shallow copy of an original array slicing it from given start index to end index (excluding end index) i.e start to end-1.
 
-💡slice method takes two arguments(optional) start and end, if no argument passed 
-then it returns shallow copy of a original array with all values.
+💡slice method takes two arguments(optional) start and end, if no argument passed then it returns shallow copy of a original array with all values.
 
 positive index =>  0  1  2
 💡for an array = [10,20,30]  
@@ -49,7 +47,7 @@ const diplayNames = names.slice(pageSize * (currentPage - 1),pageSize * currentP
 console.log(diplayNames);
 ouyput ["k","l","m","o","p","q","r","s","t","u"]
  
-👉 One Level Up :- We can create our own custom slice( Polyfill of slice ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom slice( Polyfill of slice ), Check out the code below.👇 
 */
 
 const numbers = [10, 11, 12, 13, 14, 15, 16];
