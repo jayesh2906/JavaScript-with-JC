@@ -1,10 +1,9 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.unshift and Its Polyfill 
 The unshift() method adds n number of elements to the beginning of an array and returns the new length of the array.
 
 💡Note - It mutates the original array, and returns new length array.
-
-👉 One Level Up :- We can create our own custom unshift( Polyfill of unshift ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom unshift( Polyfill of unshift ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 3, 4, 5];
