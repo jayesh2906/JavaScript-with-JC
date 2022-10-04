@@ -1,7 +1,6 @@
-/* 💡"JavaScript-with-JC" - 3 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.reduce and Its Polyfill 
-Array.prototype.reduce is a higher order function that iterates through 
-each value of an array and reduces array of values into single value.
+Array.prototype.reduce is a higher order function that iterates through each value of an array and reduces array of values into single value.
 
 💡Example -
 const numbers = [1, 2, 3, 4, 5, 6];
@@ -69,7 +68,7 @@ const nameOccurrences = names.reduce((acc, currName) => {
 console.log(nameOccurrences);
 // o/p { Jayesh: 3, John: 1, Sam: 2 }
 
-👉 One Level Up :- We can create our own custom reduce( Polyfill of reduce ), Check out below code snippet. 
+👉 One Level Up :- We can create our own custom reduce( Polyfill of reduce ), Check out the below code. 
 */
 
 const numbers = [1, 2, 3, 4, 5, 6];
