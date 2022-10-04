@@ -114,7 +114,7 @@ function MCQ5() {
 
   /*
   Answer is A) true, false, JC because delete keyword deletes only property of an object. 
-  delete keyword cannot delete local variables ( declared with var, let, and const ) and functions. 
+  delete keyword can not delete local variables ( declared with var, let, and const ) and functions. 
   delete keyword can delete global variables as they are property of window object.
  */
 }
