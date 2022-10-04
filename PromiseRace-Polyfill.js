@@ -1,6 +1,5 @@
 /* 💡"JavaScript-with-JC"
 👉 Promise.race() and Its Polyfill
-
 Promise.race() - It executes all passed promises concurrently and returns the first resolved or rejected promise result.
 
 💡Promise.race() Case :-
