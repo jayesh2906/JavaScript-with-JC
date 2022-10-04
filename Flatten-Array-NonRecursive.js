@@ -1,3 +1,6 @@
+/* 💡"JavaScript-with-JC"
+👉 Flatten array implementation - Non recursive approach.
+*/
 const numbers = [1, 2, 3, [4, 5], 6, [7, [8, 9], 10]];
 
 const flatten = function (array) {
