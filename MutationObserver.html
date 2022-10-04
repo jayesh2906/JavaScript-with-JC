@@ -1,36 +1,9 @@
-<!-- 💡"JavaScript-with-JC" - 24 #javascriptdaily
+<!-- 💡"JavaScript-with-JC"
 👉 Mutation Observer  
 The MutationObserver API allows you to continuously monitor the changes being made to the DOM tree. 
 When the DOM nodes change, you can invoke a callback function to detect the changes.
-
-💡Let's take an Example of Observing Changes in List of Items  👇
-
-        Html Part 👇
-
-        <ul id="itemsList">
-            <li class="item">First Item</li>
-            <li class="item">Second Item</li>
-            <li class="item">Third Item</li>
-        </ul>
-        <button class="btn" onclick="deleteFirstItem()">Delete First Item</button>
-
-        JavaScript Part 👇
-
-        const itemsList = document.querySelector("#itemsList")
-
-        MutationObserver takes callBack Function 👇
-        const observer = new MutationObserver((mutations) => {
-        console.log("Changes in Item List", mutations);
-        })
-        
-        observer.observe(itemsList, {
-        childList: true
-        })
-        
-        function deleteFirstItem() {
-        if (itemsList?.children?.length > 0) { itemsList.children[0].remove() }
-        }
 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
