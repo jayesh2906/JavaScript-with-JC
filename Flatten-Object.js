@@ -1,5 +1,5 @@
-/* 💡"JavaScript-with-JC" - 29 #javascriptdaily 
-👉 Flatten Object */
+/* 💡"JavaScript-with-JC"
+👉 Flatten Object implementation */
 
 const person = {
   name: "Jayesh",
