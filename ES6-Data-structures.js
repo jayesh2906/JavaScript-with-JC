@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 35 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 Map, Set, WeakMap, and WeakSet ( ES6 Data Structures ) */
 
 // 💡Map Object
