@@ -21,18 +21,18 @@ and later on higher order function calls the callback function to perform some o
   indiaBatting(DhoniFinishing);
 
 
-💡Types of Callback :- Check Code in attached document
+💡Types of Callback :- 
 👉 Synchronous Callback (blocking) :- Executes immediately during the execution of the higher-order function.
 👉 Asynchronous Callback (non-blocking) :- Executes after the execution of the higher-order function.
 
-💡Callback Hell :- Check Code in attached document
+💡Callback Hell :- 
 👉 Callback Hell is the situation where callbacks are nested several levels deep
-// which makes it difficult to understand and maintain the code. It's also known as Pyramid of Doom.
+which makes it difficult to understand and maintain the code. It's also known as Pyramid of Doom.
 
-// 💡 Avoiding Callback Hell
-// 1) Using Promises :- Check Code in attached document
-// 2) Using async-await :- Check Code in attached document
-// 3) Using generators
+💡 Avoiding Callback Hell
+👉 1) Using Promises 
+👉 2) Using async-await 
+👉 3) Using generators
 */
 
 function callBackExample() {
