@@ -19,7 +19,7 @@ Classes are a template ( a blueprint ) for creating objects.
 // 1) Class Declaration
 // 2) Class Expression
 
-// 1) Let's take an example Class Declaration
+// 👉 1) Let's take an example Class Declaration
 
 class Person {
   // special method for creating and initializing an object
@@ -40,7 +40,7 @@ console.log(typeof Person); // function, ( Person.prototype => Object.prototype 
 const jayesh = new Person("jayesh", 24);
 jayesh.getInfo(); // name jayesh age 24
 
-// 2) Let's take an example Class Expression
+// 👉 2) Let's take an example Class Expression
 
 // unnamed class expression
 const Person1 = class {
