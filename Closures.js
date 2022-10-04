@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 11 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 Closures, Function along with it's lexical scope bundled together to form a closure.
 In simple words, Each and every function in javascript has access to its outer function's scope. 
 Inner function can access all the variables and functions of it's outer function 
