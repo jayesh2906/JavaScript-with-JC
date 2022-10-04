@@ -1,13 +1,10 @@
-/* 💡"JavaScript-with-JC" - 37 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 Method Chaining 
-Method chaining is a chain of methods where each method shares the same reference means
-each method returns an object, allowing the calls to be chained together in a single statement.
-Method chaining is used to write more readable code.
+Method chaining is a chain of methods where each method shares the same reference means each method returns an object, allowing the calls to be 
+chained together in a single statement. Method chaining is used to write more readable code.
 
-this keyword in JavaScript refers to the current object in which it is called. 
-when a method returns this means it returns an instance of the object in which it is returned
-and with returned instance of an object, we can call next method of an object. In this way, 
-we can achieve method chaining in JavaScript.
+💡 this keyword in JavaScript refers to the current object in which it is called. when a method returns this means it returns an instance of the object in which
+it is returned and with returned instance of an object, we can call next method of an object. In this way, we can achieve method chaining in JavaScript.
 */
 
 // 💡 Three ways of implementing method chaining.
