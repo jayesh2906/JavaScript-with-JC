@@ -89,7 +89,7 @@ function MCQ4() {
   // 😀D) { name: 'Jayesh', age: 24 }, 24
 
   /*
-  Answer is B) { name: 'Jayesh' }, 24 beacuse delete keyword deletes property of an object and does not delete property's value.
+  Answer is B) { name: 'Jayesh' }, 24 beacuse delete keyword deletes property of an object and we are setting getAge as pass by value.
  */
 }
 // MCQ4();
