@@ -7,6 +7,7 @@ Promise.all() - It executes all passed promises concurrently and improves the pe
 2) If any promise fails, returns the rejected promise error.
 3) If passed empty [], returns empty [].
 */
+
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("1st Promise resolved!");
