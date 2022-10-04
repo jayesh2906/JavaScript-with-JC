@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 18 #javascriptdaily
+/* 💡"JavaScript-with-JC"
 👉 Callback and Callback Hell
 Callback functions are first class citizens passed as an argument to higher order function,
 and later on higher order function calls the callback function to perform some operation.
@@ -33,7 +33,6 @@ and later on higher order function calls the callback function to perform some o
 // 1) Using Promises :- Check Code in attached document
 // 2) Using async-await :- Check Code in attached document
 // 3) Using generators
-
 */
 
 function callBackExample() {
