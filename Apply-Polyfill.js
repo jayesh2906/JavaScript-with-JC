@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 12 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 apply method and Its Polyfill
 apply method allow us to use the methods of another object or outside methods, apply method is used for function borrowing.
 
