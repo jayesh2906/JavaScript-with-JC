@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 32 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 Event Loop, CallStack, Callback and Microtask Queue 
 
 💡 CallStack :- The callStack is used by JavaScript to keep track of multiple function calls. 
