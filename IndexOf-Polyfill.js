@@ -1,11 +1,9 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.indexOf and Its Polyfill 
-The indexOf() method returns the first index at which a given element is found in an array, 
-or -1 if it is not present.
+The indexOf() method returns the first index at which a given element is found in an array, or -1 if it is not present.
 
 💡Note - It does not mutate the original array, and returns an index or -1.
-
-👉 One Level Up :- We can create our own custom indexOf( Polyfill of indexOf ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom indexOf( Polyfill of indexOf ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 5, 3, 4, 5, 6];
