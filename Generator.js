@@ -1,34 +1,13 @@
-/* 💡"JavaScript-with-JC" - 23 #javascriptdaily
+/* 💡"JavaScript-with-JC"
 👉 Generator  
-Generator is a function that can be paused and resumed from where it was paused. 
-It is written as the function keyword followed by an asterisk (*).
+Generator is a function that can be paused and resumed from where it was paused. It is written as the function keyword followed by an asterisk (*).
 Generator returns a Generator object that is used by calling the next method.
-
-💡Let's take a simple Example -
-
-  function* getNumbers() {
-    yield 1;
-    yield 2;
-    yield 3;
-  }
-
-  const numberObject = getNumbers();
-  const first = numberObject.next();
-  const second = numberObject.next();
-  const third = numberObject.next();
-  const fourth = numberObject.next();
-
-  console.log(first); // { value: 1, done: false }
-  console.log(second); // { value: 2, done: false }
-  console.log(third); // { value: 3, done: false }
-  console.log(fourth); // { value: undefined, done: true }
 
 💡 Use cases :-
 👉 1) Creating Infinite loop ( generating unique Id ).
 👉 2) Iterators ( looping through an array ).
 👉 3) Handling promises using async generator.
 👉 4) State management using Redux Saga.
-
 */
 
 // simple Example
