@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 1 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 Array.prototype.map and It's Polyfill 
 map is a higher order function in javascript that iterates through 
 each element of an array and can modify each element of an array.
@@ -49,8 +49,8 @@ o/p - updatedTodos [
   { id: 3, task: 'Do code' }
 ]
 
-Wait, It's not an end, We can create our own custom map( Polyfill of map ) Check code snippet below.  
-  */
+Wait, It's not an end, We can create our own custom map( Polyfill of map ) Check out the code below.  
+*/
 
 const numbers = [1, 2, 3, 4, 5];
 
