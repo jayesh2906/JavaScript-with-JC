@@ -1,5 +1,6 @@
-/* 💡"JavaScript-with-JC" - 36 #javascriptdaily 
-👉 Polyfill of String.prototype.split */
+/* 💡"JavaScript-with-JC"
+👉 Polyfill of String.prototype.split 
+*/
 
 const message = "This is the string with two the in it.";
 
