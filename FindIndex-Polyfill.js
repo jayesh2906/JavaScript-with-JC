@@ -1,11 +1,10 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.findIndex and Its Polyfill 
 The findIndex() method returns the index of the first element in an array that satisfies the provided callback function. 
 If no elements satisfy the callback function, -1 is returned.
 
 💡Note - It does not mutate the original array, and returns an index or -1.
-
-👉 One Level Up :- We can create our own custom findIndex( Polyfill of findIndex ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom findIndex( Polyfill of findIndex ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 5, 3, 4, 5, 6];
