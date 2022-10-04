@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 27 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 Classes and Objects
 The ES6 JavaScript supports the Object-Oriented programming components, 
 Classes are a template ( a blueprint ) for creating objects.
@@ -72,23 +72,23 @@ john.getInfo(); // name john age 24
 
 // Class Declaration hoisting ? => TDZ
 
-// const Ford = new Car("black"); // Uncaught ReferenceError: Cannot access 'Car' before initialization
+const Ford = new Car("black"); // Uncaught ReferenceError: Cannot access 'Car' before initialization
 
-// class Car {
-//   constructor(color) {
-//     this.color = color;
-//   }
-// }
+class Car {
+  constructor(color) {
+    this.color = color;
+  }
+}
 
-// // Class Expression hoisting ? => TDZ or undefined
+// Class Expression hoisting ? => TDZ or undefined
 
-// const Ferrari = new Car("red"); // Uncaught ReferenceError: Cannot access 'Car' before initialization
+const Ferrari = new Car("red"); // Uncaught ReferenceError: Cannot access 'Car' before initialization
 
-// const Car = class {
-//   constructor(color) {
-//     this.color = color;
-//   }
-// };
+const Car = class {
+  constructor(color) {
+    this.color = color;
+  }
+};
 
 ////////////////////////////////////////////////////////////////
 
