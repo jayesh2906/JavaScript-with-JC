@@ -1,3 +1,7 @@
+/* 💡"JavaScript-with-JC" 
+👉 Implementation of filter method using reduce. 
+*/
+
 // array of numbers
 const numbers = [1, 2, 3, 4, 5, 6];
 
