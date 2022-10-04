@@ -1,9 +1,8 @@
-/* 💡"JavaScript-with-JC" - 30 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 "this" keyword in deep
-In Javascript, "this" depends on the context on which "this" is currently in.
-this keyword refers to different objects depending on how it is used.
+In Javascript, "this" depends on the context on which "this" is currently in. this keyword refers to different objects depending on how it is used.
 
-💡 7 Things you should know about "this" ( Please check attached pdf for code )
+💡 7 Things you should know about "this"
 👉 Rule 1) function with new keyword ( this refers to the function object )
 👉 Rule 2) call, apply, bind ( this refers to the obj passed to methods )
 👉 Rule 3) method in object ( this refers to the object )
@@ -13,7 +12,7 @@ this keyword refers to different objects depending on how it is used.
 👉 Miscellaneous important things about "this"
 */
 
-// 6 Rules of "this"
+// 💡 6 Rules of "this"
 // Rule 1) function with new keyword ( this refers to the function object )
 function Person() {
   console.log(this); // Person {}
@@ -122,7 +121,7 @@ function OuterFunction() {
 }
 new OuterFunction();
 
-// Miscellaneous important things about "this"
+// 💡 Miscellaneous important things about "this"
 
 // "this" inside nested normal function
 
