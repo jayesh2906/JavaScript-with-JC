@@ -1,11 +1,9 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.shift and Its Polyfill 
-The shift() method removes the first element from an array and returns that removed element. 
-This method changes the length of the array.
+The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
 
 💡Note - It mutates the original array, and returns first element.
-
-👉 One Level Up :- We can create our own custom shift( Polyfill of shift ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom shift( Polyfill of shift ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 3, 4, 5];
