@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 39 #javascriptdaily 
+/* 💡"JavaScript-with-JC"
 👉 ClearAllTimeout and ClearAllInterval
 
 💡ClearAllTimeout :-
