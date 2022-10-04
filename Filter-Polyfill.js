@@ -63,7 +63,7 @@ const filterTruthy = values.filter((value) => value);
 console.log("filterTruthy", filterTruthy); //  [ 1, 'Jc', [], {} ]
 💡Note - Boolean([]) and Boolean({}) are true values
 
-👉One Level Up :- We can create our own custom filter( Polyfill of filter ), Check code snippet below.  
+👉One Level Up :- We can create our own custom filter( Polyfill of filter ), Check out code below. 👇 
 */
 
 const numbers = [1, 2, 3, 4, 5, 6];
