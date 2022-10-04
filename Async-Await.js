@@ -1,43 +1,14 @@
-/* 💡"JavaScript-with-JC" - 22 #javascriptdaily
-👉 Async-await Modern approach to handling Promises 
+/* 💡"JavaScript-with-JC"
+👉 Async-await Modern approach for handling Promises 
 The async and await keywords provide a way to handle the asynchronous tasks in a synchronous manner.
 async/await allows promise-based behavior to be written in a cleaner way,
 
 💡We can handle promises using async await :-
  1) Sequentially
  2) Concurrently 
+*/
 
 // 💡Let's take a simple Example -
-
-// generateNumber 👇 is a promise that is created by promise constructor
- const generateNumber = new Promise((resolve, reject) => {
-    console.log("generating number...");
-    setTimeout(() => {
-      let number = Math.floor(Math.random() * 10);
-      if (number >= 5) {
-        resolve(`number generated successfully ${number}.`);
-      } else {
-        reject("problem in generating number!");
-      }
-    }, 1000);
-  });
-
-  // handling promise in a cleaner way using async await
-  const doTask = async () => {
-    try {
-      const result = await generateNumber;
-      console.log(result);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      console.log("Promise is settled, either fulfilled or rejected");
-    }
-  };
-  doTask();
-
- 💡We can convert promise then catch code into async await code, Check attached docs below
-  */
-
 // generateNumber 👇 is a promise which is created by promise constructor
 function simpleExample() {
   const generateNumber = new Promise((resolve, reject) => {
@@ -67,7 +38,7 @@ function simpleExample() {
 }
 // simpleExample()
 
-// 1) Sequential Async await
+// 💡 1) Sequential Async await
 function sequentialAsyncAwait() {
   const addItmesToCart = () => {
     return new Promise((resolve, reject) => {
@@ -146,7 +117,7 @@ function sequentialAsyncAwait() {
 }
 // sequentialAsyncAwait();
 
-// 2) Concurrent Async await
+// 💡 2) Concurrent Async await
 function concurrentAsyncAwait() {
   const taskOne = () => {
     return new Promise((resolve, reject) => {
@@ -225,7 +196,7 @@ function concurrentAsyncAwait() {
 }
 // concurrentAsyncAwait();
 
-// convert promise then catch code into async await code
+// 💡 convert promise then catch code into async await code
 import fetch from "node-fetch";
 function fetchUsersList() {
   fetch("https://jsonplaceholder.typicode.com/users")
