@@ -1,52 +1,10 @@
-/* 💡"JavaScript-with-JC" - 21 #javascriptdaily
+/* 💡"JavaScript-with-JC"
 👉 Promise.allSettled() and Its Polyfill
-Promise.allSettled() returns a promise that gets resolved when all passed 
-promises are settled ( either fulfilled or rejected ) and in result 
+Promise.allSettled() returns a promise that gets resolved when all passed promises are settled ( either fulfilled or rejected ) and in result 
 it gives an array of objects having status and the value/reason of each promise.
-👉 Note :- If passed empty [], returns empty [].
 
-💡Let's take an Example -
-
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("1st Promise resolved!");
-  }, 1000);
-});
-
-const p2 = Promise.resolve("2nd Promise resolved!");
-
-const p3 = 3;
-
-const p4 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let status = true;
-    if (!status) {
-      resolve("4th Promise resolved!");
-    } else {
-      reject("4th Promise rejected!");
-    }
-  }, 2000);
-});
-
-Promise.allSettled([p1, p2, p3, p4]).then((result) => {
-  console.log("result", result);
-});
-
-👇 Using Promise.allSettled() with await
-(async () => {
-  const result = await Promise.allSettled([p1, p2, p3, p4]);
-  console.log("result", result);
-})();
-
- Output 👇
-[
-  { status: 'fulfilled', value: '1st Promise resolved!' },
-  { status: 'fulfilled', value: '2nd Promise resolved!' },
-  { status: 'fulfilled', value: 3 },
-  { status: 'rejected', reason: '4th Promise rejected!' }
-]
-
-👉 We can create our own custom allSettled( Polyfill of allSettled ), Check out the code snippet below.👇 
+💡 Note :- If passed empty [], returns empty [].
+👉 We can create our own custom allSettled( Polyfill of allSettled ), Check out the code below.👇 
 */
 
 const p1 = new Promise((resolve, reject) => {
