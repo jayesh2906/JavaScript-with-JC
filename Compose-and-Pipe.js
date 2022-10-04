@@ -1,4 +1,4 @@
-/* 💡"JavaScript-with-JC" - 15 #javascriptdaily
+/* 💡"JavaScript-with-JC"
 👉 Pipe and Compose Implementation
 Pipe and Compose functions are higher order functions that are used for writing a well structured and 
 clean code by avoiding nested function calls.
