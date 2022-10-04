@@ -1,10 +1,9 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.concat and Its Polyfill 
 The concat() method is used to merge two or more arrays.
 
 💡Note - It does not mutate the original array, and returns a new array.
-
-👉 One Level Up :- We can create our own custom concat( Polyfill of concat ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom concat( Polyfill of concat ), Check out the code below.👇 
 */
 
 const numbers1 = [1, 2, 3];
