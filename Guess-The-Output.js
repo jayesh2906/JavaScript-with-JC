@@ -89,7 +89,33 @@ function MCQ4() {
   // 😀D) { name: 'Jayesh', age: 24 }, 24
 
   /*
-  Answer is B) { name: 'Jayesh' }, 24 beacuse delete keyword deletes property of an object and we are setting getAge as pass by value.
+  Answer is B) { name: 'Jayesh' }, 24 because delete keyword deletes property of an object and we are setting getAge as pass by value.
  */
 }
 // MCQ4();
+
+// 👉 MCQ-5
+function MCQ5() {
+  // No Strict Mode
+  name = "Jayesh"; // window.name ( property of window object )
+  console.log(delete name);
+
+  const displayName = (function (name) {
+    console.log(delete name); // Local variable of function
+    return name;
+  })("JC");
+
+  console.log(displayName);
+
+  // 👍A) true, false, JC
+  // 💡B) true, true, undefined
+  // 💖C) false, false, JC
+  // 😀D) false, true, undefined
+
+  /*
+  Answer is A) true, false, JC because delete keyword deletes only property of an object. 
+  delete keyword cannot delete local variables ( declared with var, let, and const )
+  delete keyword can delete global variables as they are property of window object.
+ */
+}
+// MCQ5();
