@@ -1,11 +1,9 @@
-/* 
+/* 💡"JavaScript-with-JC"
 👉Array.prototype.lastIndexOf and Its Polyfill 
-The lastIndexOf() method returns the last index at which a given element is found in an array, 
-or -1 if it is not present, array is searched backwards, starting at fromIndex.
+The lastIndexOf() method returns the last index at which a given element is found in an array, or -1 if it is not present, array is searched backwards, starting at fromIndex.
 
 💡Note - It does not mutate the original array, and returns an index or -1.
-
-👉 One Level Up :- We can create our own custom lastIndexOf( Polyfill of lastIndexOf ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom lastIndexOf( Polyfill of lastIndexOf ), Check out the code below.👇 
 */
 
 const numbers = [1, 2, 5, 3, 4, 5, 6];
