@@ -1,9 +1,8 @@
-/* 💡"JavaScript-with-JC" - 7 #javascriptdaily 
+/* 💡"JavaScript-with-JC" 
 👉Array.prototype.splice and Its Polyfill 
 Array.prototype.splice modifies an original array and returns deleted values array.
 
-💡splice method takes (start, howManyDelete, newAdd1, newAdd2, newAddN), If no argument  is passed 
-then original array remains as it is and it returns an empty array [].
+💡splice method takes (start, howManyDelete, newAdd1, newAdd2, newAddN), If no argument  is passed then original array remains as it is and it returns an empty array [].
 
 positive index =>  0  1  2
 💡for an array = [10,20,30]  
@@ -56,7 +55,7 @@ output 👇
   { id: 4, todo: 'Watch Netflix' }
 ]
 
-👉 One Level Up :- We can create our own custom splice( Polyfill of splice ), Check out the code snippet below.👇 
+👉 One Level Up :- We can create our own custom splice( Polyfill of splice ), Check out the code below.👇 
 */
 
 const numbers = [10, 11, 12, 13, 14, 15];
