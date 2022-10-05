@@ -154,4 +154,4 @@ function MCQ6() {
   console.log(arrBlock[0]()); // 0
   console.log(arrBlock[4]()); // 4
 }
-MCQ6();
+// MCQ6();
