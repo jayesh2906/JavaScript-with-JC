@@ -119,3 +119,39 @@ function MCQ5() {
  */
 }
 // MCQ5();
+
+// 👉 MCQ-6
+function MCQ6() {
+  const arr = [];
+
+  for (var i = 0; i < 5; i++) {
+    arr[i] = function () {
+      return i;
+    };
+  }
+
+  console.log(arr[0]());
+  console.log(arr[4]());
+
+  // 👍A) 0, 4     💡B) 4, 4
+  // 💖C) 5, 5     😀D) TypeError
+
+  /*
+  Answer is C) 5, 5 because variables declared with var keyword are function-scoped or globally-scoped but not blocked scoped. 
+  Inner function will form the closure and ponits to the updated value of i that is 5. 
+  In the case of Let variable, as they are blocked scoped so inner function will hold different values of i from 0 to 4.
+ */
+
+  /* 👇 In the case of Let variable */
+  const arrBlock = [];
+
+  for (let i = 0; i < 5; i++) {
+    arrBlock[i] = function () {
+      return i;
+    };
+  }
+
+  console.log(arrBlock[0]()); // 0
+  console.log(arrBlock[4]()); // 4
+}
+MCQ6();
