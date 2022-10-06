@@ -155,3 +155,25 @@ function MCQ6() {
   console.log(arrBlock[4]()); // 4
 }
 // MCQ6();
+
+// 👉 MCQ-7
+function MCQ7() {
+  let person = { name: "Jayesh" };
+  const personArray = [person];
+  person = null;
+  console.log(personArray);
+
+  personArray = [];
+  console.log(personArray);
+
+  // 👍A) [ { name: "Jayesh" } ], []
+  // 💡B) [ { name: "Jayesh" } ] , TyperError
+  // 💖C) [ null ], TypeError
+  // 😀D) [ {} ], []
+
+  /*
+  Answer is B) [ { name: "Jayesh" } ] , TyperError because person = null will only disconnect the person variable from value { name: "Jayesh"} which is stored in memory, personArray[0] will still point to same value { name: "Jayesh"}.
+  and personArray = [] at this line TyperError as const variable can't be redeclared and throws Uncaught TypeError: Assignment to constant variable.  
+ */
+}
+// MCQ7();
