@@ -177,3 +177,26 @@ function MCQ7() {
  */
 }
 // MCQ7();
+
+// 👉 MCQ-8
+function MCQ8() {
+  const value = { number: 10 };
+
+  const addition = (x = { ...value }) => {
+    console.log((x.number += 5));
+  };
+
+  addition();
+  addition();
+  addition(value);
+  addition(value);
+
+  // 👍A) 15, 20, 25, 30    💡B) 15, 15, 20, 25
+  // 💖C) 15, 15, 15, 15    😀D) 15, 15, 15, 20
+
+  /*
+  Answer is D) 15, 15, 15, 20 because when we call addition function 3rd time with passing value object as an argument, then x will take value as pass by reference and will update number property of original object ( value in this case ) to 15.  
+  Hence, while calling addition function 4th time will console 15 + 5 => 20.
+ */
+}
+MCQ8();
