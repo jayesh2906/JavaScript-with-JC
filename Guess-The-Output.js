@@ -199,4 +199,40 @@ function MCQ8() {
   Hence, while calling addition function 4th time will console 15 + 5 => 20.
  */
 }
-MCQ8();
+// MCQ8();
+
+// 👉 MCQ-9
+function MCQ9() {
+  function makePerson() {
+    return {
+      userName: "Jayesh",
+      ref: this,
+    };
+  }
+
+  const person = makePerson();
+  console.log(person.ref.userName);
+
+  // 👍A) Jayesh      💡B) ""
+  // 💖C) undefined   😀D) TypeError
+
+  /*
+  Answer is C) undefined because "this" keyword in makePerson function will be window object,
+  person.ref.userName is same as Window.userName and no property named with userName is present in window object, Hence It will console undefined.
+ */
+
+  // 👇 We can get "Jayesh" as an output by doing small change in above question :-
+  function makePerson2() {
+    return {
+      userName: "Jayesh",
+      // 👇 Here, We have assigned a function to ref property of an object, and function's "this" will point to the returned object.
+      ref: function () {
+        return this;
+      },
+    };
+  }
+
+  const person2 = makePerson2();
+  console.log(person2.ref().userName); // Jayesh
+}
+// MCQ9();
