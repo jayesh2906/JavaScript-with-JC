@@ -51,7 +51,7 @@ const Person1 = class {
   }
 };
 
-const sam = new Person("sam", 24);
+const sam = new Person1("sam", 24);
 sam.getInfo(); // name sam age 24
 
 // named class expression
@@ -80,7 +80,7 @@ class Car {
   }
 }
 
-// Class Expression hoisting ? => TDZ or undefined
+// Class Expression hoisting ? => TDZ (let, const) or undefined (var)
 
 const Ferrari = new Car("red"); // Uncaught ReferenceError: Cannot access 'Car' before initialization
 
@@ -350,18 +350,18 @@ const obj6 = Object.assign({}, { name: "Jc", age: 24 });
 console.log(obj6); // { name: 'Jc', age: 24 }
 
 // 7) using singleton pattern
-const obj7 = new (function () {
-  this.name = "Jc";
-  this.age = 24;
-})();
+const obj7 = new (function (name, age) {
+  this.name = name;
+  this.age = age;
+})("Jc", 24);
 console.log(obj7); // { name: 'Jc', age: 24 }
 
 // 8) using factory function
-function Person8() {
+function Person8(name, age) {
   return {
-    name: "Jc",
-    age: 24,
+    name: name,
+    age: age,
   };
 }
-const obj8 = Person8();
+const obj8 = Person8("Jc", 24);
 console.log(obj8); // { name: 'Jc', age: 24 }
