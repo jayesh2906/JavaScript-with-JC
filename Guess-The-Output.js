@@ -217,7 +217,7 @@ function MCQ9() {
   // 💖C) undefined   😀D) TypeError
 
   /*
-  Answer is C) undefined because "this" keyword in makePerson function will be window object,
+  Answer is C) undefined because "this" keyword in makePerson function will refer to the window object,
   person.ref.userName is same as Window.userName and no property named with userName is present in window object, Hence It will console undefined.
  */
 
