@@ -236,3 +236,30 @@ function MCQ9() {
   console.log(person2.ref().userName); // Jayesh
 }
 // MCQ9();
+
+// 👉 MCQ-10
+function MCQ10() {
+  const user = {
+    userName: "Jayesh",
+    displayName: function () {
+      console.log(this.userName);
+    },
+  };
+
+  setTimeout(user.displayName, 1000);
+
+  // 👍A) Jayesh     💡B) undefined
+  // 💖C) ""         😀D) TypeError
+
+  /*
+  Answer is B) undefined because setTimeout is using user.displayName as a callback function rather than object method.
+  callback function's "this" will refer to the window object and It will console undefined as there is no property such as userName in the window object.   
+  */
+
+  // 👇 We can get "Jayesh" as an output by wrapping the user.displayName() inside a function :-
+
+  setTimeout(function () {
+    user.displayName(); // Here, displayName is called by user object ( object method ). Hence, "this" will refer to user object.
+  }, 1000);
+}
+MCQ10();
