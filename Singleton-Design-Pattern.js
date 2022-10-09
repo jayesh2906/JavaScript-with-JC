@@ -9,6 +9,8 @@ and makes sure that the instance is only created the first time.
 💡Use Cases :-
 👉1) Configuration object across the system.
 👉2) Notification object across the system.
+👉3) Context Api in React also uses SDP to create global object. 
+👉4) Redux in React uses SDP to create one single immutable global object.
 */
 
 const Singleton = (function () {
