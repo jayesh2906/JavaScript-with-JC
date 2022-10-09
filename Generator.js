@@ -132,14 +132,14 @@ tasks
 tasks
   .next()
   .then((response) => {
-    console.log(response); // { value: 'First task resolved', done: false }
+    console.log(response); // { value: 'Second task resolved', done: false }
   })
   .catch((error) => console.log(error));
 
 tasks
   .next()
   .then((response) => {
-    console.log(response); // { value: 'First task resolved', done: false }
+    console.log(response); // { value: 'Third task resolved', done: false }
   })
   .catch((error) => console.log(error));
 
