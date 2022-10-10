@@ -262,4 +262,33 @@ function MCQ10() {
     user.displayName(); // Here, displayName is called by user object ( object method ). Hence, "this" will refer to user object.
   }, 1000);
 }
-MCQ10();
+// MCQ10();
+
+// 👉 MCQ-11
+function MCQ11() {
+  const series = { name: "JavaScript-with-JC" };
+
+  function getSatus(postNumber) {
+    return `${this.name} 🌟 ${postNumber}`;
+  }
+
+  console.log(getSatus.call(series, 50));
+  console.log(getSatus.bind(series, 50));
+
+  // 👍A) JavaScript-with-JC 🌟 50, undefined
+  // 💡B) JavaScript-with-JC 🌟 50, JavaScript-with-JC 🌟 50
+  // 💖C) JavaScript-with-JC 🌟 50, [Function: bound getSatus]
+  // 😀D) JavaScript-with-JC 🌟 50, TypeError
+
+  /*
+  Answer is C) JavaScript-with-JC 🌟 50, [Function: bound getSatus] because call, apply and bind methods are used for function borrowing in JavaScript.   
+  The call method immediately invokes the borrowed function where as bind method does not invoke the borrowed function immediately, bind method returns a copy of borrowed function
+  that can be called later on with or without passing new arguments to it.
+  */
+
+  // 👇 We can get 'JavaScript-with-JC 🌟 50, JavaScript-with-JC 🌟 50' as an output by calling borrowed function of bind method :-
+
+  console.log(getSatus.call(series, 50)); // JavaScript-with-JC 🌟 50
+  console.log(getSatus.bind(series, 50)()); // JavaScript-with-JC 🌟 50
+}
+MCQ11();
