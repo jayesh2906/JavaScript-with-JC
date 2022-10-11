@@ -291,4 +291,42 @@ function MCQ11() {
   console.log(getSatus.call(series, 50)); // JavaScript-with-JC 🌟 50
   console.log(getSatus.bind(series, 50)()); // JavaScript-with-JC 🌟 50
 }
-MCQ11();
+// MCQ11();
+
+// 👉 MCQ-12
+function MCQ12() {
+  var name = "Jayesh";
+
+  function displayName() {
+    console.log(this.name);
+  }
+
+  const person = {
+    name: "JC",
+    method(fn) {
+      fn();
+    },
+  };
+
+  person.method(displayName);
+
+  // 👍A) JC           💡B) Jayesh
+  // 💖C) undefined    😀D) TypeError
+
+  /*
+  Answer is B) Jayesh because displayName function is passed to person object method as a callback function.
+  "this" keyword in displayName function will refer to window object and window object has a property "name" with value "Jayesh". Hence, It will console Jayesh as an output.
+  */
+
+  // 👇 We can get JC as an output by attaching call method with fn() inside person method :-
+
+  const person2 = {
+    name: "JC",
+    method(fn) {
+      fn.call(this); // borrowing function and passing "this" of person2 object.
+    },
+  };
+
+  person2.method(displayName); // JC
+}
+MCQ12();
