@@ -15,15 +15,15 @@ console.log("numbers", numbers); // [ 5, 4, 3, 2, 1 ]
 
 Array.prototype.customReverse = function () {
   let array = this;
-  let temp = [];
+  let j = array.length - 1;
 
-  for (let i = 0; i < array.length; i++) {
-    temp.push(array[i]);
+  for (let i = 0; i < array.length / 2; i++) {
+    let temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+    j--;
   }
 
-  for (let i = 0; i < array.length; i++) {
-    array[i] = temp[array.length - i - 1];
-  }
   return array;
 };
 
