@@ -371,4 +371,42 @@ function MCQ13() {
   arguments[0]() function's "this" will refer to arguments object. Hence, It will console 3 as an output.
   */
 }
-MCQ13();
+// MCQ13();
+
+// 👉 MCQ-14
+function MCQ14() {
+  var name = "Jayesh";
+
+  function displayName() {
+    console.log(this.name);
+  }
+
+  const person = {
+    name: "JC",
+    method: displayName.bind(this),
+  };
+
+  person.method();
+
+  // 👍A) Jayesh       💡B) JC
+  // 💖C) undefined    😀D) TypeError
+
+  /*
+  Answer is A) Jayesh because "this" inside the definition for person object does not refer to person object. 
+  "this" will refer to the window object here, and binding displayName function with passing window's this  
+  as a context will return a copy of bound function that is stored in method property of person object. 
+  So, While calling person.method() will console Jayesh as an output.
+ */
+
+  // 👇 We can get JC as an output by wrapping displayName.bind(this) inside a function because "this" inside the normal function of an object refers to the object :-
+
+  const person2 = {
+    name: "JC",
+    method: function () {
+      return displayName.bind(this); // Here, "this" refers to the person2 object
+    },
+  };
+
+  person2.method()(); // JC
+}
+MCQ14();
