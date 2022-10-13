@@ -1,6 +1,8 @@
 /* 💡"JavaScript-with-JC"
 👉 Flatten array implementation - Non recursive approach.
 */
+
+// 1) Using Stack
 const numbers = [1, 2, 3, [4, 5], 6, [7, [8, 9], 10]];
 
 const flatten = function (array) {
@@ -19,3 +21,9 @@ const flatten = function (array) {
 };
 
 console.log(flatten(numbers));
+
+// 2) Using toString()
+const arr = [1, 2, [3, 4], 5, [6, [7, 8], 9]];
+console.log(arr.toString()); // 1,2,3,4,5,6,7,8,9
+console.log(arr.toString().split(",")); // [ '1', '2', '3','4', '5', '6','7', '8', '9' ]
+console.log([...arr.toString().split(",")]); // [ '1', '2', '3','4', '5', '6','7', '8', '9' ]
