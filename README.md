@@ -1,6 +1,6 @@
 # JavaScript-with-JC
 
-In "JavaScript-with-JC", I have covered all the advanced JavaScript concepts, Frequently asked interview questions and MCQs mentioned below:-
+In "JavaScript-with-JC", I have covered all the advanced JavaScript concepts, Frequently asked interview questions and MCQs mentioned below :-
 
 - Polyfill ( map, reduce, forEach, filter, slice, find, flat, etc... ),
 - Closure,
