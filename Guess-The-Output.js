@@ -396,7 +396,7 @@ function MCQ14() {
   "this" will refer to the window object here, and binding displayName function with passing window's this  
   as a context will return a copy of bound function that is stored in method property of person object. 
   So, While calling person.method() will console Jayesh as an output.
- */
+  */
 
   // 👇 We can get JC as an output by wrapping displayName.bind(this) inside a function because "this" inside the normal function of an object refers to the object :-
 
@@ -409,4 +409,23 @@ function MCQ14() {
 
   person2.method()(); // JC
 }
-MCQ14();
+// MCQ14();
+
+// 👉 MCQ-15
+function MCQ15() {
+  function show() {
+    console.log(this.name);
+  }
+
+  show = show.bind({ name: "JC" }).bind({ name: "Jayesh" });
+  show();
+
+  // 👍A) Jayesh       💡B) undefined
+  // 💖C) JC           😀D) TypeError
+
+  /*
+  Answer is A) JC because a function which is bound with bind keyword can not be re-bound with other new context, bind chaining does not exist.
+  once the function is bound to a particular object, It will always be bound to that object no matter how many times it's further bounded.
+  */
+}
+MCQ15();
