@@ -17,7 +17,7 @@ numbers.forEach(display);
 
 numbers.reduce((acc, curr, index, array) => {
   display(curr, index, array);
-});
+}, undefined);
 
 // -------------------------------------------------------------------
 
