@@ -417,7 +417,10 @@ function MCQ15() {
     console.log(this.name);
   }
 
-  show = show.bind({ name: "JC" }).bind({ name: "Jayesh" });
+  const person1 = { name: "Jc" };
+  const person2 = { name: "Jayesh" };
+
+  show = show.bind(person1).bind(person2);
   show();
 
   // 👍A) Jayesh       💡B) undefined
