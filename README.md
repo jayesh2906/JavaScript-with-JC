@@ -19,17 +19,17 @@ In "JavaScript-with-JC", I have covered all the advanced JavaScript concepts, Fr
 - Prototype, Prototype Inheritance,
 - Class object,
 - Composition vs Inheritance,
-- Flatten Array ( Recursive and Non-Recursive ).
-- Flatten Object.
+- Flatten Array ( Recursive and Non-Recursive ),
+- Flatten Object,
 - This keyword,
 - Hoisting,
 - Memoization,
 - Event Loop, CallStack, Callback Queue, Microtask Queue,
 - Higher order functions,
 - Event Bubbling, Capturing, delegation,
-- Set, Map, WeakSet, WeakMap
-- Custom String.split Method
-- Method Chaining
-- Singleton design pattern
-- ClearAllInterval, ClearAllTimeout
+- Set, Map, WeakSet, WeakMap,
+- Custom String.split Method,
+- Method Chaining,
+- Singleton design pattern,
+- ClearAllInterval, ClearAllTimeout,
 - Guess the Output? ( Frequently asked MCQs ) and Many more...
