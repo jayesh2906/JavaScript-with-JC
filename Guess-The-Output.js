@@ -431,4 +431,34 @@ function MCQ15() {
   once the function is bound to a particular object, It will always be bound to that object no matter how many times it's further bounded.
   */
 }
-MCQ15();
+// MCQ15();
+
+// 👉 MCQ-16
+function MCQ16() {
+  let person1 = {
+    name: { firstName: "Jayesh" },
+    age: 24,
+  };
+  let person2 = { ...person1 };
+
+  person2.name.firstName = "Virat";
+  person2.age = 33;
+
+  console.log(person1.name.firstName);
+  console.log(person1.age);
+
+  // 👍A) Jayesh, 33     💡B) Jayesh, 24
+  // 💖C) Virat, 33      😀D) Virat, 24
+
+  /*
+  Answer is D) Virat, 24 because The spread operator makes deep copies of data if the data is not nested. 
+  When we have nested data in an array or object the spread operator will create a deep copy of the top most data 
+  and a shallow copy of the nested data. 
+  person1 and person2 is pointing to different memory address but person1.name and person2.name is pointing to the same memory address
+
+  We Can do Deep copy of nested objects by using:-
+  1) const copyObj = JSON.parse(JSON.stringify(originalObj))
+  2) const copyObj = structuredClone(originalObj);
+*/
+}
+MCQ16();
