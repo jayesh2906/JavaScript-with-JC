@@ -427,7 +427,7 @@ function MCQ15() {
   // 💖C) JC           😀D) TypeError
 
   /*
-  Answer is A) JC because a function which is bound with bind keyword can not be re-bound with other new context, bind chaining does not exist.
+  Answer is C) JC because a function which is bound with bind keyword can not be re-bound with other new context, bind chaining does not exist.
   once the function is bound to a particular object, It will always be bound to that object no matter how many times it's further bounded.
   */
 }
