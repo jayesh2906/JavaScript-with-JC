@@ -464,26 +464,26 @@ function MCQ16() {
 // MCQ16();
 
 // 👉 MCQ-17
-function MCQ17() {}
-MCQ17;
+function MCQ17() {
+  for (var i = 0; i < 5; i++) {
+    setTimeout(
+      (i) => {
+        console.log(i);
+      },
+      1000,
+      i
+    );
+  }
 
-for (var i = 0; i < 5; i++) {
-  setTimeout(
-    (i) => {
-      console.log(i);
-    },
-    1000,
-    i
-  );
-}
+  // 👍A) 0 1 2 3 4      💡B) 5 5 5 5 5
+  // 💖C) 4 4 4 4 4      😀D) 0 1 2 3 4 5
 
-// 👍A) 0 1 2 3 4      💡B) 5 5 5 5 5
-// 💖C) 4 4 4 4 4      😀D) 0 1 2 3 4 5
-
-/*
+  /*
   Answer is A) 0 1 2 3 4 because as we are passing i ( 0 to 4 ) value as an argument to setTimeout callback function
   therefore this will console different values of i from 0 to 4.
 
   if there was no argument passed to setTimeout callback function then the output would be 5 5 5 5 5 because variables declared 
   with var keyword are function-scoped or globally-scoped but not blocked scoped. Inner function i would point to the updated value of i that is 5.
 */
+}
+MCQ17();
