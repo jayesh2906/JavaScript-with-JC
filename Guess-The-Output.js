@@ -486,4 +486,29 @@ function MCQ17() {
   with var keyword are function-scoped or globally-scoped but not blocked scoped. Inner function i would point to the updated value of i that is 5.
 */
 }
-MCQ17();
+// MCQ17();
+
+// 👉 MCQ-18
+function MCQ18() {
+  console.log(1);
+
+  async function fetchData() {
+    console.log(2);
+    let result = await Promise.resolve(3);
+    console.log(result);
+  }
+
+  fetchData();
+  console.log(4);
+
+  // 👍A) 1 2 3 4      💡B) 1 4 2 3
+  // 💖C) 1 2 4 3      😀D) 1 3 4 2
+
+  /*
+  Answer is C) 1 2 4 3 beacuse promise is used to handle the asynchronous result of an operation and 
+  callback functions attached to the promises are stored into microtask queue. 
+  So, first synchronous code will be executed i.e 1,2,4 and once callstack is empty, event loop pushes the microtask queue's task into callstack
+  callstack will start executing the task and It will console 3 at last.
+  */
+}
+MCQ18();
