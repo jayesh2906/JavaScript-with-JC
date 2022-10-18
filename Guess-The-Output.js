@@ -505,10 +505,43 @@ function MCQ18() {
   // 💖C) 1 2 4 3      😀D) 1 3 4 2
 
   /*
-  Answer is C) 1 2 4 3 beacuse promise is used to handle the asynchronous result of an operation and 
+  Answer is C) 1 2 4 3 beacause promise is used to handle the asynchronous result of an operation and 
   callback functions attached to the promises are stored into microtask queue. 
   So, first synchronous code will be executed i.e 1,2,4 and once callstack is empty, event loop pushes the microtask queue's task into callstack
   callstack will start executing the task and It will console 3 at last.
   */
 }
-MCQ18();
+// MCQ18();
+
+// 👉 MCQ-19
+function MCQ19() {
+  console.log("start");
+
+  const promise = new Promise((resolve) => {
+    console.log(1);
+    resolve(2);
+    console.log(3);
+  });
+
+  promise.then((result) => {
+    console.log(result);
+  });
+
+  console.log("end");
+
+  // 👍A) start end 1 3 2      💡B) start 1 3 end 2
+  // 💖C) start end 1 2 3      😀D) start 1 end 2 3
+
+  /*
+  Answer is B) start 1 3 end 2 beacause The function we pass into the Promise constructor runs synchronously, 
+  but anything that depends on its resolution ( resolve or reject ) will be called asynchronously. 
+  Even if the promise resolves immediately, any handlers ( callback attached to promise then and catch ) will execute asynchronously. 
+
+  const promise = new Promise((resolve) => {
+  console.log(1);  // runs synchronously
+  resolve(2); // called asynchronously by then callback
+  console.log(3); // runs synchronously
+});
+*/
+}
+MCQ19();
