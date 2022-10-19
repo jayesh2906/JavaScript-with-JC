@@ -544,4 +544,27 @@ function MCQ19() {
 });
 */
 }
-MCQ19();
+// MCQ19();
+
+// 👉 MCQ-20
+function MCQ20() {
+  console.log("First");
+
+  const promise = new Promise((resolve) => {
+    console.log("Second");
+  });
+
+  promise.then((result) => {
+    console.log(result);
+  });
+
+  console.log("Third");
+
+  // 👍A) First Second undefined Third      💡B) First Third Second
+  // 💖C) First Second Third undefined      😀D) First Second Third
+
+  /*
+  Answer is D) First Second Third because as there is no resolve in Promise constructor, So it will not go inside of .then block.
+*/
+}
+MCQ20();
