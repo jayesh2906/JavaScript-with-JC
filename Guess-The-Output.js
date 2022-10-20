@@ -565,6 +565,35 @@ function MCQ20() {
 
   /*
   Answer is D) First Second Third because as there is no resolve in Promise constructor, So it will not go inside of .then block.
-*/
+  */
 }
-MCQ20();
+// MCQ20();
+
+// 👉 MCQ-21
+function MCQ21() {
+  const fetchData = function () {
+    return new Promise((resolve, reject) => {
+      reject();
+    });
+  };
+
+  fetchData()
+    .then(() => {
+      console.log("Success 1");
+    })
+    .catch(() => {
+      console.log("Error 1");
+    })
+    .then(() => {
+      console.log("Success 2");
+    });
+
+  // 👍A) Error 1 TypeError    💡B) Error 1
+  // 💖C) Error 1 Success 2    😀D) undefined
+
+  /*
+  Answer is C) Error 1 Success 2 because in promise chaining .then method below .catch method will be called if in .catch method we are not 
+  returning rejected promise ( by default implicitly returns a promise that is handled by it's below .then method )
+  */
+}
+MCQ21();
