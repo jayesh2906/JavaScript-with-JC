@@ -596,4 +596,28 @@ function MCQ21() {
   returning rejected promise ( by default implicitly returns a promise that is handled by it's below .then method )
   */
 }
-MCQ21();
+// MCQ21();
+
+// 👉 MCQ-22
+function MCQ22() {
+  function foo() {
+    let a = (b = 0);
+    a++;
+    return a;
+  }
+  foo();
+  console.log(typeof a);
+  console.log(typeof b);
+
+  // 👍A) undefined number        💡B) ReferenceError number
+  // 💖C) undefined undefined     😀D) number number
+
+  /* 
+  Answer is A) undefined number because variable a is declared with let it is blocked scope and will be "not defined" outside function foo().
+  The typeof operator returns "undefined" even for “undeclared” (or “not defined”) variables.
+  Notice that there was no error thrown when we executed typeof a, even though a is an undeclared variable. 
+  This is a special safety guard in the behavior of typeof. 
+  and variable b is a just global scope variable hence it will be available outside function foo() also. 
+  */
+}
+MCQ22();
