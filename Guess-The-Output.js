@@ -620,4 +620,27 @@ function MCQ22() {
   and variable b is a just global scope variable hence it will be available outside function foo() also. 
   */
 }
-MCQ22();
+// MCQ22();
+
+// 👉 MCQ-23
+function MCQ23() {
+  console.log("start");
+
+  setTimeout(() => {
+    console.log("first");
+  }, 0);
+
+  Promise.resolve("second").then((res) => console.log(res));
+
+  console.log("end");
+
+  // 👍A) start end first second       💡B) start first second end
+  // 💖C) start end second first       😀D) start first end second
+
+  /* 
+  Answer is C) start end second first because callback function attached to Promises added into microtask queue 
+  whereas callback function of setTimeout added into callback ( macroTask ) queue. 
+  microTask queue has more priority than callback ( macroTask ) queue.
+  */
+}
+MCQ23();
