@@ -663,7 +663,7 @@ function MCQ24() {
 
   /* 
   Answer is B) Virat Virat because objects are passed as a reference, person1 and person2 will hold the same memory address
-  Hence, altering any property of person2 will modify property of person1 as well.
+  and altering any property of person2 will modify property of person1 as well.
   */
 }
 MCQ24();
