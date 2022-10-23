@@ -643,4 +643,27 @@ function MCQ23() {
   microTask queue has more priority than callback ( macroTask ) queue.
   */
 }
-MCQ23();
+// MCQ23();
+
+// 👉 MCQ-24
+function MCQ24() {
+  const person1 = {
+    name: "Jayesh",
+    age: 24,
+  };
+
+  const person2 = person1;
+  person2.name = "Virat";
+
+  console.log(person1.name);
+  console.log(person2.name);
+
+  // 👍A) Jayesh Virat  💡B) Virat Virat
+  // 💖C) Virat Jayesh  😀D) Jayesh Jayesh
+
+  /* 
+  Answer is B) Virat Virat because objects are passed as a reference, person1 and person2 will hold the same memory address
+  Hence, altering any property of person2 will modify property of person1 as well.
+  */
+}
+MCQ24();
