@@ -688,6 +688,7 @@ function MCQ25() {
   returning rejected promise ( by default implicitly it returns a promise that is handled by it's below .then method ).
   as .catch method is not returning anything, result of .then method will be undefined.
 
+  The Error() constructor creates an error object. Error() can be called with or without new. Both create a new Error instance.
   Error objects are thrown when runtime errors occur. The Error object can also be used as a base object for user-defined exceptions.
   Error.message in user-created Error objects is the string provided as the constructor's first argument that is "Fails!" in our case.
   */
