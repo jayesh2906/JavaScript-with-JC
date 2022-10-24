@@ -666,4 +666,30 @@ function MCQ24() {
   and altering any property of person2 will modify property of person1 as well.
   */
 }
-MCQ24();
+// MCQ24();
+
+// 👉 MCQ-25
+function MCQ25() {
+  let p = new Promise((resolve, reject) => {
+    reject(Error("Fails!"));
+  });
+  p.catch((error) => {
+    console.log(error.message);
+  }).then((result) => {
+    console.log(result);
+  });
+
+  // 👍A) Fails! undefined    💡B) Fails!
+  // 💖C) Fails! TypeError    😀D) Fails! Fails!
+
+  /* 
+  Answer is A) Fails! undefined because promise is rejecting so .catch callback will execute and console "Fails" first.
+  In promise chaining .then method below .catch method will be called if in .catch method we are not 
+  returning rejected promise ( by default implicitly it returns a promise that is handled by it's below .then method ).
+  as .catch method is not returning anything, result of .then method will be undefined.
+
+  Error objects are thrown when runtime errors occur. The Error object can also be used as a base object for user-defined exceptions.
+  Error.message in user-created Error objects is the string provided as the constructor's first argument that is "Fails!" in our case.
+  */
+}
+MCQ25();
