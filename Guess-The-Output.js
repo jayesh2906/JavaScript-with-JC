@@ -693,4 +693,29 @@ function MCQ25() {
   Error.message in user-created Error objects is the string provided as the constructor's first argument that is "Fails!" in our case.
   */
 }
-MCQ25();
+// MCQ25();
+
+// 👉 MCQ-26
+function MCQ26() {
+  const person = {
+    name: "JC",
+    displayName() {
+      console.log(this.name);
+    },
+  };
+
+  const jayesh = Object.create(person);
+
+  person.displayName();
+  jayesh.displayName();
+
+  // 👍A) JC undefined          💡B) undefined JC
+  // 💖C) undefined undefined   😀D) JC JC
+
+  /* 
+  Answer is D) JC JC because Object.create() method creates a new object, using an existing object as the prototype 
+  of the newly created object. Object.create() is used for Prototypal inheritance. jayesh.__proto__ will point to person object. 
+  If child object does not have property then it will inherit the property from it's parent ( prototype ) object.
+  */
+}
+MCQ26();
