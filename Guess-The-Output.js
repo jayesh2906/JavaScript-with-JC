@@ -718,4 +718,33 @@ function MCQ26() {
   If child object does not have property then it will inherit the property from it's parent ( prototype ) object.
   */
 }
-MCQ26();
+// MCQ26();
+
+// 👉 MCQ-27
+function MCQ27() {
+  const fetchData = function () {
+    return new Promise((res) => res("One"));
+  };
+
+  let isLoading = true;
+  fetchData()
+    .then((result) => {
+      console.log(result);
+    })
+    .finally(() => {
+      console.log("Two");
+      isLoading = false;
+    });
+
+  console.log(isLoading);
+
+  // 👍A) One Two true   💡B) One Two false
+  // 💖C) true One Two   😀D) false One Two
+
+  /* 
+  Answer is C) true One Two because first synchronous code will be executed i.e isLoading ( true ). 
+  once callstack is empty and promise is resolved, callback function attached to the promise .then method() will execute
+  and eventually .finally method will be executed.
+  */
+}
+MCQ27();
