@@ -747,4 +747,28 @@ function MCQ27() {
   and eventually .finally method will be executed.
   */
 }
-MCQ27();
+// MCQ27();
+
+// 👉 MCQ-28
+function MCQ28() {
+  const calc = (a) => {
+    return (b) => {
+      if (b) return calc(a + b);
+      return a;
+    };
+  };
+
+  console.log(calc(1)(2)(3)(4)());
+
+  // 👍A) 3   💡B) 10
+  // 💖C) 5   😀D) 1
+
+  /* 
+  Answer is B) 10 because of Infinite Currying.
+  Currying is a technique to convert multiple arguments function into a single argument functions (unary functions) in a sequence.
+  There are two ways to perform currying :-
+  1) Using Closures ( Used in above question )
+  2) Using Bind
+  */
+}
+MCQ28();
