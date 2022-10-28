@@ -796,7 +796,7 @@ function MCQ29() {
   It returns the modified target object. Merging objects with same properties overwritten by other objects that have the same properties later in the parameters order.
 
   In the above question, person1 is target object that is merged with person2 and as both objects have same property name
-  that's why "Jayesh" is overwritten by "Virat". person and person1 points to the same memory address. comparing person === person1 result true.
+  that's why "Jayesh" is overwritten by "Virat". person and person1 points to the same memory address. comparing person === person1 results true.
 
   Note:- While Cloning an object using Object.assign makes deep copies of data if the data is not nested. When we have nested data in an object then 
   It will create a deep copy of the top most data and a shallow copy of the nested data.  
