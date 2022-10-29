@@ -843,6 +843,6 @@ function MCQ30() {
   the promise settles and returns its result. So, as there are two resolved promises callback function stored in microtask queue.
   first promise .then method will console "Success", after that await promise of second promise will console "Success".
   3) At last, Synchronous code after the await keyword in async function will be executed i.e console.log("Second");
-*/
+  */
 }
 MCQ30();
