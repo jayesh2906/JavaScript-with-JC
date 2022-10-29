@@ -810,4 +810,39 @@ function MCQ29() {
   Object.assign(target, ...sources)
   */
 }
-MCQ29();
+// MCQ29();
+
+// 👉 MCQ-30
+function MCQ30() {
+  const promise = () => Promise.resolve("Success");
+
+  function first() {
+    promise().then((res) => console.log(res));
+    console.log("First");
+  }
+
+  async function second() {
+    const res = await promise();
+    console.log(res);
+    console.log("Second");
+  }
+
+  first();
+  second();
+
+  // 👍A) First Success Second Success
+  // 💡B) First Second Success Success
+  // 💖C) Second Success First Success
+  // 😀D) First Success Success Second
+
+  /* 
+  Answer is D) First Success Success Second because :-
+  1) While calling first function, callback function attached to then method of promise will be stored into microtask queue 
+  and next synchronous code i.e console.log("First") will be executed in callstack. 
+  2) While calling second function which is async, The keyword await in async second function makes JavaScript wait until
+  the promise settles and returns its result. So, as there are two resolved promises callback function stored in microtask queue.
+  first promise .then method will console "Success", after that await promise of second promise will console "Success".
+  3) At last, Synchronous code after the await keyword in async function will be executed i.e console.log("Second");
+*/
+}
+MCQ30();
