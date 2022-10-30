@@ -845,4 +845,29 @@ function MCQ30() {
   3) At last, Synchronous code after the await keyword in async function will be executed i.e console.log("Second");
   */
 }
-MCQ30();
+// MCQ30();
+
+// 👉 MCQ-31
+function MCQ31() {
+  console.log("start");
+
+  async function getData() {
+    console.log("JC");
+    return "Jayesh";
+  }
+
+  getData().then((res) => console.log(res));
+
+  console.log("end");
+
+  // 👍A) start end JC Jayesh     💡B) start JC Jayesh end
+  // 💖C) start JC end Jayesh     😀D) start Jayesh JC end
+
+  /* 
+  Answer is C) start JC end Jayesh because async function always returns a promise. If no promise is return other values are wrapped in a resolved promise automatically.
+  So in the above question return "Jayesh" would be same as Promise.resolve("Jayesh");
+  First, All the synchronous code will be executed i.e start JC end and later on callback function attached to promise that is stored in microtask queue will be executed by callstack.
+  Hence, The Final Result will be:- start JC end Jayesh
+  */
+}
+MCQ31();
