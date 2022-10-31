@@ -870,4 +870,36 @@ function MCQ31() {
   Hence, The Final Result will be:- start JC end Jayesh
   */
 }
-MCQ31();
+// MCQ31();
+
+// 👉 MCQ-32
+function MCQ32() {
+  const p1 = Promise.resolve("First");
+  const p2 = Promise.reject("Second");
+  const p3 = Promise.resolve("Third");
+
+  const runPromises = async () => {
+    try {
+      const res = await Promise.all([p1, p2, p3]);
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  runPromises();
+
+  // 👍A) [ First, Third ]    💡B) Second
+  // 💖C) [ First ]           😀D) [ Second ]
+
+  /* 
+  Answer is B) Second because Promise.all() executes all passed promises concurrently and improves the performance of the application.
+  👉 Promise.all() Cases :-
+  1) If all promises resolve, returns the array of results of all promises resolved.
+  2) If any promise fails, returns the rejected promise error.
+  3) If passed empty [], returns empty [].
+
+  In the above question, promise p2 is rejected. Hence, Promise.all() will return the rejected promise error "Second".
+  */
+}
+MCQ32();
