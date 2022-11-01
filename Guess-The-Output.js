@@ -902,4 +902,33 @@ function MCQ32() {
   In the above question, promise p2 is rejected. Hence, Promise.all() will return the rejected promise error "Second".
   */
 }
-MCQ32();
+// MCQ32();
+
+// 👉 MCQ-33
+function MCQ33() {
+  const inc = async (x) => {
+    x = x + (await 1);
+    return x;
+  };
+
+  const increment = async (x) => {
+    x = x + 1;
+    return x;
+  };
+
+  inc(1).then((x) => {
+    increment(x).then((x) => console.log(x));
+  });
+
+  // 👍A) 1    💡B) 2
+  // 💖C) 3    😀D) 4
+
+  /* 
+  Answer is C) 3 because first promise return by async function "inc" will resolve and return ( 1 + 1 ) 2 as a result in .then method.
+  secondly, promise return by async function "increment" will resolve and return ( 2 + 1 ) 3 as a result in .then method.
+
+  Note:- await keyword in async function waits for the promise to fullfilled but if the value is not a Promise ( In above question await 1 ), 
+  it converts the value to a resolved Promise, and waits for it. So. await 1 would be same as Promise.resolve(1).
+*/
+}
+MCQ33();
