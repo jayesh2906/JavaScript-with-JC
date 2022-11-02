@@ -929,6 +929,44 @@ function MCQ33() {
 
   Note:- await keyword in async function waits for the promise to fullfilled but if the value is not a Promise ( In above question await 1 ), 
   it converts the value to a resolved Promise, and waits for it. So. await 1 would be same as Promise.resolve(1).
-*/
+  */
 }
-MCQ33();
+// MCQ33();
+
+// 👉 MCQ-34
+function MCQ34() {
+  displayName();
+  var displayName = function () {
+    console.log("Jayesh");
+  };
+
+  function displayName() {
+    console.log("JC");
+  }
+  displayName();
+
+  // 👍A) Jayesh Jayesh   💡B) JC JC
+  // 💖C) Jayesh JC       😀D) JC Jayesh
+
+  /* 
+  Answer is D) JC Jayesh because of Hoisting When javaScript engine starts executing the code, It creates the global execution 
+  context in callstack, Each context in callstack has two phases:- 1) Memory Creation and 2) Code Execution
+
+  at the Memory Creation, for var displayName = func(){} displayName will be undefined but below in the code declared function displayName() {} 
+  will override the displayName value to function displayName() { console.log("JC") }
+
+  displayName :  displayName() {
+    console.log("JC");
+  }
+
+  at the Code Execution, first displayName() function will console "JC" and at the next line displayName will be assigned
+  function () { console.log("Jayesh") } as value; 
+
+  displayName :  displayName() {
+    console.log("Jayesh");
+  }
+
+  Hence, last displayName() function will console "Jayesh"
+  */
+}
+MCQ34();
