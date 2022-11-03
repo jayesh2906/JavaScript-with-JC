@@ -969,4 +969,40 @@ function MCQ34() {
   Hence, last displayName() function will console "Jayesh"
   */
 }
-MCQ34();
+// MCQ34();
+
+// 👉 MCQ-35
+function MCQ35() {
+  const fetchData = function () {
+    return new Promise((res, reject) => {
+      reject("Error");
+    });
+  };
+
+  fetchData()
+    .then(null, (err) => {
+      console.log("First");
+      console.log(err);
+    })
+    .catch(() => {
+      console.log("Second");
+      console.log(err);
+    });
+
+  // 👍A) First Error        💡B) Second Error
+  // 💖C) Second undefined   😀D) ReferenceError
+
+  /* 
+  Answer is A) First Error because then() method takes up to two arguments: callback functions for the fulfilled and rejected 
+  cases of the Promise.
+  Syntax of then :- then(onFulfilled) or then(onFulfilled, onRejected).
+  then(
+  (value) => fulfillment handler 
+  (reason) => rejection handler 
+  );
+
+  In the above question, Inside .then() - We are passing first argument as null and second argument as callback function for rejected 
+  case of the Promise. So, Second argument callback function will be executed for rejected case and will console First Error. 
+  */
+}
+MCQ35();
