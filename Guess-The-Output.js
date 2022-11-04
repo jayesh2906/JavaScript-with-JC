@@ -1005,4 +1005,43 @@ function MCQ35() {
   case of the Promise. So, Second argument callback function will be executed for rejected case and will console First Error. 
   */
 }
-MCQ35();
+// MCQ35();
+
+// 👉 MCQ-36
+function MCQ36() {
+  function resolveAfterNSeconds(time, value) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(value);
+      }, time);
+    });
+  }
+
+  async function doTasks() {
+    console.time("time");
+    let a = await resolveAfterNSeconds(1000, 1);
+    let b = resolveAfterNSeconds(2000, 2);
+    let c = resolveAfterNSeconds(1000, 3);
+
+    console.log(a + (await b) + (await c));
+    console.timeEnd("time");
+  }
+  doTasks();
+
+  // 👍A) 6 in 4 Sec      💡B) 6 in 3 Sec
+  // 💖C) NaN in 1 Sec    😀D) 1 in 4 Sec
+
+  /* 
+  Answer is B) 6 in 3 Sec because while execution of doTasks function, first await resolveAfterNSeconds(1000, 1) will wait
+  for 1 second. variable "a" will be assigned value as 1. a = 1, Total time = 1 Sec.
+
+  In Next Line, resolveAfterNSeconds(2000, 2) pending Promise will be assigned to variable "b" and immediately next line
+  resolveAfterNSeconds(1000, 3) pending Promise will be assigned to variable "c", both promises "b" and "c" will run concurrently.
+
+  At Last Line, console.log(a + (await b) + (await c)), promise "b" will take 2Sec to resolve and concurrently promise "c" will 
+  also get resolved in 1sec. overall time to execute (await b) + (await c) is only 2Sec because of concurrency.
+
+  Hence, Output would be 6 where a = 1, b = 2, c = 3 and Total time = 3 Sec.
+*/
+}
+MCQ36();
