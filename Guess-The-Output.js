@@ -1042,6 +1042,33 @@ function MCQ36() {
   also get resolved in 1sec. overall time to execute (await b) + (await c) is only 2Sec because of concurrency.
 
   Hence, Output would be 6 where a = 1, b = 2, c = 3 and Total time = 3 Sec.
-*/
+  */
 }
-MCQ36();
+// MCQ36();
+
+// 👉 MCQ-37
+function MCQ37() {
+  let a = true;
+
+  setTimeout(() => {
+    a = false;
+  }, 2000);
+
+  while (a) {
+    console.log("JC");
+  }
+
+  // 👍A) "JC" one time after 2 sec.
+  // 💡B) "JC" continously till 2 sec.
+  // 💖C) "JC" Infinite times.
+  // 😀D) Console Nothing.
+
+  /* 
+  Answer is C) "JC" Infinite times because callback attached to setTimeout function is asynchronous task and need to wait
+  for execution of main thread ( synchronous tasks in callstack ) to execute.
+
+  As value of a is true, code will never exit from while loop ( callstack will never be empty to take callback attached to
+  setTimeout function ). Hence, It will console "JC" Infinite times.
+  */
+}
+MCQ37();
