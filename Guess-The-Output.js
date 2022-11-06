@@ -1071,4 +1071,36 @@ function MCQ37() {
   setTimeout function ). Hence, It will console "JC" Infinite times.
   */
 }
-MCQ37();
+// MCQ37();
+
+// 👉 MCQ-38
+function MCQ38() {
+  console.log(1);
+
+  setTimeout(function () {
+    console.log(2);
+  }, 1000);
+
+  setTimeout(
+    (function () {
+      console.log(3);
+      return () => {};
+    })(),
+    2000
+  );
+
+  console.log(4);
+
+  // 👍A) 1 2 3 4    💡B) 1 4 3 2
+  // 💖C) 1 4 2 3    😀D) 1 3 4 2
+
+  /* 
+  Answer is D) 1 3 4 2 because at first console.log(1) will print "1", callback function attached to first setTimeout will 
+  wait for atleast 1 second.
+  In the 2nd setTimeout we are passing IIFE ( Immediately invoked function execution ). So, IIFE will print "3" immediately 
+  and will return () => {} as callback that will wait for atleast 2 seconds. 
+  console.log(4) will print "4", callstack will be empty as all synchronous tasks completed.
+  After one second callback function attached to first setTimeout pushed into callstack and console.log(2) will print "2".
+  */
+}
+MCQ38();
