@@ -1097,10 +1097,36 @@ function MCQ38() {
   /* 
   Answer is D) 1 3 4 2 because at first console.log(1) will print "1", callback function attached to first setTimeout will 
   wait for atleast 1 second.
-  In the 2nd setTimeout we are passing IIFE ( Immediately invoked function execution ). So, IIFE will print "3" immediately 
+  In the 2nd setTimeout we are passing IIFE ( Immediately Invoked Function Expression ). So, IIFE will print "3" immediately 
   and will return () => {} as callback that will wait for atleast 2 seconds. 
   console.log(4) will print "4", callstack will be empty as all synchronous tasks completed.
   After one second callback function attached to first setTimeout pushed into callstack and console.log(2) will print "2".
   */
 }
-MCQ38();
+// MCQ38();
+
+// 👉 MCQ-39
+function MCQ39() {
+  const num = [1, 2, 3];
+  const double = function (num) {
+    return num * 2;
+  };
+
+  const res1 = num.map(double);
+  const res2 = num.forEach(double);
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) [2, 4, 6] [2, 4, 6]    💡B) [2, 4, 6] undefined
+  // 💖C) [2, 4, 6] [1, 2, 3]    😀D) undefined [2, 4, 6]
+
+  /* 
+  Answer is B) [2, 4, 6] undefined because map function iterates through each element of an array and can modify each 
+  element of an array. map function does not mutate the original array, Always returns new copy of a mutated array.
+
+  Whereas, forEach function iterates through each element of an array and executes a callback function once for each 
+  element and does not mutate the original array, Always returns undefined.
+  */
+}
+MCQ39();
