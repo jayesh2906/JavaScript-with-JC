@@ -1129,4 +1129,39 @@ function MCQ39() {
   element and does not mutate the original array, Always returns undefined.
   */
 }
-MCQ39();
+// MCQ39();
+
+// 👉 MCQ-40
+function MCQ40() {
+  setTimeout(() => {
+    console.log(1);
+    Promise.resolve().then(() => {
+      console.log(2);
+    });
+  }, 0);
+
+  Promise.resolve().then(() => {
+    console.log(3);
+    setTimeout(() => {
+      console.log(4);
+    }, 0);
+  });
+
+  // 👍A) 3 1 2 4    💡B) 3 2 1 4
+  // 💖C) 1 2 3 4    😀D) 3 4 1 2
+
+  /* 
+  Answer is A) 3 1 2 4 because of taskqueue and microtask queue behaviour.
+  callback attached to setTimeout will be pushed to taskqueue and callback of Promise.resolve().then will be pushed to microtask queue.
+
+  As microtask queue has higher priority than taskqueue, callback attached to Promise.then will start executing in callstack 
+  and console.log(3) will print "3", in the next line callback attached to setTimeout will be pushed to taskqueue.
+
+  Now taskqueue has two setTimeout callback functions, So first callback function will start executing and console.log(1) will print "1"
+  in the next line callback attached to Promise.resolve().then will be pushed to microtask queue.
+
+  Now, microtask queue has one callback and taskqueue also has one callback, As microtask queue has higher priority than taskqueue
+  from microtask queue callback function will execute and console.log(2) will print "2" and at last from taskqueue console.log(4) will print "4".
+  */
+}
+MCQ40();
