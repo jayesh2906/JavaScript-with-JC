@@ -76,4 +76,8 @@ Promise.customAny([p1, p2, p3])
   })
   .catch((error) => {
     console.log("error customAny", error);
+    console.log(error instanceof AggregateError);
+    console.log(error.message);
+    console.log(error.name);
+    console.log(error.errors);
   });
