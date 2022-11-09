@@ -1164,4 +1164,28 @@ function MCQ40() {
   from microtask queue callback function will execute and console.log(2) will print "2" and at last from taskqueue console.log(4) will print "4".
   */
 }
-MCQ40();
+// MCQ40();
+
+// 👉 MCQ-41
+function MCQ41() {
+  const arr = [1, 2, 5, 3, 2, 4];
+
+  const checkTwo = (num, i, arr) => {
+    if (num === 2) return true;
+    return false;
+  };
+
+  const res1 = arr.filter(checkTwo);
+  const res2 = arr.find(checkTwo);
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) [2, 2] [2, 2]    💡B) [2, 2] [2]
+  // 💖C) [2] 2            😀D) [2, 2] 2
+
+  /* 
+  Answer is D) [2, 2] 2 because find method returns only first found value whereas filter method returns an array of filtered values.
+  */
+}
+MCQ41();
