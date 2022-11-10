@@ -1188,4 +1188,30 @@ function MCQ41() {
   Answer is D) [2, 2] 2 because find method returns only first found value whereas filter method returns an array of filtered values.
   */
 }
-MCQ41();
+// MCQ41();
+
+// 👉 MCQ-42
+function MCQ42() {
+  const person = {
+    key: "name",
+  };
+
+  const jayesh = {
+    name: "JC",
+  };
+
+  console.log(jayesh[person.key]);
+  console.log(jayesh?.person?.key);
+  console.log(jayesh[person["key"]]);
+
+  // 👍A) undefined JC JC    💡B) JC JC JC
+  // 💖C) JC undefined JC    😀D) JC JC undefined
+
+  /* 
+  Answer is C) JC undefined JC because jayesh object does not have property "person". So, jayesh?.person will be undefined
+  and because of the optional chaining jayesh?.person?.key won't thow any error and return undefined.
+
+  If there was no optional chaining used then jayesh.person.key would have thrown Uncaught TypeError: Cannot read properties of undefined (reading 'key')
+  */
+}
+MCQ42();
