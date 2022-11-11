@@ -1214,4 +1214,37 @@ function MCQ42() {
   If there was no optional chaining used then jayesh.person.key would have thrown Uncaught TypeError: Cannot read properties of undefined (reading 'key')
   */
 }
-MCQ42();
+// MCQ42();
+
+// 👉 MCQ-43
+function MCQ43() {
+  class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    getName() {
+      return this.name;
+    }
+    static getAge() {
+      return this.age;
+    }
+  }
+
+  const jayesh = new Person("JC", 24);
+  console.log(jayesh.getName());
+  console.log(jayesh.getAge());
+
+  // 👍A) JC 24          💡B) JC TypeError
+  // 💖C) JC undefined   😀D) undefined JC
+
+  /* 
+  Answer is B) JC TypeError because static methods are created once and only access by class, static methods can not be called by an object 
+  jayesh.getName() will throw an Uncaught TypeError: jayesh.getAge is not a function. static methods are also known as class methods.
+
+  A static method cannot access a class's instance variables and instance methods, because a static method can be called even when 
+  no objects of the class have been instantiated. For the same reason, the this reference cannot be used in a static method. 
+  Person.getAge() will return undefined as "this" referes to the object. static methods can only use static variables and call static methods.
+  */
+}
+MCQ43();
