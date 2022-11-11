@@ -972,32 +972,34 @@ function DSA22() {
 }
 // DSA22();
 
-// 👉 23) Minimum diff between max and min of array M elements
+// 👉 23) Pair elements of an array
 /*
-N = 8, M = 5
-A = {3, 4, 1, 9, 56, 7, 9, 12}
-Output: 6
-Explanation: The minimum difference between 
-maximum chocolates and minimum chocolates 
-is 9 - 3 = 6 by choosing following M packets :
-{3, 4, 9, 7, 9}.
+const arr = [ 1, 2, 3, 2, 4, 5, 3, 2 ]
+output :- [ [ 1 ], [ 2, 2, 2 ], [ 3, 3 ], [ 4 ], [ 5 ] ]
 */
 function DSA23() {
-  const arr = [3, 4, 1, 9, 56, 7, 9, 12];
-  const m = 5;
+  const arr = [1, 2, 3, 2, 4, 5, 3, 2];
 
-  function minDiff(arr, m) {
-    arr.sort((a, b) => a - b);
-    console.log(arr);
-    let minimumDiff = arr[arr.length - 1];
+  function pairElements(arr) {
+    let map = new Map();
+    const result = [];
 
-    for (let i = 0; i < arr.length - m; i++) {
-      minimumDiff = Math.min(arr[i + m - 1] - arr[i], minimumDiff);
+    for (let num of arr) {
+      map.set(num, (map.get(num) || 0) + 1);
     }
 
-    return minimumDiff;
+    for (let [key, value] of map) {
+      let temp = [];
+      for (let j = 0; j < value; j++) {
+        temp.push(+key);
+      }
+      result.push(temp);
+    }
+
+    return result;
   }
-  console.log(minDiff(arr, m));
+
+  console.log(pairElements(arr));
 }
 // DSA23();
 
@@ -2723,7 +2725,6 @@ const str = "Jayesh";
 const char = "a";
 output = "Jyesh";
 */
-
 function DSA75() {
   const str = "Jayesh";
   const char = "a";
@@ -2739,3 +2740,132 @@ function DSA75() {
   console.log(result);
 }
 // DSA75();
+
+// 👉 76) Spell out numbers ( convert numbers which are less than 100 into words ).
+/* 
+spellNumber(1) => "one"
+spellNumber(12) => "twele"
+spellNumber(17) => "seventeen"
+spellNumber(21) => "twenty one"
+spellNumber(40) => "fourty"
+spellNumber(99) => "ninty nine"
+*/
+function DSA76() {
+  function spellNumber(number) {
+    if (number > 99) {
+      return "Greater than 99";
+    }
+    const lessThan20 = [
+      "Zero",
+      "One",
+      "Two",
+      "Three",
+      "Four",
+      "Five",
+      "Six",
+      "Seven",
+      "Eight",
+      "Nine",
+      "Ten",
+      "Eleven",
+      "Twele",
+      "Thirteen",
+      "Fourteen",
+      "Fifteen",
+      "Sixteen",
+      "Seventeen",
+      "Eighteen",
+      "Nineteen",
+    ];
+
+    const tenPlace = [
+      "",
+      "",
+      "Twenty",
+      "Thirty",
+      "Fourty",
+      "Fifty",
+      "Sixty",
+      "Seventy",
+      "Eighty",
+      "Ninety",
+    ];
+
+    let result = "";
+
+    if (number < 20) {
+      result = lessThan20[number];
+    } else {
+      let unit = number % 10;
+      let ten = parseInt(number / 10);
+      if (unit === 0) {
+        result = tenPlace[ten];
+      } else {
+        result = tenPlace[ten] + " " + lessThan20[unit];
+      }
+    }
+
+    return result;
+  }
+
+  console.log(spellNumber(0));
+  console.log(spellNumber(1));
+  console.log(spellNumber(12));
+  console.log(spellNumber(17));
+  console.log(spellNumber(21));
+  console.log(spellNumber(40));
+  console.log(spellNumber(99));
+  console.log(spellNumber(100));
+}
+// DSA76();
+
+// 👉 77) Array of objects Manipulation
+/* 
+const portfolio = [
+  { name: "Mark", stock: "FB" },
+  { name: "Steve", stock: "AAPL" },
+  { name: "Tim", stock: "AAPL" },
+  { name: "Steve", stock: "MSFT" },
+  { name: "Bill", stock: "MSFT" },
+  { name: "Bill", stock: "AAPL" },
+];
+
+Output 
+const shareholder = [
+  { stock: "AAPL", name: ["Steve", "Bill", "Tim"], count: 3 },
+  { stock: "MSFT", name: ["Steve", "Bill"], count: 2 },
+  { stock: "FB", name: ["Mark"], count: 1 },
+];
+*/
+function DSA77() {
+  const portfolio = [
+    { name: "Mark", stock: "FB" },
+    { name: "Steve", stock: "AAPL" },
+    { name: "Tim", stock: "AAPL" },
+    { name: "Steve", stock: "MSFT" },
+    { name: "Bill", stock: "MSFT" },
+    { name: "Bill", stock: "AAPL" },
+  ];
+
+  const resultObj = portfolio.reduce((res, { name, stock }) => {
+    let existingObj = res[stock] || {
+      stock,
+      name: [],
+      count: 0,
+    };
+
+    res[stock] = {
+      stock,
+      name: [...existingObj.name, name],
+      count: existingObj.count + 1,
+    };
+
+    return res;
+  }, {});
+
+  const shareholder = Object.values(resultObj).sort(
+    (a, b) => b.count - a.count
+  );
+  console.log(shareholder);
+}
+// DSA77();
