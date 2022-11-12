@@ -1245,6 +1245,37 @@ function MCQ43() {
   A static method cannot access a class's instance variables and instance methods, because a static method can be called even when 
   no objects of the class have been instantiated. For the same reason, the this reference cannot be used in a static method. 
   Person.getAge() will return undefined as "this" referes to the object. static methods can only use static variables and call static methods.
+
+  In the static method, the method can only access static data members and static methods of another class or same class but cannot 
+  access non-static methods and variables.
   */
 }
-MCQ43();
+// MCQ43();
+
+// 👉 MCQ-44
+function MCQ44() {
+  const p1 = new Promise((res) => {
+    setTimeout(() => res("One"), 2000);
+  });
+
+  const p2 = new Promise((res, rej) => {
+    setTimeout(() => rej("Two"), 1000);
+  });
+
+  Promise.race([p1, p2])
+    .then((res) => {
+      console.log("result", res);
+    })
+    .catch((err) => {
+      console.log("error", err);
+    });
+
+  // 👍A) result One      💡B) result Two
+  // 💖C) error One       😀D) error Two
+
+  /* 
+  Answer is D) error Two because Promise.race() executes all passed promises concurrently and returns the first resolved
+  or rejected promise result. In above question, promise p2 is getting rejected in one second before promise p1 that is taking 2 seconds to fullfill.
+  */
+}
+MCQ44();
