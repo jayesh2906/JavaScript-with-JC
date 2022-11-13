@@ -1274,8 +1274,37 @@ function MCQ44() {
   // 💖C) error One       😀D) error Two
 
   /* 
-  Answer is D) error Two because Promise.race() executes all passed promises concurrently and returns the first resolved
-  or rejected promise result. In above question, promise p2 is getting rejected in one second before promise p1 that is taking 2 seconds to fullfill.
+  Answer is D) error Two because Promise.race() executes all passed promises concurrently and returns the first resolved or rejected promise result. 
+  In above question, promise p2 is getting rejected in one second before promise p1 that is taking 2 seconds to fullfill.
   */
 }
-MCQ44();
+// MCQ44();
+
+// 👉 MCQ-45
+function MCQ45() {
+  function Person(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.getInfo = function () {
+      return this.name;
+    };
+  }
+
+  Person.prototype.getInfo = function () {
+    return `${this.name} ${this.age}`;
+  };
+
+  const jayesh = new Person("JC", 24);
+  console.log(jayesh.getInfo());
+
+  // 👍A) JC        💡B) undefined
+  // 💖C) JC 24     😀D) TypeError
+
+  /* 
+  Answer is A) JC because Person.prototype.getInfo ( Prototye member ) will add getInfo function to Person object's Prototype ( Parent object of Person Object ), 
+  where as this.getInfo = function () { return this.name }; will add the getInfo function to Person object ( Instance member )
+  So, inner getInfo function will override it's parent prototype getInfo function and we will get the output as "JC". 
+  */
+}
+MCQ45();
