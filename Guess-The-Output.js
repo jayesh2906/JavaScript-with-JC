@@ -1307,4 +1307,40 @@ function MCQ45() {
   So, inner getInfo function will override it's parent prototype getInfo function and we will get the output as "JC". 
   */
 }
-MCQ45();
+// MCQ45();
+
+// 👉 MCQ-46
+function MCQ46() {
+  Promise.resolve(1)
+    .then((res) => {
+      console.log(res);
+      return res * 2;
+    })
+    .then((res) => {
+      console.log(res);
+      return res * 2;
+    })
+    .then((res) => {
+      console.log(res);
+      return res * 2;
+    })
+    .finally((res) => {
+      console.log(res);
+    });
+
+  // 👍A) 1 2 4 TypeError     💡B) 1 2 4
+  // 💖C) 1 2 4 undefined     😀D) 1 2 4 8
+
+  /* 
+  Answer is C) 1 2 4 undefined because of the Promise chaining.
+  Promise chaining allows you to chain together multiple asynchronous tasks in a specific order where one asynchronous task needs to be performed 
+  after the completion of other asynchronous task.
+
+  💡 We can perform Promise Chaining :-
+  👉 by returning a new instance of promise in then()
+  👉 by returning a value in then (), behind the scene it returns a new promise that immediately resolves to the return value.
+
+  .finally method() :- callback function attached to .finally method does not take any parameters, hence It will output undefined. 
+  */
+}
+MCQ46();
