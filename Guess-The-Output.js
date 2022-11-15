@@ -1343,4 +1343,29 @@ function MCQ46() {
   .finally method() :- callback function attached to .finally method does not take any parameters, hence It will output undefined. 
   */
 }
-MCQ46();
+// MCQ46();
+
+// 👉 MCQ-47
+function MCQ47() {
+  function checkPerson(data) {
+    if (data === { name: "Jayesh" }) {
+      console.log("One");
+    } else if (data == { name: "Jayesh" }) {
+      console.log("Two");
+    } else {
+      console.log("Three");
+    }
+  }
+
+  checkPerson({ name: "Jayesh" });
+
+  // 👍A) One Two      💡B) Three
+  // 💖C) One          😀D) Two
+
+  /* 
+  Answer is B) Three because objects are non-primitive types that compared by thier references
+  data and { name: "Jayesh" } will have diffrent memory reference Hence, It will console "Three" as an output.
+  To compare object as value we can use JSON.stringify(), JSON.stringify(data) === JSON.stringify({ name: "Jayesh" }) results true.
+  */
+}
+MCQ47();
