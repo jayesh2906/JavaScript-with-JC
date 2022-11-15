@@ -1363,9 +1363,9 @@ function MCQ47() {
   // 💖C) One          😀D) Two
 
   /* 
-  Answer is B) Three because objects are non-primitive types that compared by thier references
+  Answer is B) Three because objects are non-primitive data types that compared by thier references.
   data and { name: "Jayesh" } will have diffrent memory reference Hence, It will console "Three" as an output.
-  To compare object as value we can use JSON.stringify(), JSON.stringify(data) === JSON.stringify({ name: "Jayesh" }) results true.
+  To compare object as value in the above case we can use JSON.stringify(), JSON.stringify(data) === JSON.stringify({ name: "Jayesh" }) results true.
   */
 }
 MCQ47();
