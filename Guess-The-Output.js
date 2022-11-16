@@ -1368,4 +1368,33 @@ function MCQ47() {
   To compare object as value in the above case we can use JSON.stringify(), JSON.stringify(data) === JSON.stringify({ name: "Jayesh" }) results true.
   */
 }
-MCQ47();
+// MCQ47();
+
+// 👉 MCQ-48
+function MCQ48() {
+  function getName1() {
+    console.log(arguments[0]);
+  }
+
+  getName1("Jayesh");
+
+  const getName2 = () => {
+    console.log(arguments[0]);
+  };
+
+  getName2("JC");
+
+  // 👍A) Jayesh ReferenceError    💡B) Jayesh undefined
+  // 💖C) ReferenceError JC        😀D) Jayesh JC
+
+  /* 
+  Answer is A) Jayesh ReferenceError because Arrow functions don't have their own bindings to this, arguments, or super.
+  Above code will give Uncaught ReferenceError: arguments is not defined at getName2. In place of arguments, we can use 
+  rest operator in arrow function definition for arguments array.  
+  const getName2 = (...arguments) => {
+    console.log(arguments[0]);
+  };
+  getName2("JC"); // JC
+  */
+}
+MCQ48();
