@@ -1397,4 +1397,29 @@ function MCQ48() {
   getName2("JC"); // JC
   */
 }
-MCQ48();
+// MCQ48();
+
+// 👉 MCQ-49
+function MCQ49() {
+  var name = "Jayesh";
+  let age = "24";
+  const player = "Virat";
+
+  {
+    var name = "JC";
+    let age = "25";
+    const player = "VK";
+  }
+
+  console.log(name);
+  console.log(age);
+  console.log(player);
+
+  // 👍A) JC 25 Virat     💡B) JC 24 Virat
+  // 💖C) Jayesh 25 Vk    😀D) JC 24 VK
+
+  /* 
+  Answer is B) JC 24 Virat because variables declared with "var" keyword are function-scoped whereas variables declared with "let" or "const" are block-scoped.
+  */
+}
+MCQ49();
