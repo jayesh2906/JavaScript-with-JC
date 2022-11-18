@@ -1422,4 +1422,31 @@ function MCQ49() {
   Answer is B) JC 24 Virat because variables declared with "var" keyword are function-scoped whereas variables declared with "let" or "const" are block-scoped.
   */
 }
-MCQ49();
+// MCQ49();
+
+// 👉 MCQ-50
+function MCQ50() {
+  const person = {
+    name: "Jayesh",
+    age: 24,
+    name: "JC",
+  };
+
+  const { name: first, age, name: last } = person;
+
+  console.log(first, age, last);
+
+  // 👍A) JC 24 undefined    💡B) Jayesh 24 Jayesh
+  // 💖C) JC 24 JC           😀D) Jayesh 24 TypeError
+
+  /* 
+  Answer is C) JC 24 JC because If in an object there are two keys with the same name, the "name" key will be replaced by the last value "JC". 
+  "name" key will still be in its first position, but with the last replaced value.  
+
+  In the next line we are destructuring the person object specifying an alternate destructured name for an object property ("name" as first and "name" as last)
+  Both first and last will have "JC" as value.
+
+  Final Output will be :- JC 24 JC
+  */
+}
+MCQ50();
