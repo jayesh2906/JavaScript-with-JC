@@ -1449,4 +1449,28 @@ function MCQ50() {
   Final Output will be :- JC 24 JC
   */
 }
-MCQ50();
+// MCQ50();
+
+// 👉 MCQ-51
+function MCQ51() {
+  const person = {};
+  const name1 = { key: "name1" };
+  const name2 = { key: "name2" };
+
+  person[name1] = "Jayesh";
+  person[name2] = "Virat";
+
+  console.log(person[name1]);
+
+  // 👍A) undefined          💡B) Jayesh
+  // 💖C) [object Object]    😀D) Virat
+
+  /* 
+  Answer is D) Virat because Object keys are automatically converted into strings, name1 and name2 are keys of person object.
+  as name1 and name2 are object after stringifying name1 and name2 will become [object Object], So person[name1] and person[name2] are nothing but person["object Object"]. 
+  First, person["object Object"] will be set as "Jayesh" and in the next line person["object Object"] will have value as "Virat".
+
+  When we log person[name1], which is actually person["object Object"] it will return value as "Virat". 
+  */
+}
+MCQ51();
