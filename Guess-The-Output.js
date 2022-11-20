@@ -1473,4 +1473,34 @@ function MCQ51() {
   When we log person[name1], which is actually person["object Object"] it will return value as "Virat". 
   */
 }
-MCQ51();
+// MCQ51();
+
+// 👉 MCQ-52
+function MCQ52() {
+  const p1 = new Promise((res, rej) => {
+    setTimeout(() => rej("One"), 1000);
+  });
+
+  const p2 = new Promise((res, rej) => {
+    setTimeout(() => res("Two"), 2000);
+  });
+
+  const p3 = new Promise((res, rej) => {
+    setTimeout(() => res("Three"), 3000);
+  });
+
+  Promise.any([p1, p2, p3])
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error));
+
+  // 👍A) One         💡B) Two
+  // 💖C) Three       😀D) Error
+
+  /* 
+  Answer is B) Two because Promise.any() executes all passed promises concurrently and returns the first resolved promise result.
+  If no promise resolves, It returns the AggregateError "All promises were rejected". If passed empty [], It returns error.
+
+  In the above code, promise p2 is the first resolved promise, Hence It will output "Two" as a result.
+  */
+}
+MCQ52();
