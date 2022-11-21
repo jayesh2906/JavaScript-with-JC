@@ -1503,4 +1503,24 @@ function MCQ52() {
   In the above code, promise p2 is the first resolved promise, Hence It will output "Two" as a result.
   */
 }
-MCQ52();
+// MCQ52();
+
+// 👉 MCQ-53
+function MCQ53() {
+  function showName() {
+    return (() => "Jayesh")();
+  }
+
+  console.log(typeof showName);
+  console.log(typeof showName());
+
+  // 👍A) "function" "string"      💡B) "object" "string"
+  // 💖C) "function" "function"    😀D) "function" "undefined"
+
+  /* 
+  Answer is A) "function" "string" because typeof showName is "function" as showName is function and for typeof showName(),
+  immediately invoked function expression (IIFE) will execute immediately and return "Jayesh" and "Jayesh" will further returned by showName() function.
+  typeof "Jayesh" will be "string". So, Final Output will be "function" "string".
+  */
+}
+MCQ53();
