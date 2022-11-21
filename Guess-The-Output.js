@@ -1519,7 +1519,7 @@ function MCQ53() {
 
   /* 
   Answer is A) "function" "string" because typeof showName is "function" as showName is function and for typeof showName(),
-  immediately invoked function expression (IIFE) will execute immediately and return "Jayesh". "Jayesh" will further returned by showName() function.
+  immediately invoked function expression (IIFE) will execute immediately and return "Jayesh". "Jayesh" will be further returned by showName() function.
   typeof "Jayesh" will be "string". So, Final Output will be "function" "string".
   */
 }
