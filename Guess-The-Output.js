@@ -1523,4 +1523,30 @@ function MCQ53() {
   typeof "Jayesh" will be "string". So, Final Output will be "function" "string".
   */
 }
-MCQ53();
+// MCQ53();
+
+// 👉 MCQ-54
+function MCQ54() {
+  const arr = [1, 2, 3];
+
+  const removeLast = function (array) {
+    array.pop();
+    return array;
+  };
+
+  removeLast([...arr]);
+  console.log(arr);
+
+  removeLast(arr);
+  console.log(arr);
+
+  // 👍A) [1, 2, 3] 3      💡B) [1, 2] [1, 2, 3]
+  // 💖C) [1, 2] [1]       😀D) [1, 2, 3] [1, 2]
+
+  /* 
+  Answer is D) [1, 2, 3] [1, 2] because first time for removeLast([...arr]), arr is passed with spread operator because of which new copy ( different reference ) 
+  of arr will be passed to removeLast function and won't mutate the original arr. arr will still have [1, 2, 3] as value.
+  For second call of removeLast(arr), arr is passed directly with same memory reference so mutating array will change original "arr" as well, so arr will be modified to [1, 2].
+  */
+}
+MCQ54();
