@@ -1549,4 +1549,33 @@ function MCQ54() {
   For second call of removeLast(arr), arr is passed directly with same memory reference so mutating array will change original "arr" as well, so arr will be modified to [1, 2].
   */
 }
-MCQ54();
+// MCQ54();
+
+// 👉 MCQ-55
+function MCQ55() {
+  const list1 = ["Jayesh", "Virat"];
+  const list2 = [];
+
+  if (list1) {
+    console.log("Display1");
+  } else {
+    console.log("Empty1");
+  }
+
+  if (list2) {
+    console.log("Display2");
+  } else {
+    console.log("Empty2");
+  }
+
+  // 👍A) Empty1 Display2      💡B) Display1 Empty2
+  // 💖C) Display1 Display2    😀D) Empty1 Empty2
+
+  /* 
+  Answer is C) Display1 Display2 because empty array [] or the empty object {} are truthy values in JavaScript, Boolean([]) is true.
+  Hence, for both list1 and list2 the if statement condition will satisfy and will console Display1 Display2.
+
+  Note:- To check if an array is empty, We can use array.length === 0.
+  */
+}
+MCQ55();
