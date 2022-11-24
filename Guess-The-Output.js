@@ -1578,4 +1578,33 @@ function MCQ55() {
   Note:- To check if an array is empty, We can use array.length === 0.
   */
 }
-MCQ55();
+// MCQ55();
+
+// 👉 MCQ-56
+function MCQ56() {
+  console.log("start");
+
+  const first = setTimeout(() => {
+    console.log("first");
+    clearTimeout(second);
+  }, 1000);
+
+  const second = setTimeout(() => {
+    console.log("second");
+    clearTimeout(first);
+  }, 2000);
+
+  console.log("end");
+
+  // 👍A) start first second end    💡B) start end first
+  // 💖C) start end first second    😀D) start second end
+
+  /* 
+  Answer is B) start end first because The clearTimeout() method clears a timer set with the setTimeout() method.
+  In variable "first" we are assigning id of first setTimeout and similarly in variable "second" we are assigning id of seconnd setTimeout.
+  Both the setTimeouts ( asynchronous task ) will be handled by web api, as first setTimeout is taking only 1 second. So    
+  callback function attached to first setTimeout will be executed and clearTimeout(second) will clear the second setTimeout from web api.
+  Hence, The Final Output will be start end first.
+  */
+}
+MCQ56();
