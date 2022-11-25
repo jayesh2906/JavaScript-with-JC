@@ -1607,4 +1607,34 @@ function MCQ56() {
   Hence, The Final Output will be start end first.
   */
 }
-MCQ56();
+// MCQ56();
+
+// 👉 MCQ-57
+function MCQ57() {
+  function* generateNumber(i) {
+    yield i;
+    yield i * 2;
+    return i * 2 * 2;
+    yield i * 2 * 2 * 2;
+  }
+
+  const numbers = generateNumber(10);
+
+  console.log(numbers.next().value);
+  console.log(numbers.next().value);
+  console.log(numbers.next().value);
+  console.log(numbers.next().value);
+
+  // 👍A) 10 20 40 80    💡B) 10 20 undefined 40
+  // 💖C) 10 20 20 40    😀D) 10 20 40 undefined
+
+  /* 
+  Answer is D) 10 20 40 undefined, Generator is a function that can be paused and resumed from where it was paused. It is written as the function keyword followed by an asterisk (*).
+  Generator returns a Generator object that is used by calling the next method. For the first time calling numbers.next().value, we will get 10 as an output, second time 20 as an ouput.
+  While calling numbers.next().value for third time, Inside generator function we have return keyword that will return 40 and also terminate the generator function and 
+  as the generator function is finished calling numbers.next().value again for fourth time will give output as undefined. So, Final Output will be 10 20 40 undefined
+
+  Note:- A return statement in a generator, when executed, will make the generator finish (i.e. the done property of the object returned by it will be set to true ).
+  */
+}
+MCQ57();
