@@ -1634,7 +1634,7 @@ function MCQ57() {
   While calling numbers.next().value for third time, Inside generator function we have return keyword that will return 40 and also terminate the generator function and 
   as the generator function is finished calling numbers.next().value again for fourth time will give output as undefined. So, Final Output will be 10 20 40 undefined
 
-  Note:- A return statement in a generator, when executed, will make the generator finish (i.e. the done property of the object returned by it will be set to true ).
+  Note:- A return statement in a generator, when executed, will make the generator finish ( i.e. the done property of the object returned by it will be set to true ).
   */
 }
 MCQ57();
