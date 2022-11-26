@@ -1637,4 +1637,32 @@ function MCQ57() {
   Note:- A return statement in a generator, when executed, will make the generator finish ( i.e. the done property of the object returned by it will be set to true ).
   */
 }
-MCQ57();
+// MCQ57();
+
+// 👉 MCQ-58
+function MCQ58() {
+  const numbers = [1, 2, 3, 4, 5];
+
+  const total1 = numbers.reduce((acc, curr) => {
+    return acc + curr;
+  }, 0);
+
+  const total2 = numbers.reduce((acc, curr) => {
+    return acc + curr;
+  });
+
+  console.log(total1);
+  console.log(total2);
+
+  // 👍A) 15 15     💡B) 10 15
+  // 💖C) 15 10     😀D) 15 NaN
+
+  /* 
+  Answer is A) 15 15, Array.prototype.reduce is a higher order function that iterates through each value of an array and
+  reduces array of values into single value.
+
+  With initial value as second argument (callback loops for n times) accumulator takes initial value, and current takes first value of an array.
+  Without initial value as second argument (callback loops for (n-1) times) accumulator takes first value of an array, and current takes second value of an array.
+  */
+}
+MCQ58();
