@@ -1665,4 +1665,32 @@ function MCQ58() {
   Without initial value as second argument (callback loops for (n-1) times) accumulator takes first value of an array, and current takes second value of an array.
   */
 }
-MCQ58();
+// MCQ58();
+
+// 👉 MCQ-59
+function MCQ59() {
+  const p1 = new Promise((res, rej) => {
+    setTimeout(() => res("One"), 1000);
+  });
+
+  const p2 = new Promise((res, rej) => {
+    setTimeout(() => rej("Two"), 2000);
+  });
+
+  Promise.allSettled([p1, p2])
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error));
+
+  // 👍A) [{ status: "fulfilled", value: "One" }]
+  // 💡B) ["One", "Two"]
+  // 💖C) [{ status: "fulfilled", value: "One" },
+  //       { status: "rejected", reason: "Two" }]
+  // 😀D) ["One"]
+
+  /* 
+  Answer is C) [{ status: "fulfilled", value: "One" },{ status: "rejected", reason: "Two" }]. Promise.allSettled() 
+  returns a promise that gets resolved when all passed promises are settled ( either fulfilled or rejected ) and 
+  in result it gives an array of objects having status and the value/reason of each promise.
+  */
+}
+MCQ59();
