@@ -1693,4 +1693,26 @@ function MCQ59() {
   in result it gives an array of objects having status and the value/reason of each promise.
   */
 }
-MCQ59();
+// MCQ59();
+
+// 👉 MCQ-60
+function MCQ60() {
+  function Person(name) {
+    this.name = name;
+  }
+  Person.prototype.age = 24;
+
+  const jayesh = new Person("JC");
+
+  console.log(jayesh.hasOwnProperty("name"));
+  console.log(jayesh.hasOwnProperty("age"));
+
+  // 👍A) true true      💡B) true false
+  // 💖C) false false    😀D) false true
+
+  /* 
+  Answer is B) true false because The hasOwnProperty() method returns a boolean indicating whether the object has the 
+  specified property as its own property. If the specified property is inherited, or does not exist, the method returns false.
+*/
+}
+MCQ60();
