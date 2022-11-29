@@ -1713,6 +1713,36 @@ function MCQ60() {
   /* 
   Answer is B) true false because The hasOwnProperty() method returns a boolean indicating whether the object has the 
   specified property as its own property. If the specified property is inherited, or does not exist, the method returns false.
-*/
+  */
 }
-MCQ60();
+// MCQ60();
+
+// 👉 MCQ-61
+function MCQ61() {
+  const array = [
+    "Whatever you want to do",
+    "Believe it, believe it, believe it",
+    "Even if you don't believe play the game of belief",
+    "Act as if you believe. That is the Power",
+  ];
+
+  const result = array.slice(-2, 3);
+
+  console.log(result[0]);
+
+  // 👍A) "Whatever you want to do"
+  // 💡B) "Believe it, believe it, believe it"
+  // 💖C) "Even if you don't believe play the game of belief"
+  // 😀D) "Act as if you believe. That is the Power"
+
+  /* 
+  Answer is C) "Even if you don't believe play the game of belief" because Array.prototype.slice returns a shallow copy 
+  of an original array slicing it from given start index to end index (excluding end index) i.e start to end-1.
+  slice method takes two arguments(optional) start and end, if no argument passed then it returns shallow copy of a original array with all values.
+
+  positive index =>  0  1  2
+  => for an array = [10,20,30]  
+  negative index => -3 -2 -1
+  */
+}
+MCQ61();
