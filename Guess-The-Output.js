@@ -1745,4 +1745,29 @@ function MCQ61() {
   negative index => -3 -2 -1
   */
 }
-MCQ61();
+// MCQ61();
+
+// 👉 MCQ-62
+function MCQ62() {
+  setTimeout(() => {
+    console.log(1);
+  }, 1000);
+
+  Promise.resolve(2).then((result) => {
+    console.log(result);
+  });
+
+  setTimeout(() => {
+    console.log(3);
+  }, -1000);
+
+  // 👍A) 1 3 2     💡B) 3 2 1
+  // 💖C) 2 1 3     😀D) 2 3 1
+
+  /* 
+  Answer is D) 2 3 1 because If we provide something less than 0 sec then the browser will just ignore delay and use the minimum 0 sec.
+  So, First Callback function attached to promise will console "2". Then second setTimout callback function will execute and console "3". 
+  and after one second first setTimeout callback function will execute and console "1". Final result will be 2 3 1.
+  */
+}
+MCQ62();
