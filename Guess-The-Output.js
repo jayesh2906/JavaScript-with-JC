@@ -1770,4 +1770,28 @@ function MCQ62() {
   and after one second first setTimeout callback function will execute and console "1". Final result will be 2 3 1.
   */
 }
-MCQ62();
+// MCQ62();
+
+// 👉 MCQ-63
+function MCQ63() {
+  let num = 10;
+
+  const incrementNumber1 = () => num++;
+
+  const incrementNumber2 = (num) => num++;
+
+  const num1 = incrementNumber1();
+  const num2 = incrementNumber2(num1);
+
+  console.log(num1);
+  console.log(num2);
+
+  // 👍A) 11 12     💡B) 10 10
+  // 💖C) 10 11     😀D) 11 11
+
+  /* 
+  Answer is B) 10 10 because The unary operator ++ first returns the value of the operand, then increments the value of the operand.
+  So, incrementNumber1() will return "10" that will be assigned to "num1" and increment "num" by 1. incrementNumber2(num1) will also return "10" that will be assigned to "num2".
+  */
+}
+MCQ63();
