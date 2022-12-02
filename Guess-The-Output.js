@@ -1794,4 +1794,29 @@ function MCQ63() {
   So, incrementNumber1() will return "10" that will be assigned to "num1" and increment "num" by 1. incrementNumber2(num1) will also return "10" that will be assigned to "num2".
   */
 }
-MCQ63();
+// MCQ63();
+
+// 👉 MCQ-64
+function MCQ64() {
+  const person = {
+    name: "Jayesh",
+    age: 24,
+    lang: "JS",
+  };
+
+  const result = JSON.stringify(person, ["name", "age"]);
+  console.log(result);
+
+  // 👍A) "[object Object]"
+  // 💡B) "{"name": "Jayesh", "age": 24, "lang": "JS"}"
+  // 💖C) "{"name": "Jayesh", "age": 24}"
+  // 😀D) "{"language": "JavaScript"}"
+
+  /* 
+  Answer is C) "{"name": "Jayesh", "age": 24}" because The second argument of JSON.stringify is the replacer. 
+  The replacer can either be a function or an array that lets you control what and how the values should be stringified.
+  If the replacer is an array, only the property names included in the array will be added to the JSON string. 
+  In above case, only the properties with "name" and "age" are included, "lang" is excluded. So, result will be "{"name": "Jayesh", "age": 24}".
+  */
+}
+MCQ64();
