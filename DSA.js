@@ -717,7 +717,7 @@ function DSA16() {
   let sum = 0;
 
   function checkSubArray() {
-    for (i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
       sum += arr[i];
 
       if (arr[i] === 0 || map.has(sum) || sum === 0) {
@@ -732,6 +732,25 @@ function DSA16() {
   console.log("subArray with sum", checkSubArray(arr));
 
   // 2) Using 3 for loop
+  const result = [];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    let sum = arr[i];
+    for (let j = i + 1; j < arr.length; j++) {
+      sum += arr[j];
+      if (sum === 0) {
+        let temp = [];
+        let start = i;
+        while (start <= j) {
+          temp.push(arr[start]);
+          start++;
+        }
+        result.push(temp);
+      }
+    }
+  }
+
+  console.log(result);
 }
 // DSA16();
 
