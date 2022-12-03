@@ -999,6 +999,7 @@ output :- [ [ 1 ], [ 2, 2, 2 ], [ 3, 3 ], [ 4 ], [ 5 ] ]
 function DSA23() {
   const arr = [1, 2, 3, 2, 4, 5, 3, 2];
 
+  // 1) using map
   function pairElements(arr) {
     let map = new Map();
     const result = [];
@@ -1019,8 +1020,25 @@ function DSA23() {
   }
 
   console.log(pairElements(arr));
+
+  // 2) using sorting
+  arr.sort((a, b) => a - b);
+  const result = [];
+  let temp = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1]) {
+      temp.push(arr[i]);
+    } else {
+      temp.push(arr[i]);
+      result.push(temp);
+      temp = [];
+    }
+  }
+
+  console.log(result);
 }
-// DSA23();
+DSA23();
 
 /////////////////////////////////// string ////////////////////////////////
 
