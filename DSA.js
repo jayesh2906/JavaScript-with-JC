@@ -2055,7 +2055,7 @@ let items = [
 ];
 
 let excludes = [
-  { k: "silver", v: "silver" },
+  { k: "color", v: "silver" },
   { k: "type", v: "tv" },
 ];
 
@@ -2108,7 +2108,7 @@ function DSA54() {
   const selected = 3;
   let count = 0;
 
-  // Move all selected at back
+  // 1) Move all selected at back
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] !== selected) {
       arr[count++] = arr[i];
@@ -2121,7 +2121,7 @@ function DSA54() {
 
   console.log("Back", arr); // [1, 2, 4, 5, 6, 7, 3, 3, 3];
 
-  // Move all selected at front
+  // 2) Move all selected at front
   const arr1 = [1, 2, 3, 4, 3, 5, 3, 6, 7];
   count = arr1.length - 1;
   for (let i = arr1.length - 1; i >= 0; i--) {
@@ -2134,6 +2134,23 @@ function DSA54() {
   }
 
   console.log("Front", arr1); // [3, 3, 3, 1, 2, 4, 5, 6, 7];
+
+  // 3) Using replace
+  const item = 3;
+  let j = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[j] === item) {
+      if (arr[i] !== item) {
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+        j++;
+      }
+    } else {
+      j++;
+    }
+  }
+
+  console.log(arr);
 }
 // DSA54();
 
