@@ -2397,7 +2397,7 @@ function DSA61() {
 
 // 👉 62) WAP to move all the special characters to the end of the string
 /* 
- 	input:- 'hello@#hi&'
+  input:- 'hello@#hi&'
   output:- 'hellohi@#&'
 */
 function DSA62() {
