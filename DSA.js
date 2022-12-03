@@ -1038,7 +1038,7 @@ function DSA23() {
 
   console.log(result);
 }
-DSA23();
+// DSA23();
 
 /////////////////////////////////// string ////////////////////////////////
 
@@ -1337,7 +1337,7 @@ function DSA31() {
 }
 // DSA31();
 
-// 👉 32) Check whether two array are equal or not, does matter position
+// 👉 32) Check whether two array are equal or not, does not matter position
 // const a = [1, 2, 3, 4, 5];
 // const b = [5, 2, 1, 4, 3];
 // Output => true
@@ -1345,7 +1345,7 @@ function DSA32() {
   const a = [1, 2, 3, 4, 5];
   const b = [5, 2, 1, 4, 3];
 
-  // 1) Using Hasping Map
+  // 1) Using Map
   function checkTwoArray(a, b) {
     const mapA = {};
     const mapB = {};
