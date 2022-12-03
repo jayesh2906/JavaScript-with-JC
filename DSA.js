@@ -2901,6 +2901,7 @@ function DSA77() {
     { name: "Bill", stock: "AAPL" },
   ];
 
+  // 1) first way
   const resultObj = portfolio.reduce((res, { name, stock }) => {
     let existingObj = res[stock] || {
       stock,
@@ -2921,5 +2922,21 @@ function DSA77() {
     (a, b) => b.count - a.count
   );
   console.log(shareholder);
+
+  // 2) second way
+  const result = portfolio.reduce((acc, curr) => {
+    if (acc[curr.stock]) {
+      acc[curr.stock] = {
+        stock: curr.stock,
+        name: [...acc[curr.stock].name, curr.name],
+        count: acc[curr.stock].count + 1,
+      };
+    } else {
+      acc[curr.stock] = { stock: curr.stock, name: [curr.name], count: 1 };
+    }
+    return acc;
+  }, {});
+
+  console.log(Object.values(result).sort((a, b) => b.count - a.count));
 }
-// DSA77();
+DSA77();
