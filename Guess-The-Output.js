@@ -1819,4 +1819,25 @@ function MCQ64() {
   In above case, only the properties with "name" and "age" are included, "lang" is excluded. So, result will be "{"name": "Jayesh", "age": 24}".
   */
 }
-MCQ64();
+// MCQ64();
+
+// 👉 MCQ-65
+function MCQ65() {
+  const array = [1, 2, 3];
+  const value = array.pop();
+
+  const result = array.unshift(value);
+
+  console.log(result);
+  console.log(array);
+
+  // 👍A) 3 [3, 1, 2]     💡B) [3, 1, 2] [3, 1, 2]
+  // 💖C) 3 [1, 2, 3]     😀D) [3, 1, 2] [1, 2, 3]
+
+  /* 
+  Answer is A) 3 [3, 1, 2] because The pop() method removes the last element of an array and returns it. so value will be "3".
+  The unshift() method adds n number of elements to the beginning of an array and returns the new length of the array. 
+  array.unshift(value) will push "value" to beginning of array and will return the new size of the array. Hence, result => 3 array => [3, 1, 2]. 
+  */
+}
+MCQ65();
