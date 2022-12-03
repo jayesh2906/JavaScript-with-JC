@@ -2579,7 +2579,7 @@ function DSA67() {
     }
   }
 
-  if (arr[arr.length - 1] > result) {
+  if (arr[arr.length - 1] > arr[arr.length - 2]) {
     result.push(arr[arr.length - 1]);
   }
 
