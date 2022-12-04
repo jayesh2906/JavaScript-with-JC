@@ -1840,4 +1840,35 @@ function MCQ65() {
   array.unshift(value) will push "value" to beginning of array and will return the new size of the array. Hence, result => 3 array => [3, 1, 2]. 
   */
 }
-MCQ65();
+// MCQ65();
+
+// 👉 MCQ-66
+function MCQ66() {
+  const person = {
+    name: "Jayesh",
+    age: 24,
+    skill: {
+      language: "JavaScript",
+    },
+  };
+
+  Object.freeze(person);
+
+  person.name = "JC";
+  person.skill.language = "Java";
+
+  console.log(person.name);
+  console.log(person.skill.language);
+
+  // 👍A) JC JavaScript        💡B) Jayesh Java
+  // 💖C) Jayesh JavaScript    😀D) JC Java
+
+  /* 
+  Answer is B) Jayesh Java because The Object.freeze() method freezes an object. Freezing an object prevents extensions and makes existing 
+  properties non-writable and non-configurable. A frozen object can no longer be changed: new properties cannot be added, existing properties cannot be removed.
+
+  Note :- Object.freeze() method only freezes first level properties of an object, Nested properties of an object can still be changed, added and removed.
+  as language property is nested property of person object so it can be altered. The Final Ouput will be Jayesh Java.
+  */
+}
+MCQ66();
