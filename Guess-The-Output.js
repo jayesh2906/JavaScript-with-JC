@@ -1871,4 +1871,31 @@ function MCQ66() {
   as language property is nested property of person object so it can be altered. The Final Ouput will be Jayesh Java.
   */
 }
-MCQ66();
+// MCQ66();
+
+// 👉 MCQ-67
+function MCQ67() {
+  const numbers = [1, 3, 11, 21, 2];
+
+  const res1 = [...numbers.sort()];
+  const res2 = [...numbers.sort((a, b) => a - b)];
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) [1, 2, 3, 11, 21] [1, 2, 3, 11, 21]
+  // 💡B) [1, 11, 2, 21, 3] [1, 11, 2, 21, 3]
+  // 💖C) [1, 11, 2, 21, 3] [1, 2, 3, 11, 21]
+  // 😀D) [1, 2, 3, 11, 21] [21, 11, 3, 2, 1]
+
+  /* 
+  Answer is C) [1, 11, 2, 21, 3] [1, 2, 3, 11, 21] because The sort() method by default sorts the elements of an array in 
+  ascending order converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+  To compare numbers instead of strings, We can pass custom function ( compareFn ) in sort function, (a, b) => a - b is an arrow function that is passed.
+  if compareFn(a, b) returns value > 0	sort a after b.
+  if compareFn(a, b) returns value < 0	sort a before b.
+  if compareFn(a, b) returns value === 0	keep original order of a and b. 
+  */
+}
+MCQ67();
