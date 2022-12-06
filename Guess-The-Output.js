@@ -1898,4 +1898,29 @@ function MCQ67() {
   if compareFn(a, b) returns value === 0	keep original order of a and b. 
   */
 }
-MCQ67();
+// MCQ67();
+
+// 👉 MCQ-68
+function MCQ68() {
+  const players = ["JC", "VK", "HP", "DK"];
+
+  for (let player in players) {
+    console.log(player);
+  }
+
+  for (let player of players) {
+    console.log(player);
+  }
+
+  // 👍A) 0 1 2 3, 0 1 2 3
+  // 💡B) JC VK HP DK, JC VK HP DK
+  // 💖C) JC VK HP DK, 0 1 2 3
+  // 😀D) 0 1 2 3, JC VK HP DK
+
+  /* 
+  Answer is D) 0 1 2 3, JC VK HP DK because for-in loop iterates over enumerable properties. In an array, the enumerable properties 
+  are the "keys" of array elements, which are actually their indexes {0: "JC", 1: "VK", 2: "HP", 3: "DK"}.
+  While for-of loop iterates over elements of an array, the variable "player" is equal to the element it's currently iterating over, "JC", "VK", "HP", "DK".
+  */
+}
+MCQ68();
