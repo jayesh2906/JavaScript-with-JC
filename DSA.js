@@ -2939,4 +2939,29 @@ function DSA77() {
 
   console.log(Object.values(result).sort((a, b) => b.count - a.count));
 }
-DSA77();
+// DSA77();
+
+// 👉 78) Finding sum of digits of a number until sum becomes single digit
+/* 
+const "5431" => "13" => "4"
+*/
+function DSA78() {
+  const num = 5431;
+
+  function sumOfDigits(num) {
+    let res = 0;
+    if (num < 10) {
+      return num;
+    } else {
+      while (num > 0) {
+        let rem = num % 10;
+        res += rem;
+        num = parseInt(num / 10);
+      }
+    }
+    return res > 9 ? sumOfDigits(res) : res;
+  }
+
+  console.log(sumOfDigits(num));
+}
+DSA78();
