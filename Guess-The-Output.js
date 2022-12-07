@@ -1947,7 +1947,7 @@ function MCQ69() {
   Once the "let" variables are declared then only we can initialize them. If we try to initialize "let" variables before their declaration It will throw ReferenceError.
 
   In the case of "var" variables, because of hoisting the obj1 variable will be initialized as undefined and will get { a: 20 } { a: 20 } as an output.
-  In the case of "let" variables, the obj1 variable will be in temporal dead zone (time frame between hoisted to initialization)
+  In the case of "let" variables, the obj1 variable will be in temporal dead zone (time frame between hoisted to initialization).
   */
 }
 MCQ69();
