@@ -1923,4 +1923,31 @@ function MCQ68() {
   While for-of loop iterates over elements of an array, the variable "player" is equal to the element it's currently iterating over, "JC", "VK", "HP", "DK".
   */
 }
-MCQ68();
+// MCQ68();
+
+// 👉 MCQ-69
+function MCQ69() {
+  obj1 = { a: 10 };
+  const obj2 = obj1;
+  obj2.a = 20;
+
+  console.log(obj1);
+  console.log(obj2);
+  let obj1;
+
+  // 👍A) { a: 10 } { a: 20 }
+  // 💡B) { a: 20 } { a: 10 }
+  // 💖C) { a: 20 } { a: 20 }
+  // 😀D) ReferenceError
+
+  /* 
+  Answer is D) ReferenceError because "let" variables can not be accessed before their initialization. at the last line we are declaring let obj1. 
+  and at first line obj1 = { a: 10 } we will get Uncaught ReferenceError: Cannot access 'obj1' before initialization.
+
+  Once the "let" variables are declared then only we can initialize them. If we try to initialize "let" variables before their declaration It will throw ReferenceError.
+
+  In the case of "var" variables, because of hoisting the obj1 variable will be initialized as undefined and will get { a: 20 } { a: 20 } as an output.
+  In the case of "let" variables, the obj1 variable will be in temporal dead zone (time frame between hoisted to initialization)
+  */
+}
+MCQ69();
