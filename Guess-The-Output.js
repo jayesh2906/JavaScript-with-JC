@@ -1950,4 +1950,31 @@ function MCQ69() {
   In the case of "let" variables, the obj1 variable will be in temporal dead zone (time frame between hoisted to initialization).
   */
 }
-MCQ69();
+// MCQ69();
+
+// 👉 MCQ-70
+function MCQ70() {
+  let user = {
+    userName: "Jayesh",
+    age: 24,
+    getName: function () {
+      return this.userName;
+    },
+  };
+
+  let getName = user.getName;
+
+  console.log(getName());
+  console.log(getName.call(user));
+
+  // 👍A) Jayesh Jayesh        💡B) undefined Jayesh
+  // 💖C) Jayesh undefined     😀D) ReferenceError
+
+  /* 
+  Answer is B) undefined Jayesh because when we use let getName = user.getName, getName variable will be assigned as function () { return this.userName },
+  "this" of getName function will point to window object and no property named with userName is present in window object, Hence It will console undefined.
+
+  getName.call(user) will console "Jayesh" because call method is used for function borrowing, getName.call(user) is equivalent to user.getName().
+  */
+}
+MCQ70();
