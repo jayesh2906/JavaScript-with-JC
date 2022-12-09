@@ -1977,4 +1977,25 @@ function MCQ70() {
   getName.call(user) will console "Jayesh" because call method is used for function borrowing, getName.call(user) is equivalent to user.getName().
   */
 }
-MCQ70();
+// MCQ70();
+
+// 👉 MCQ-71
+function MCQ71() {
+  const person = {
+    name: "Jayesh",
+  };
+
+  const { name = "Virat", age = 34 } = person;
+
+  console.log(name);
+  console.log(age);
+
+  // 👍A) Jayesh 34     💡B) Virat undefined
+  // 💖C) Virat 34      😀D) Jayesh undefined
+
+  /* 
+  Answer is A) Jayesh 34 because With destructuring we can set defaults, or fallback values so that if an item is not in the object (or Array) it will fall back to what we have set at the default.
+  as "age" property is not present in person object, while destructuring age = 34 will set "age" variable as 34 default value.  
+  */
+}
+MCQ71();
