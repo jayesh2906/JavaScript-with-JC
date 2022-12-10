@@ -1998,4 +1998,32 @@ function MCQ71() {
   as "age" property is not present in person object, while destructuring age = 34 will set "age" variable as 34 default value.  
   */
 }
-MCQ71();
+// MCQ71();
+
+// 👉 MCQ-72
+function MCQ72() {
+  const person = {
+    name: "Jayesh",
+  };
+
+  const person1 = Object.create(person);
+  person1.age = 24;
+
+  delete person1.name;
+  delete person1.age;
+
+  console.log(person1.name);
+  console.log(person1.age);
+
+  // 👍A) undefined undefined   💡B) undefined Jayesh
+  // 💖C) Jayesh undefined      😀D) Jayesh 24
+
+  /* 
+  Answer is C) Jayesh undefined because Object.create() method creates a new object, using an existing object as the prototype 
+  of the newly created object. Object.create() is used for Prototypal inheritance. person1.__proto__ will point to person object. 
+  If child object does not have property then it will inherit the property from it's parent ( prototype ) object.
+
+  delete person1.name and delete person1.age will delete "name" and "age" property of person1 object but "name" property will still be inherited from it's parent ( prototype ) "person" object. 
+  */
+}
+MCQ72();
