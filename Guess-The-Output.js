@@ -2026,4 +2026,32 @@ function MCQ72() {
   delete person1.name and delete person1.age will delete "name" and "age" property of person1 object but "name" property will still be inherited from it's parent ( prototype ) "person" object. 
   */
 }
-MCQ72();
+// MCQ72();
+
+// 👉 MCQ-73
+function MCQ73() {
+  showName1();
+  showName2();
+  showName3();
+
+  function showName1() {
+    console.log("JC1");
+  }
+
+  var showName2 = function () {
+    console.log("JC2");
+  };
+
+  var showName3 = () => {
+    console.log("JC3");
+  };
+
+  // 👍A) JC1 undefined JC3   💡B) JC1 TypeError
+  // 💖C) JC1 JC2 undefined   😀D) JC1 JC2 JC3
+
+  /* 
+  Answer is B) JC1 TypeError because function expressions and arrow functions are not hoisted in javascript only function declarations are hoisted.
+  At the memory creation phase, variable "showName2" and "showName3" will be initialized as "undefined". while calling showName2() it will throw Uncaught TypeError: showName2 is not a function.
+  */
+}
+MCQ73();
