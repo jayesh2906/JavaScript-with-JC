@@ -2054,4 +2054,35 @@ function MCQ73() {
   At the memory creation phase, variable "showName2" and "showName3" will be initialized as "undefined". while calling showName2() it will throw Uncaught TypeError: showName2 is not a function.
   */
 }
-MCQ73();
+// MCQ73();
+
+// 👉 MCQ-74
+function MCQ74() {
+  const person = { name: "Jayesh" };
+
+  function verifyPerson1(person) {
+    return person === { name: "Jayesh" };
+  }
+
+  function verifyPerson2(person) {
+    let p1 = JSON.stringify(person);
+    let p2 = JSON.stringify({ name: "Jayesh" });
+    return p1 === p2;
+  }
+
+  console.log(verifyPerson1(person));
+  console.log(verifyPerson2(person));
+
+  // 👍A) true false     💡B) true true
+  // 💖C) false false    😀D) false true
+
+  /* 
+  Answer is D) false true because While comparing non-primitives data types (objects or arrays) with "===" operators it compares objects by their references.
+  JSON.stringify is used for deep comparison of objects, JSON.stringify converts the object into string and "===" operators compares strings by their value.
+
+  Default comparison :- "==" or "===" ( compare by value )
+  Shallow comparison :- for comparing objects without nested property shallowCompare({a: 1}, {a: 1})
+  Deep comparison :- for comparing objects with nested property deepCompare({a: {b: 1}}, {a: {b: 1}})
+  */
+}
+MCQ74();
