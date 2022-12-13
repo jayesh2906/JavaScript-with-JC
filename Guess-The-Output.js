@@ -2085,4 +2085,33 @@ function MCQ74() {
   Deep comparison :- for comparing objects with nested property deepCompare({a: {b: 1}}, {a: {b: 1}})
   */
 }
-MCQ74();
+// MCQ74();
+
+// 👉 MCQ-75
+function MCQ75() {
+  function Person(name) {
+    this.name = name;
+  }
+
+  Person.prototype.age = 24;
+
+  const jayesh = new Person("JC");
+
+  console.log(Object.keys(jayesh));
+
+  let keys = [];
+  for (let key in jayesh) {
+    keys.push(key);
+  }
+
+  console.log(keys);
+
+  // 👍A) ['name', 'age'] ['name', 'age']    💡B) ['name', 'age'] ['name']
+  // 💖C) ['name'] ['name', 'age']           😀D) ['name', 'age'] ['age']
+
+  /* 
+  Answer is C) ['name'] ['name', 'age'] because Object.keys() method returns an array of a given object's own properties only,
+  whereas for...in loop enumerates properties in the prototype chain as well.
+  */
+}
+MCQ75();
