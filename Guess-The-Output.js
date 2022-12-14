@@ -2114,4 +2114,109 @@ function MCQ75() {
   whereas for...in loop enumerates properties in the prototype chain as well.
   */
 }
-MCQ75();
+// MCQ75();
+
+// 👉 MCQ-76
+function MCQ76() {
+  const person = {
+    pName: "Jayesh",
+    getInfo() {
+      function getName() {
+        console.log(this.pName);
+      }
+      getName();
+    },
+  };
+
+  person.getInfo();
+
+  // 👍A) undefined     💡B) Jayesh
+  // 💖C) ""            😀D) Error
+
+  /* 
+  Answer is A) undefined because "this" keyword inside nested normal function refers to window object and no property named with pName is present in window object.
+  We can get "Jayesh" as an output using arrow function, Because in arrow function the 'this' pointer is interpreted lexically, so it will refer to the object as desired.
+  */
+}
+// MCQ76();
+
+// 👉 MCQ-77
+function MCQ77() {
+  const person = {
+    name: "JC",
+    age: 24,
+  };
+
+  let lang = person.lang;
+  lang = "JS";
+
+  console.log(person);
+
+  // 👍A) {name: 'JC', age: 24, lang: undefined}
+  // 💡B) {name: 'JC', age: 24}
+  // 💖C) {name: 'JC', age: 24, lang:'JS'}
+  // 😀D) Error
+
+  /*
+  Answer is B) {name: 'JC', age: 24} because We are setting the variable lang equal to the value of the property called lang on the person object. 
+  There is no property on this object called lang, so the variable lang has the value of undefined.
+  We are not referencing the person object itself, We simply set the variable lang equal to the current value of the lang property on the person object.
+  Then, we are setting lang equal to the string "JS". This doesn't change the person object beacuse there is no reference to that object.
+  */
+}
+// MCQ77();
+
+// 👉 MCQ-78
+function MCQ78() {
+  const players = ["VK", "HP", "Dk"];
+
+  const result = players.splice(2, 1, "RP");
+
+  console.log(players);
+  console.log(result);
+
+  // 👍A) ['Dk'] ['VK', 'HP', 'RP']
+  // 💡B) ['VK', 'HP', 'RP'] ['VK', 'HP', 'RP']
+  // 💖C) ['VK', 'HP', 'RP'] ['Dk']
+  // 😀D) ['VK', 'HP', 'RP', 'Dk'] ['Dk']
+
+  /*
+  Answer is C) ['VK', 'HP', 'RP'] ['Dk'] because Array.prototype.splice modifies an original array and returns deleted values array.
+  splice method takes (start, howManyDelete, newAdd1, newAdd2, newAddN), If no argument is passed then original array remains as it is and it returns an empty array [].
+  positive index =>  0  1  2
+    for an array = [10,20,30]  
+  negative index => -3 -2 -1
+  */
+}
+// MCQ78();
+
+// 👉 MCQ-79
+function MCQ79() {
+  const person = {
+    name: "Jayesh",
+    age: 24,
+    skill: {
+      lang: "JavaScript",
+    },
+  };
+
+  Object.seal(person);
+
+  person.name = "JC";
+  person.skill.lang = "Java";
+
+  console.log(person.name);
+  console.log(person.skill.lang);
+
+  // 👍A) JC JavaScript        💡B) Jayesh Java
+  // 💖C) Jayesh JavaScript    😀D) JC Java
+
+  /* 
+  Answer is D) JC Java because The Object.seal() method seals an object. A sealed object has a fixed set of properties: new properties cannot be added, 
+  existing properties cannot be removed, But values of existing properties can still be changed as long as they are writable. seal() returns the same object that was passed in.
+  
+  Note :- Object.seal() method only seals first level properties of an object, Nested properties of an object can still be changed, added and removed.
+  as existing properties can still be changed "name" will be changed to "JC" and lang property is nested property of person object so it can be altered. The Final Ouput will be JC Java.
+  */
+}
+MCQ79();
