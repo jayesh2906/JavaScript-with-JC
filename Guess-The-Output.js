@@ -2219,4 +2219,36 @@ function MCQ79() {
   as existing properties can still be changed "name" will be changed to "JC" and lang property is nested property of person object so it can be altered. The Final Ouput will be JC Java.
   */
 }
-MCQ79();
+// MCQ79();
+
+// 👉 MCQ-80
+function MCQ80() {
+  function Person(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  class Player {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+  }
+
+  const jayesh = new Person("JC", 24);
+  const virat = new Person("VK", 34);
+
+  console.log(typeof Person);
+  console.log(typeof Player);
+
+  // 👍A) "object" "object"     💡B) "function" "function"
+  // 💖C) "function" "class"    😀D) "object" "class"
+
+  /* 
+  Answer is B) "function" "function" because The typeof operator in JavaScript returns "function" for user-defined function, a predefined function, or a class as an operand.
+  console.log(typeof function() {}) - user-defined function => "function"
+  console.log(typeof Math.tan) - predefined function => "function"
+  console.log(typeof class C {}) - class => "function"
+  */
+}
+MCQ80();
