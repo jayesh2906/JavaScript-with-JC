@@ -2236,7 +2236,7 @@ function MCQ80() {
   }
 
   const jayesh = new Person("JC", 24);
-  const virat = new Person("VK", 34);
+  const virat = new Player("VK", 34);
 
   console.log(typeof Person);
   console.log(typeof Player);
