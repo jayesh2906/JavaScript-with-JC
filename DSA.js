@@ -2964,4 +2964,32 @@ function DSA78() {
 
   console.log(sumOfDigits(num));
 }
-DSA78();
+// DSA78();
+
+// 👉 79) Find sum of numbers occurred only once in the array ( using only one loop )
+/* 
+  const array = [2, 5, 4, 4, 6, 5, 4, 7, 6];
+  output => 2 + 7 => 9
+*/
+function DSA79() {
+  const array = [2, 5, 4, 4, 6, 5, 4, 7, 6];
+  let obj = {};
+  let sum = 0;
+
+  for (let num of array) {
+    if (isNaN(obj[num])) {
+      sum = sum + num;
+      obj[num] = 1;
+    } else {
+      if (obj[num] > 0) {
+        sum = sum - num;
+        obj[num] = obj[num] - 1;
+      } else {
+        obj[num] = obj[num] + 1;
+      }
+    }
+  }
+
+  console.log(sum);
+}
+DSA79();
