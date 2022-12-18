@@ -2245,7 +2245,7 @@ function MCQ80() {
   // 💖C) "function" "class"    😀D) "object" "class"
 
   /* 
-  Answer is B) "function" "function" because The typeof operator in JavaScript returns "function" for user-defined function, a predefined function, or a class as an operand.
+  Answer is B) "function" "function" because The typeof operator in JavaScript returns "function" for user-defined function, a predefined function, or a class.
   console.log(typeof function() {}) - user-defined function => "function"
   console.log(typeof Math.tan) - predefined function => "function"
   console.log(typeof class C {}) - class => "function"
