@@ -2251,4 +2251,23 @@ function MCQ80() {
   console.log(typeof class C {}) - class => "function"
   */
 }
-MCQ80();
+// MCQ80();
+
+// 👉 MCQ-81
+function MCQ81() {
+  function add(num1, num2 = num1) {
+    return num1 + num2;
+  }
+
+  const result = add(10);
+  console.log(result);
+
+  // 👍A) undefined         💡B) NaN
+  // 💖C) ReferenceError    😀D) 20
+
+  /* 
+  Answer is D) 20 because while calling add(10) the value of num1 is equal to the passed value 10 and The default value of num2 is the 
+  value of num1 that is 10. So, num1 + num2 will return 20.
+  */
+}
+MCQ81();
