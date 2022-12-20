@@ -2292,7 +2292,7 @@ function MCQ82() {
 
   /* 
   Answer is D) { constructor: ...} undefined because regular functions have a prototype property, which is an object (prototype object) with a constructor property. 
-  Where as srrow functions do not have this prototype property. undefined gets returned when trying to access the prototype property using getName2.prototype.
+  Where as arrow functions do not have this prototype property. undefined gets returned when trying to access the prototype property using getName2.prototype.
 
   Difference b/w Regular Function and Arrow Function :-
   1) Arrow Function does not have it's own "this" keyword. 
