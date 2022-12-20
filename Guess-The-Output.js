@@ -2298,7 +2298,7 @@ function MCQ82() {
   1) Arrow Function does not have it's own "this" keyword. 
   2) Arrow Function does not have it's own "argument" keyword. 
   3) Arrow Function can not be used as object function constructor.
-  4) We can not use "new" keyword with arroe function.
+  4) We can not use "new" keyword with arrow function.
   */
 }
 MCQ82();
