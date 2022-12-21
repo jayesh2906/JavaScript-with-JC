@@ -2316,7 +2316,7 @@ function MCQ83() {
   // 💖C) 4 3       😀D) undefined 3
 
   /* 
-  Answer is B) undefined 4 because as we know everything in javascript is an object. array [1, 2, 3, 4] is similar to { "0":1, "1":2, "2":3, "3":4 }.
+  Answer is B) undefined 4 because as we know that everything in javascript is an object. array [1, 2, 3, 4] is similar to { "0":1, "1":2, "2":3, "3":4 }.
   delete numbers[2] will delete the index 2 from array and array will become [1, 2, empty, 4]. the length of the array will not change.
   As index "2" property is removed from the array, numbers[2] will be undefined.
   */
