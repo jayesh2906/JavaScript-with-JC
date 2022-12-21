@@ -2301,4 +2301,24 @@ function MCQ82() {
   4) We can not use "new" keyword with arrow function.
   */
 }
-MCQ82();
+// MCQ82();
+
+// 👉 MCQ-83
+function MCQ83() {
+  const numbers = [1, 2, 3, 4];
+
+  delete numbers[2];
+
+  console.log(numbers[2]);
+  console.log(numbers.length);
+
+  // 👍A) 3 4       💡B) undefined 4
+  // 💖C) 4 3       😀D) undefined 3
+
+  /* 
+  Answer is B) undefined 4 because as we know everything in javascript is an object. array [1, 2, 3, 4] is similar to { "0":1, "1":2, "2":3, "3":4 }.
+  delete numbers[2] will delete the index 2 from array and array will become [1, 2, empty, 4]. the length of the array will not change.
+  As index "2" property is removed from the array, numbers[2] will be undefined.
+  */
+}
+MCQ83();
