@@ -2992,4 +2992,42 @@ function DSA79() {
 
   console.log(sum);
 }
-DSA79();
+// DSA79();
+
+// 👉 80) Find the smallest positive number missing from an unsorted array
+/* 
+const arr1 = [2, 3, 7, 6, 8, -1, -10, 15]; // 1
+const arr2 = [2, 3, -7, 6, 8, 1, -10, 15]; // 4
+const arr3 = [1, 1, 0, -1, -2]; // 2
+const arr4 = [3, 2, 1, 4, 5]; // 6
+*/
+function DSA80() {
+  const arr1 = [2, 3, 7, 6, 8, -1, -10, 15];
+  const arr2 = [2, 3, -7, 6, 8, 1, -10, 15];
+  const arr3 = [1, 1, 0, -1, -2];
+  const arr4 = [3, 2, 1, 4, 5];
+
+  function findFirstPositive(arr) {
+    let length = arr.length;
+    let present = new Array(length + 1).fill(false);
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > 0 && arr[i] <= length) {
+        present[arr[i]] = true;
+      }
+    }
+
+    for (let i = 1; i < present.length; i++) {
+      if (!present[i]) {
+        return i;
+      }
+    }
+    return present.length;
+  }
+
+  console.log(findFirstPositive(arr1));
+  console.log(findFirstPositive(arr2));
+  console.log(findFirstPositive(arr3));
+  console.log(findFirstPositive(arr4));
+}
+DSA80();
