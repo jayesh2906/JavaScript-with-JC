@@ -2321,4 +2321,25 @@ function MCQ83() {
   As index "2" property is removed from the array, numbers[2] will be undefined.
   */
 }
-MCQ83();
+// MCQ83();
+
+// 👉 MCQ-84
+function MCQ84() {
+  const arr = [1, "Jayesh", { name: "JC" }];
+
+  for (let value of arr) {
+    console.log(value + 1);
+  }
+
+  // 👍A) 2 NaN [object Object]1        💡B) 2 NaN NaN
+  // 💖C) 2 Jayesh1 [object Object]1    😀D) 2 Jayesh1 NaN
+
+  /* 
+  Answer is C) 2 Jayesh1 [object Object]1 because The + operator is not only used for adding numerical values, but we can also use it to concatenate strings. 
+  Whenever the JavaScript engine sees that one or more values are not a number, it coerces the number into a string.
+  The first one is 1, which is a numerical value. 1 + 1 returns the number 2.
+  The second one is "Jayesh". "Jayesh" is a string and 1 is a number: 1 gets coerced into a string. "Jayesh" and "1" get concatenated, which results in the string "Jayesh1".
+  The third one { name: "JC" } is an object. Neither a number nor an object is a string, so it stringifies both. Whenever we stringify a regular object, it becomes "[object Object]". "[object Object]" concatenated with "1" becomes "[object Object]1".
+  */
+}
+MCQ84();
