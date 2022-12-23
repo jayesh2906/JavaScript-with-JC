@@ -2359,8 +2359,7 @@ function MCQ85() {
   // 💖C) JC Jayesh   😀D) ReferenceError
 
   /* 
-  Answer is A) JC JC because at first name is initialized as "Jayesh", while calling getName() function name will be overwritten by "JC".
-  Hence, The result will be "JC" "JC".
+  Answer is A) JC JC because at first name is initialized as "Jayesh", while calling getName() function name will be overwritten by "JC". Hence, The result will be "JC" "JC".
   */
 }
 MCQ85();
