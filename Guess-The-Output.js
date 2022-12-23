@@ -2339,8 +2339,7 @@ function MCQ84() {
   Whenever the JavaScript engine sees that one or more values are not a number, it coerces the number into a string.
   The first one is 1, which is a numerical value. 1 + 1 returns the number 2.
   The second one is "Jayesh". "Jayesh" is a string and 1 is a number: 1 gets coerced into a string. "Jayesh" and "1" get concatenated, which results in the string "Jayesh1".
-  The third one { name: "JC" } is an object. Neither a number nor an object is a string, so it stringifies both. Whenever we stringify a regular object, it becomes "[object Object]". 
-  "[object Object]" concatenated with "1" becomes "[object Object]1".
+  The third one { name: "JC" } is an object. Neither a number nor an object is a string, so it stringifies both. Whenever we stringify a regular object, it becomes "[object Object]". "[object Object]" concatenated with "1" becomes "[object Object]1".
   */
 }
 // MCQ84();
