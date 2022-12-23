@@ -2342,4 +2342,25 @@ function MCQ84() {
   The third one { name: "JC" } is an object. Neither a number nor an object is a string, so it stringifies both. Whenever we stringify a regular object, it becomes "[object Object]". "[object Object]" concatenated with "1" becomes "[object Object]1".
   */
 }
-MCQ84();
+// MCQ84();
+
+// 👉 MCQ-85
+function MCQ85() {
+  function getName() {
+    name = "JC";
+    console.log(name);
+  }
+
+  let name = "Jayesh";
+  getName();
+  console.log(name);
+
+  // 👍A) JC JC       💡B) JC undefined
+  // 💖C) JC Jayesh   😀D) ReferenceError
+
+  /* 
+  Answer is A) JC JC because at first name is initialized as "Jayesh", while calling getName() function name will be overwritten by "JC".
+  Hence, The result will be "JC" "JC".
+  */
+}
+MCQ85();
