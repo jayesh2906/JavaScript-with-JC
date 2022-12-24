@@ -2363,4 +2363,25 @@ function MCQ85() {
   Hence, The result will be "JC" "JC".
   */
 }
-MCQ85();
+// MCQ85();
+
+// 👉 MCQ-86
+function MCQ86() {
+  const person = [{ name: "Jayesh" }, 24];
+  const result = person.slice();
+
+  result[0].name = "JC";
+  result[1] = 34;
+
+  console.log(person[0]);
+  console.log(person[1]);
+
+  // 👍A) {name: 'Jayesh'} 24     💡B) {name: 'JC'} 24
+  // 💖C) {name: 'Jayesh'} 34     😀D) {name: 'JC'} 34
+
+  /* 
+  Answer is B) {name: 'JC'} 24 because Array.prototype.slice method returns only a shallow copy of an original array.
+  While changing result[0].name will also change person[0].name as nested property of array will have same reference.
+  */
+}
+MCQ86();
