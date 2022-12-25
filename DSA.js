@@ -2853,7 +2853,7 @@ function DSA76() {
       if (unit === 0) {
         result = tenPlace[ten];
       } else {
-        result = tenPlace[ten] + " " + lessThan20[unit];
+        result = tenPlace[ten] + " " + (unit ? lessThan20[unit] : "");
       }
     }
 
