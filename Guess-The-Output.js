@@ -2384,4 +2384,29 @@ function MCQ86() {
   While changing result[0].name will also change person[0].name as nested property of array will have same reference.
   */
 }
-MCQ86();
+// MCQ86();
+
+// 👉 MCQ-87
+function MCQ87() {
+  const calc = (a) => {
+    return (b) => {
+      return (c) => {
+        return a + b + c;
+      };
+    };
+  };
+
+  console.log(calc(1)(2)(3));
+
+  // 👍A) NaN     💡B) 3
+  // 💖C) 6       😀D) Error
+
+  /* 
+  Answer is C) 6 because of function currying.
+  Currying is a technique to convert multiple arguments function into a single argument functions (unary functions) in a sequence.
+  There are two ways to perform currying :-
+  1) Using Closures ( Used in above question )
+  2) Using Bind
+  */
+}
+MCQ87();
