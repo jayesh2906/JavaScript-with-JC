@@ -2748,7 +2748,6 @@ function DSA73() {
 "middle" => "dd"
 "A" => "A"
 */
-
 function DSA74() {
   const str1 = "test";
   const str2 = "testing";
