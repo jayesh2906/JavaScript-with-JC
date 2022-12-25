@@ -2728,7 +2728,6 @@ function DSA72() {
 // DSA72();
 
 // 👉 73) check if an object is empty or not in javaScript
-
 function DSA73() {
   function isObjectEmpty(value) {
     return Object.keys(value).length === 0 && value.constructor === Object; // 👈 constructor check
