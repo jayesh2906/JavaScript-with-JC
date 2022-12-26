@@ -2409,4 +2409,26 @@ function MCQ87() {
   2) Using Bind
   */
 }
-MCQ87();
+// MCQ87();
+
+// 👉 MCQ-88
+function MCQ88() {
+  const numbers = [1, 2, 3, 2, 2, 3];
+  const obj = {};
+
+  for (let num of numbers) {
+    obj[num] = (obj[num] || 0) + 1;
+  }
+
+  console.log(obj[1]);
+  console.log(obj[2]);
+
+  // 👍A) 1 1       💡B) 1 2
+  // 💖C) 2 3       😀D) 1 3
+
+  /* 
+  Answer is D) 1 3 because the above code is to find out the count of each number in an array. 
+  the final "obj" will be {1: 1, 2: 3, 3: 2} where obj[1] is 1 and obj[2] is 3.
+*/
+}
+MCQ88();
