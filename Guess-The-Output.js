@@ -2429,6 +2429,28 @@ function MCQ88() {
   /* 
   Answer is D) 1 3 because the above code is to find out the count of each number in an array. 
   the final "obj" will be {1: 1, 2: 3, 3: 2} where obj[1] is 1 and obj[2] is 3.
-*/
+  */
 }
-MCQ88();
+// MCQ88();
+
+// 👉 MCQ-89
+function MCQ89() {
+  const numbers = [1, [2, [3], 4], 5];
+
+  const res1 = numbers.flat();
+  const res2 = numbers.flat(2);
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) [1, [2, [3], 4], 5] [1, [2, [3], 4], 5]
+  // 💡B) [1, 2, [3], 4, 5] [1, 2, 3, 4, 5]
+  // 💖C) [1, [2, [3], 4], 5] [1, 2, 3, 4, 5]
+  // 😀D) [1, 2, [3], 4, 5] [1, [2, [3], 4], 5]
+
+  /* 
+  Answer is B) [1, 2, [3], 4, 5] [1, 2, 3, 4, 5] because Array.prototype.flat method flattens a given array up to the given depth. 
+  By default, It takes depth as 1.
+  */
+}
+MCQ89();
