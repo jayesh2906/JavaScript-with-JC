@@ -2453,4 +2453,31 @@ function MCQ89() {
   By default, It takes depth as 1.
   */
 }
-MCQ89();
+// MCQ89();
+
+// 👉 MCQ-90
+function MCQ90() {
+  class Person {
+    constructor() {
+      console.log("parent");
+    }
+  }
+
+  class Player extends Person {
+    constructor() {
+      console.log("child");
+      super();
+    }
+  }
+
+  const virat = new Player();
+
+  // 👍A) child parent     💡B) parent child
+  // 💖C) child            😀D) parent
+
+  /* 
+  Answer is A) child parent because We create the variable virat which is an instance of the Player class so the constructor on Player gets called. 
+  after which we call super(), super() calls the constructor of the parent class which is Person class so the constructor in Person gets called.
+  */
+}
+MCQ90();
