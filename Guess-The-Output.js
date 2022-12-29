@@ -2480,4 +2480,21 @@ function MCQ90() {
   after which we call super(), super() calls the constructor of the parent class which is Person class so the constructor in Person gets called.
   */
 }
-MCQ90();
+// MCQ90();
+
+// 👉 MCQ-91
+function MCQ91() {
+  const players = ["JC", "VK", "HP", "DK"];
+  players.length = 0;
+
+  console.log(players[0]);
+  console.log(players[2]);
+
+  // 👍A) JC undefined            💡B) JC HP
+  // 💖C) undefined undefined     😀D) Error
+
+  /* 
+    Answer is C) undefined undefined because players.length = 0 will make players array empty, players[0] and players[2] both will be undefined.
+  */
+}
+MCQ91();
