@@ -2497,4 +2497,23 @@ function MCQ91() {
     Answer is C) undefined undefined because players.length = 0 will make players array empty, players[0] and players[2] both will be undefined.
   */
 }
-MCQ91();
+// MCQ91();
+
+// 👉 MCQ-92
+function MCQ92() {
+  const person = ["Jayesh", "Virat"];
+
+  const personObj = { ...person };
+
+  console.log(personObj);
+
+  // 👍A) {0, 1}
+  // 💡B) {0: 'Jayesh', 1: 'Virat'}
+  // 💖C) {'Jayesh', 'Virat'}
+  // 😀D) Error
+
+  /* 
+  Answer is B) {0: 'Jayesh', 1: 'Virat'} because while destructuring the array in {} converts the array into object having key as element index and value as element itself.
+  */
+}
+MCQ92();
