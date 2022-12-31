@@ -2516,4 +2516,26 @@ function MCQ92() {
   Answer is B) {0: 'Jayesh', 1: 'Virat'} because while destructuring the array in {} converts the array into object having key as element index and value as element itself.
   */
 }
-MCQ92();
+// MCQ92();
+
+// 👉 MCQ-93
+function MCQ93() {
+  const array = [1, ["2", 3], "4"];
+  const result = [];
+
+  for (let item of array) {
+    if (!Array.isArray(item)) {
+      result.push(item);
+    }
+  }
+
+  console.log(result);
+
+  // 👍A) [1, ["2", 3], "4"]     💡B) [1]
+  // 💖C) [1, "4"]               😀D) ["4"]
+
+  /* 
+  Answer is C) [1, "4"] because Array.isArray() method checks if the passed value is an Array. Hence, the result array will have only 1 and "4".
+  */
+}
+MCQ93();
