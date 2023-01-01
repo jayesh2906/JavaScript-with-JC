@@ -2538,4 +2538,23 @@ function MCQ93() {
   Answer is C) [1, "4"] because Array.isArray() method checks if the passed value is an Array. Hence, the result array will have only 1 and "4".
   */
 }
-MCQ93();
+// MCQ93();
+
+// 👉 MCQ-94
+function MCQ94() {
+  let a = 10;
+  let b = 20;
+
+  [a, b] = [b, a];
+
+  console.log(a);
+  console.log(b);
+
+  // 👍A) 10 10     💡B) 10 20
+  // 💖C) 20 20     😀D) 20 10
+
+  /* 
+  Answer is D) 20 10 because [a, b] = [b, a] will swap the value of "a" and "b" due to array destructuring.
+  */
+}
+MCQ94();
