@@ -2557,4 +2557,25 @@ function MCQ94() {
   Answer is D) 20 10 because [a, b] = [b, a] will swap the value of "a" and "b" due to array destructuring.
   */
 }
-MCQ94();
+// MCQ94();
+
+// 👉 MCQ-95
+function MCQ95() {
+  const num1 = [1, 2];
+  const num2 = [3, 4];
+
+  const res = num1.concat(num2);
+
+  console.log(num1);
+  console.log(res);
+
+  // 👍A) [1, 2] [1, 2, 3, 4]
+  // 💡B) [1, 2, 3, 4] [1, 2, 3, 4]
+  // 💖C) [1, 2] [1, 2]
+  // 😀D) [1, 2, 3, 4] [1, 2]
+
+  /* 
+  Answer is A) [1, 2] [1, 2, 3, 4] because The concat() method is used to merge two or more arrays. It does not mutate the original array, and returns a new array.
+  */
+}
+MCQ95();
