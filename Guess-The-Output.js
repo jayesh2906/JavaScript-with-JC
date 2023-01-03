@@ -2578,4 +2578,23 @@ function MCQ95() {
   Answer is A) [1, 2] [1, 2, 3, 4] because The concat() method is used to merge two or more arrays. It does not mutate the original array, and returns a new array.
   */
 }
-MCQ95();
+// MCQ95();
+
+// 👉 MCQ-96
+function MCQ96() {
+  const user = { name: "Jayesh", age: 24 };
+  const admin = { admin: true, ...user };
+
+  console.log(admin);
+
+  // 👍A) { admin: true, user: { name: "Jayesh", age: 24 }}
+  // 💡B) { admin: true, name: "Jayesh", age: 24 }
+  // 💖C) { admin: true, user: ["Jayesh", 24] }
+  // 😀D) { admin: true }
+
+  /* 
+  Answer is B) { admin: true, name: "Jayesh", age: 24 } because of destructuring of an object, 
+  user object will be unpacked and all the properties of user object will be added to the admin object.
+  */
+}
+MCQ96();
