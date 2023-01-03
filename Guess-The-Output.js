@@ -2593,8 +2593,7 @@ function MCQ96() {
   // 😀D) { admin: true }
 
   /* 
-  Answer is B) { admin: true, name: "Jayesh", age: 24 } because of destructuring of an object, 
-  user object will be unpacked and all the properties of user object will be added to the admin object.
+  Answer is B) { admin: true, name: "Jayesh", age: 24 } because of spread operator ..., user object will be unpacked and all the properties of user object will be added to the admin object.
   */
 }
 MCQ96();
