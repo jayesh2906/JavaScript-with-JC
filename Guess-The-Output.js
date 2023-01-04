@@ -2596,4 +2596,22 @@ function MCQ96() {
   Answer is B) { admin: true, name: "Jayesh", age: 24 } because of spread operator ..., user object will be unpacked and all the properties of user object will be added to the admin object.
   */
 }
-MCQ96();
+// MCQ96();
+
+// 👉 MCQ-97
+function MCQ97() {
+  let a = 10;
+  let b = new Number(10);
+
+  console.log(a == b);
+  console.log(a === b);
+
+  // 👍A) true true     💡B) false true
+  // 💖C) true false    😀D) false fasle
+
+  /* 
+  Answer is C) true false because new Number() is a built-in function constructor which returns an object. When we use the == operator, it only checks whether it has the same value. 
+  They both have the value of 10, so it returns true. However, when we use the === operator, both value and type should be the same.
+  */
+}
+MCQ97();
