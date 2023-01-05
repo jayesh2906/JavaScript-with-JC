@@ -2614,4 +2614,24 @@ function MCQ97() {
   They both have the value of 10, so it returns true. However, when we use the === operator, both value and type should be the same.
   */
 }
-MCQ97();
+// MCQ97();
+
+// 👉 MCQ-98
+function MCQ98() {
+  const array = ["JavaScript", "with", "JC"];
+
+  const result = array.join("-");
+
+  console.log(result);
+
+  // 👍A) ["JavaScript-with-JC"]
+  // 💡B) ["JavaScript", "-", "with", "-", "JC"];
+  // 💖C) "-JavaScript-with-JC-"
+  // 😀D) "JavaScript-with-JC"
+
+  /* 
+  Answer is D) JavaScript-with-JC because The join() method creates and returns a new string by concatenating all of the elements in an array, separated by commas or a specified separator string. 
+  It does not mutate the original array, and returns a string value. 
+  */
+}
+MCQ98();
