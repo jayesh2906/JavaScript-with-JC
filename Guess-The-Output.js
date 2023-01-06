@@ -2634,4 +2634,21 @@ function MCQ98() {
   It does not mutate the original array, and returns a string value. 
   */
 }
-MCQ98();
+// MCQ98();
+
+// 👉 MCQ-99
+function MCQ99() {
+  function getName(...args) {
+    console.log(typeof args);
+  }
+
+  getName("Jayesh");
+
+  // 👍A) "array"     💡B) "object"
+  // 💖C) "string"    😀D) "NaN"
+
+  /* 
+  Answer is B) "object" because The rest parameter (...args) converts all remaining arguments into an array. An array is an object, so typeof args returns "object". 
+  */
+}
+MCQ99();
