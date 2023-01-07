@@ -3055,3 +3055,55 @@ function DSA81() {
   console.log(compare(obj1, obj2));
 }
 // DSA81();
+
+// 👉 82) Remove "0" and "." from given array of elements.
+/*
+const array = [106, 223, 1.08, 2.005];
+output => [16, 223, 18, 25]
+*/
+function DSA82() {
+  const array = [106, 223, 1.08, 2.005];
+
+  const result = array.map((number) => {
+    const updatedNumber = number
+      .toString()
+      .replaceAll(0, "")
+      .replaceAll(".", "");
+    return +updatedNumber;
+  });
+
+  console.log("result", result);
+
+  const result2 = array.map((number) => {
+    let num = number.toString();
+
+    for (let char of num) {
+      if (["0", "."].includes(char)) {
+        num = num.replace(char, "");
+      }
+    }
+    return +num;
+  });
+
+  console.log("result2", result2);
+}
+// DSA82();
+
+// 👉 83) Return indexes of capital letter in string.
+/*
+const name = "JaYEsh";
+output => [ 0, 2, 3 ]
+*/
+function DSA83() {
+  const name = "JaYEsh";
+  const result = [];
+
+  for (let i = 0; i < name.length; i++) {
+    if (name[i].toLowerCase() !== name[i]) {
+      result.push(i);
+    }
+  }
+
+  console.log("result", result);
+}
+// DSA83();
