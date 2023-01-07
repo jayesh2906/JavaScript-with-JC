@@ -2651,4 +2651,24 @@ function MCQ99() {
   Answer is B) "object" because The rest parameter (...args) converts all remaining arguments into an array. An array is an object, so typeof args returns "object". 
   */
 }
-MCQ99();
+// MCQ99();
+
+// 👉 MCQ-100
+function MCQ100() {
+  const numbers = [1, 2, 3, 2, 4, 3];
+
+  const result = [...new Set(numbers)];
+
+  console.log("result", result);
+
+  // 👍A) [1, 2, 3, 2, 4, 3]
+  // 💡B) [1, 4]
+  // 💖C) [1, 2, 3, 4]
+  // 😀D) {1, 2, 3, 4}
+
+  /* 
+  Answer is C) [1, 2, 3, 4] because The Set object lets you store unique values of any type, whether primitive values or object references.
+  A value in the Set may only occur once. it will remove duplicates from an array.
+  */
+}
+MCQ100();
