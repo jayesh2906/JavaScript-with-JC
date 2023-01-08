@@ -3107,3 +3107,33 @@ function DSA83() {
   console.log("result", result);
 }
 // DSA83();
+
+// 👉 84) Find the 3rd min element of an array without using index and sorting
+/*
+const arr = [7, 10, 4, 3, 20, 15]
+output => 7
+*/
+function DSA84() {
+  const arr = [7, 10, 4, 3, 20, 15];
+  const Max = 1000000;
+
+  let min1 = Max;
+  let min2 = Max;
+  let min3 = Max;
+
+  for (let num of arr) {
+    if (num < min1) {
+      min3 = min2;
+      min2 = min1;
+      min1 = num;
+    } else if (num < min2) {
+      min3 = min2;
+      min2 = num;
+    } else if (num < min3) {
+      min3 = num;
+    }
+  }
+
+  console.log(min3);
+}
+// DSA84();
