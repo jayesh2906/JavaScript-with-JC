@@ -2671,4 +2671,24 @@ function MCQ100() {
   A value in the Set may only occur once. it will remove duplicates from an array.
   */
 }
-MCQ100();
+// MCQ100();
+
+// 👉 MCQ-101
+function MCQ101() {
+  let name = "Jayesh";
+  let result = "";
+
+  for (let char of name) {
+    result = char + result;
+  }
+
+  console.log(result);
+
+  // 👍A) hseyaJ     💡B) Jayesh
+  // 💖C) eshJay     😀D) Error
+
+  /* 
+  Answer is A) hseyaJ because the above code will reverse the name "Jayesh".
+  */
+}
+MCQ101();
