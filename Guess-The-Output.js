@@ -2659,7 +2659,7 @@ function MCQ100() {
 
   const result = [...new Set(numbers)];
 
-  console.log("result", result);
+  console.log(result);
 
   // 👍A) [1, 2, 3, 2, 4, 3]
   // 💡B) [1, 4]
@@ -2691,4 +2691,27 @@ function MCQ101() {
   Answer is A) hseyaJ because the above code will reverse the name "Jayesh".
   */
 }
-MCQ101();
+// MCQ101();
+
+// 👉 MCQ-102
+function MCQ102() {
+  const arr1 = new Array(3);
+  const arr2 = new Array(1, 2, 3);
+
+  console.log(arr1);
+  console.log(arr2);
+
+  // 👍A) [3] [1, 2, 3]
+  // 💡B) [empty × 3] [3]
+  // 💖C) [3] [3]
+  // 😀D) [empty × 3] [1, 2, 3]
+
+  /* 
+  Answer is D) [empty × 3] [1, 2, 3] because The Array() constructor is used to create Array objects. 
+  If the only one argument passed to the Array constructor then it returns a new empty slots array of the passed argument as length.
+  Syntax :-
+  new Array(element0, element1, ....., elementN)
+  new Array(arrayLength)
+  */
+}
+MCQ102();
