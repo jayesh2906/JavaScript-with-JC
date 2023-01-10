@@ -2714,4 +2714,25 @@ function MCQ102() {
   new Array(arrayLength)
   */
 }
-MCQ102();
+// MCQ102();
+
+// 👉 MCQ-103
+function MCQ103() {
+  const str = "Jayesh-JC";
+
+  const result = str.split("-");
+
+  console.log(str);
+  console.log(result);
+
+  // 👍A) Jayesh-JC Jayesh-JC
+  // 💡B) Jayesh-JC ['Jayesh', 'JC']
+  // 💖C) ['Jayesh', 'JC'] ['Jayesh', 'JC']
+  // 😀D) ['Jayesh', 'JC'] Jayesh-JC
+
+  /* 
+  Answer is B) Jayesh-JC ['Jayesh', 'JC'] because The split() method takes a separator and divides a String into an list of substrings by searching for the separator, 
+  puts all these substrings into an array, and returns the array. It does not mutate the original string.
+  */
+}
+MCQ103();
