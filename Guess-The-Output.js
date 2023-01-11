@@ -2735,4 +2735,26 @@ function MCQ103() {
   puts all these substrings into an array, and returns the array. It does not mutate the original string.
   */
 }
-MCQ103();
+// MCQ103();
+
+// 👉 MCQ-104
+function MCQ104() {
+  const num1 = 0;
+  const num2 = "0";
+
+  const res1 = num1 || null;
+  const res2 = num2 || null;
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) 0 null      💡B) 0 "0"
+  // 💖C) null "0"    😀D) null null
+
+  /* 
+  Answer is C) null "0" because The logical OR (||) operator returns the value of one of the specified operands, 
+  If the left operand is truthy value it will return that value else it will return right operand value.
+  As num2 is "0" (Non-empty string) that is truthy value so it will return "0" for res2.
+  */
+}
+MCQ104();
