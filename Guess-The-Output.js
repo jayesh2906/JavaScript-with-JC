@@ -2757,4 +2757,25 @@ function MCQ104() {
   As num2 is "0" (Non-empty string) that is truthy value so it will return "0" for res2.
   */
 }
-MCQ104();
+// MCQ104();
+
+// 👉 MCQ-105
+function MCQ105() {
+  const nums = [1, 2, 3, 2, 4, 3];
+
+  const res = nums.reduce((acc, curr) => {
+    return !acc.includes(curr) ? [...acc, curr] : acc;
+  }, []);
+
+  console.log(res);
+
+  // 👍A) [2, 3]
+  // 💡B) [1, 2, 3, 4]
+  // 💖C) [1, 4]
+  // 😀D) [1, 2, 3, 2, 4, 3]
+
+  /* 
+  Answer is B) [1, 2, 3, 4] because the above code is to remove the duplicates from an array with the help of reduce method.
+  */
+}
+MCQ105();
