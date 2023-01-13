@@ -2778,4 +2778,24 @@ function MCQ105() {
   Answer is B) [1, 2, 3, 4] because the above code is to remove the duplicates from an array with the help of reduce method.
   */
 }
-MCQ105();
+// MCQ105();
+
+// 👉 MCQ-106
+function MCQ106() {
+  const name = " Jayesh ";
+
+  const result = name.trim();
+
+  console.log(name);
+  console.log(result);
+
+  // 👍A) " Jayesh " "Jayesh"
+  // 💡B) " Jayesh " "Jayesh "
+  // 💖C) " Jayesh " " Jayesh"
+  // 😀D) "Jayesh" "Jayesh"
+
+  /* 
+  Answer is A) " Jayesh " "Jayesh" because The trim() method removes whitespace from both ends of a string and returns a new string, without modifying the original string.
+  */
+}
+MCQ106();
