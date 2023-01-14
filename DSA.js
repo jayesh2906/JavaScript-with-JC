@@ -3137,3 +3137,25 @@ function DSA84() {
   console.log(min3);
 }
 // DSA84();
+
+// 👉 85) Given an array of string return group of anagrams string array
+/*
+const arr = ["eat", "tea", "ate", "ball", "dna", "and"]
+output => [ [ 'eat', 'tea', 'ate' ], [ 'ball' ], [ 'dna', 'and' ] ]
+*/
+function DSA85() {
+  const arr = ["eat", "tea", "ate", "ball", "dna", "and"];
+  const obj = {};
+
+  for (let str of arr) {
+    let key = str.split("").sort().join("");
+    if (obj[key]) {
+      obj[key] = [...obj[key], str];
+    } else {
+      obj[key] = [str];
+    }
+  }
+
+  console.log(Object.values(obj));
+}
+DSA85();
