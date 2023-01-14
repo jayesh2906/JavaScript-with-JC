@@ -2798,4 +2798,28 @@ function MCQ106() {
   Answer is A) " Jayesh " "Jayesh" because The trim() method removes whitespace from both ends of a string and returns a new string, without modifying the original string.
   */
 }
-MCQ106();
+// MCQ106();
+
+// 👉 MCQ-107
+function MCQ107() {
+  const numbers = [1, 2, 3, 2, 2, 3];
+
+  const result = numbers.reduce((acc, curr) => {
+    return {
+      ...acc,
+      [curr]: (acc[curr] || 0) + 1,
+    };
+  }, {});
+
+  console.log(result[1]);
+  console.log(result[2]);
+
+  // 👍A) 1 1       💡B) 1 2
+  // 💖C) 2 3       😀D) 1 3
+
+  /* 
+  Answer is D) 1 3 because the above code is to find out the count of each number in an array. 
+  the final result will be {1: 1, 2: 3, 3: 2} where result[1] is 1 and result[2] is 3.
+  */
+}
+MCQ107();
