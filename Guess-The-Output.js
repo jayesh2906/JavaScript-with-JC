@@ -2822,4 +2822,29 @@ function MCQ107() {
   the final result will be {1: 1, 2: 3, 3: 2} where result[1] is 1 and result[2] is 3.
   */
 }
-MCQ107();
+// MCQ107();
+
+// 👉 MCQ-108
+function MCQ108() {
+  const num1 = 123;
+  const num2 = -123;
+
+  function reverse(num) {
+    let res = num.toString().split("").reverse().join("");
+    return parseFloat(res) * Math.sign(num);
+  }
+
+  const res1 = reverse(num1);
+  const res2 = reverse(num2);
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) 321 -123       💡B) 321 321
+  // 💖C) 321 -321       😀D) 321 NaN
+
+  /* 
+  Answer is C) 321 -321 because the above code is to reverse a number.
+  */
+}
+MCQ108();
