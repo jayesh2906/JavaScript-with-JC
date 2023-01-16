@@ -2847,4 +2847,24 @@ function MCQ108() {
   Answer is C) 321 -321 because the above code is to reverse a number.
   */
 }
-MCQ108();
+// MCQ108();
+
+// 👉 MCQ-109
+function MCQ109() {
+  const num1 = 034;
+  const num2 = 082;
+
+  console.log(num1);
+  console.log(num2);
+
+  // 👍A) 34 82      💡B) 28 82
+  // 💖C) 82 28      😀D) 82 34
+
+  /* 
+  Answer is B) 28 82 because of the Octal literals in JavaScript. If the number has zero prefix (0) followed by a sequence of octal digits (from 0 to 7) 
+  then the number will be converted into octal number. num1 => 034 is equal to 3*8 + 4*1 => 24 + 4 => 28.
+  If the octal literal contains a number that is out of range, JavaScript ignores the leading 0 and treats the octal literal as a decimal.
+  num2 => 082 has "8" which is out of range ( 0 to 7 ) so num2 will be treated as 82 only.
+  */
+}
+MCQ109();
