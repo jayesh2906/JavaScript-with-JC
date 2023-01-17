@@ -2867,4 +2867,22 @@ function MCQ109() {
   num2 => 082 has "8" which is out of range ( 0 to 7 ) so num2 will be treated as 82 only.
   */
 }
-MCQ109();
+// MCQ109();
+
+// 👉 MCQ-110
+function MCQ110() {
+  const res1 = ("b" + "a" + +"b" + "a").toLowerCase();
+  const res2 = ("b" + "a" + +"b" + "a").toUpperCase();
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) baNANa BANANA     💡B) baba BABA
+  // 💖C) baNANa baNANa     😀D) banana BANANA
+
+  /* 
+  Answer is D) banana BANANA because +'b' resolves to NaN ("Not a Number") because the unary operator + attempts to convert its operand into a number, 
+  the value NaN is returned as "b" is character and can not be converted into number.
+  */
+}
+MCQ110();
