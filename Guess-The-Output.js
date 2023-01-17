@@ -2881,7 +2881,7 @@ function MCQ110() {
   // 💖C) baNANa baNANa     😀D) banana BANANA
 
   /* 
-  Answer is D) banana BANANA because +'b' resolves to NaN ("Not a Number") because the unary operator + attempts to convert its operand into a number, 
+  Answer is D) banana BANANA because +'b' resolves to NaN ("Not a Number"), the unary operator + attempts to convert its operand into a number, 
   the value NaN is returned as "b" is character and can not be converted into number.
   */
 }
