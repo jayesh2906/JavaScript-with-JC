@@ -2885,4 +2885,25 @@ function MCQ110() {
   the value NaN is returned as "b" is character and can not be converted into number.
   */
 }
-MCQ110();
+// MCQ110();
+
+// 👉 MCQ-111
+function MCQ111() {
+  const displayAmount = (() => {
+    return amount ?? 0;
+  })();
+
+  var amount = 999;
+
+  console.log(displayAmount);
+
+  // 👍A) 999             💡B) 0
+  // 💖C) Function(){}    😀D) Error
+
+  /* 
+  Answer is B) 0 because of nullish coalescing (??). The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand 
+  when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand. 
+  Due to hoisting of "var" variable "amount" will be undefined so function will return 0 (right-hand side operand). 
+  */
+}
+MCQ111();
