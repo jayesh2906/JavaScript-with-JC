@@ -2906,4 +2906,24 @@ function MCQ111() {
   Due to hoisting of "var" variable "amount" will be undefined so function will return 0 (right-hand side operand). 
   */
 }
-MCQ111();
+// MCQ111();
+
+// 👉 MCQ-112
+function MCQ112() {
+  const players = ["JC", { name: "VK" }, "DK"];
+
+  const index1 = players.indexOf({ name: "VK" });
+  const index2 = players.indexOf("DK");
+
+  console.log(index1);
+  console.log(index2);
+
+  // 👍A) 0 2           💡B) 1 2
+  // 💖C) -1 2          😀D) undefined 2
+
+  /* 
+  Answer is 💖C) -1 2 because The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+  It compares searchElement to elements of the array using strict equality ( === ). players.indexOf({ name: "VK" }) will return -1 object are compared by their references.
+  */
+}
+MCQ112();
