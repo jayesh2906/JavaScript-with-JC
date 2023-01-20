@@ -2922,8 +2922,31 @@ function MCQ112() {
   // 💖C) -1 2          😀D) undefined 2
 
   /* 
-  Answer is 💖C) -1 2 because The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+  Answer is C) -1 2 because The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
   It compares searchElement to elements of the array using strict equality ( === ). players.indexOf({ name: "VK" }) will return -1 object are compared by their references.
   */
 }
-MCQ112();
+// MCQ112();
+
+// 👉 MCQ-113
+function MCQ113() {
+  const str1 = "hello";
+  const str2 = "eolhl";
+
+  function foo(s1, s2) {
+    s1 = s1.split("").sort().join("");
+    s2 = s2.split("").sort().join("");
+    return s1 === s2;
+  }
+
+  const res = foo(str1, str2);
+  console.log(res);
+
+  // 👍A) true         💡B) false
+  // 💖C) ehllo        😀D) Error
+
+  /* 
+  Answer is A) true because the above code is to compare two strings by sorting.
+  */
+}
+MCQ113();
