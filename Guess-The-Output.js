@@ -2967,7 +2967,7 @@ function MCQ114() {
   // 😀D) [1, 2, 3, 4]
 
   /* 
-  Answer is D) [1, 2, 3, 4] because the above code is to remove the duplicates from an array with the help of reduce method.
+  Answer is D) [1, 2, 3, 4] because the above code is to remove the duplicates from an array with the help of filter method.
   */
 }
 MCQ114();
