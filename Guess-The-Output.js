@@ -2949,4 +2949,25 @@ function MCQ113() {
   Answer is A) true because the above code is to compare two strings by sorting.
   */
 }
-MCQ113();
+// MCQ113();
+
+// 👉 MCQ-114
+function MCQ114() {
+  const nums = [1, 2, 3, 2, 4, 3];
+
+  const res = nums.filter((num, i, arr) => {
+    return arr.indexOf(num) === i;
+  });
+
+  console.log(res);
+
+  // 👍A) [2, 3]
+  // 💡B) [1, 2, 3, 2, 4, 3]
+  // 💖C) [1, 4]
+  // 😀D) [1, 2, 3, 4]
+
+  /* 
+  Answer is D) [1, 2, 3, 4] because the above code is to remove the duplicates from an array with the help of reduce method.
+  */
+}
+MCQ114();
