@@ -3159,3 +3159,109 @@ function DSA85() {
   console.log(Object.values(obj));
 }
 DSA85();
+
+// 👉 86) Check if the given number is Armstrong Number or not
+/*
+A positive integer is called an Armstrong number (of order n) if abcd... = a^n + b^n + c^n + d^n + …
+input: 371, output: true
+input: 1634, output: true
+*/
+function DSA86() {
+  const number1 = 371;
+  const number2 = 1634;
+
+  function checkArmstrong(num) {
+    let sum = 0;
+    let storeNum = num;
+    let length = num.toString().length;
+
+    while (num !== 0) {
+      let rem = num % 10;
+      sum += Math.pow(rem, length);
+      num = parseInt(num / 10);
+    }
+
+    return sum === storeNum;
+  }
+
+  console.log(checkArmstrong(number1));
+  console.log(checkArmstrong(number2));
+}
+DSA86();
+
+// 👉 87) Given a positive integer N as input , print first N prime numbers
+/*
+Input  : 5, Output : [2,3,5,7,11]
+Input  : 0, Output : []
+*/
+function DSA87() {
+  const num1 = 5;
+  const num2 = 0;
+
+  function checkPrimeNumber(num) {
+    for (let i = 2; i < num / 2; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function primeNumbers(num) {
+    if (num === 0) {
+      return [];
+    }
+    let count = 1;
+    let i = 3;
+    let result = [2];
+
+    while (count < num) {
+      if (checkPrimeNumber(i)) {
+        result.push(i);
+        count++;
+      }
+      i++;
+    }
+    return result;
+  }
+
+  console.log(primeNumbers(num1));
+  console.log(primeNumbers(num2));
+}
+DSA87();
+
+// 👉 88) Given a string as input, Return a string without duplicates in the same order of occurrence appended with positions of first occurrence of duplicate characters.
+/*
+Input  : Banana, Output : Ban12
+Input  : Jayesh, Output : Jayesh
+*/
+function DSA88() {
+  const str1 = "Banana";
+  const str2 = "Jayesh";
+
+  function removeDuplicateswithIndex(str) {
+    let result = "";
+    const obj = {};
+
+    for (let i = 0; i < str.length; i++) {
+      if (obj[str[i]]) {
+        obj[str[i]] = { ...obj[str[i]], count: obj[str[i]].count + 1 };
+      } else {
+        result += str[i];
+        obj[str[i]] = { firstIndex: i, count: 1 };
+      }
+    }
+
+    for (let [key, value] of Object.entries(obj)) {
+      if (value.count > 1) {
+        result += value.firstIndex;
+      }
+    }
+
+    return result;
+  }
+
+  console.log(removeDuplicateswithIndex(str1));
+  console.log(removeDuplicateswithIndex(str2));
+}
+DSA88();
