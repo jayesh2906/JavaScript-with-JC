@@ -3158,7 +3158,7 @@ function DSA85() {
 
   console.log(Object.values(obj));
 }
-DSA85();
+// DSA85();
 
 // 👉 86) Check if the given number is Armstrong Number or not
 /*
@@ -3187,7 +3187,7 @@ function DSA86() {
   console.log(checkArmstrong(number1));
   console.log(checkArmstrong(number2));
 }
-DSA86();
+// DSA86();
 
 // 👉 87) Given a positive integer N as input , print first N prime numbers
 /*
@@ -3228,7 +3228,7 @@ function DSA87() {
   console.log(primeNumbers(num1));
   console.log(primeNumbers(num2));
 }
-DSA87();
+// DSA87();
 
 // 👉 88) Given a string as input, Return a string without duplicates in the same order of occurrence appended with positions of first occurrence of duplicate characters.
 /*
@@ -3264,4 +3264,4 @@ function DSA88() {
   console.log(removeDuplicateswithIndex(str1));
   console.log(removeDuplicateswithIndex(str2));
 }
-DSA88();
+// DSA88();
