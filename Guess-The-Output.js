@@ -2970,4 +2970,24 @@ function MCQ114() {
   Answer is D) [1, 2, 3, 4] because the above code is to remove the duplicates from an array with the help of filter method.
   */
 }
-MCQ114();
+// MCQ114();
+
+// 👉 MCQ-115
+function MCQ115() {
+  const nums = [1, 2, 3];
+
+  nums[5] = 6;
+
+  console.log(nums);
+
+  // 👍A) [1, 2, 3, empty × 2, 6]
+  // 💡B) [1, 2, 3, 6]
+  // 💖C) [1, 2, 3, null × 2, 6]
+  // 😀D) Error
+
+  /* 
+  Answer is A) [1, 2, 3, empty × 2, 6] because When you set a value to an element in an array that exceeds the length of the array, It creates "empty slots". 
+  These actually have the value of undefined and console [1, 2, 3, empty × 2, 6] as an output. 
+  */
+}
+MCQ115();
