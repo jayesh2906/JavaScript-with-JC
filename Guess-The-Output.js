@@ -2990,4 +2990,25 @@ function MCQ115() {
   These actually have the value of undefined and console [1, 2, 3, empty × 2, 6] as an output. 
   */
 }
-MCQ115();
+// MCQ115();
+
+// 👉 MCQ-116
+function MCQ116() {
+  const number = "9816231529845612";
+
+  const last = number.slice(-4);
+  const res = last.padStart(number.length, "*");
+
+  console.log(res);
+
+  // 👍A) 9816************
+  // 💡B) ************5612
+  // 💖C) 9816********5612
+  // 😀D) ****************5612
+
+  /* 
+  Answer is B) ************5612 because The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. 
+  The padding is applied from the start of the current string. Masking the important details of user is the use case of padStart(). 
+  */
+}
+MCQ116();
