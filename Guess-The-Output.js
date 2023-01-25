@@ -3011,4 +3011,26 @@ function MCQ116() {
   The padding is applied from the start of the current string. Masking the important details of user is the use case of padStart(). 
   */
 }
-MCQ116();
+// MCQ116();
+
+// 👉 MCQ-117
+function MCQ117() {
+  const arr1 = [1, 2, 3, 4, 5];
+  const arr2 = [1, 2, 3, 8, 9];
+
+  const res = arr1.filter((num) => {
+    return arr2.includes(num);
+  });
+
+  console.log(res);
+
+  // 👍A) [4, 5, 8, 9]
+  // 💡B) [1, 2, 3, 4, 5, 8, 9]
+  // 💖C) [1, 2, 3]
+  // 😀D) [1, 2, 3, 4, 5]
+
+  /* 
+  Answer is C) [1, 2, 3] because the above code is to find the intersection of two arrays.   
+  */
+}
+MCQ117();
