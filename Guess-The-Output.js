@@ -3033,4 +3033,31 @@ function MCQ117() {
   Answer is C) [1, 2, 3] because the above code is to find the intersection of two arrays.   
   */
 }
-MCQ117();
+// MCQ117();
+
+// 👉 MCQ-118
+function MCQ118() {
+  const num = 5431;
+
+  function addition(num) {
+    let sum = 0;
+    while (num !== 0) {
+      let rem = num % 10;
+      sum += rem;
+      num = parseInt(num / 10);
+    }
+    return sum > 9 ? addition(sum) : sum;
+  }
+
+  const res = addition(num);
+
+  console.log(res);
+
+  // 👍A) 11         💡B) 13
+  // 💖C) 9          😀D) 4
+
+  /* 
+  Answer is D) 4 because the above code is to find the sum of digits of a number until the sum becomes a single digit.   
+  */
+}
+MCQ118();
