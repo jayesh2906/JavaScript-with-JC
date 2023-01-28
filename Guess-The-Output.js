@@ -3060,4 +3060,30 @@ function MCQ118() {
   Answer is D) 4 because the above code is to find the sum of digits of a number until the sum becomes a single digit.   
   */
 }
-MCQ118();
+// MCQ118();
+
+// 👉 MCQ-119
+function MCQ119() {
+  const arr = ["JC", { name: "VK" }, "JC", { name: "VK" }];
+
+  const res = arr.filter((item, index, array) => {
+    if (array.indexOf(item) === index) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+  console.log(res);
+
+  // 👍A) ["JC", { name: "VK" }, "JC", { name: "VK" }]
+  // 💡B) ["JC", { name: "VK" }, { name: "VK" }]
+  // 💖C) ["JC", { name: "VK" }]
+  // 😀D) ["JC", { name: "VK" }, "JC"]
+
+  /* 
+  Answer is B) ["JC", { name: "VK" }, { name: "VK" }] because the above code is to remove the primitive type duplicates from an array with the help of filter method.
+  Non-primitive type duplicates will not be filtered out as indexOf() method uses strict equality ( === ), array.indexOf({ name: "VK" }) will return -1 as object are compared by their references.   
+  */
+}
+MCQ119();
