@@ -2961,6 +2961,12 @@ function DSA78() {
   }
 
   console.log(sumOfDigits(num));
+
+  function sumOfDigits2(num) {
+    return num === 0 ? 0 : num % 9 || 9;
+  }
+
+  console.log(sumOfDigits2(num));
 }
 // DSA78();
 
