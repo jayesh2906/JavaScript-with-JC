@@ -2948,14 +2948,10 @@ function DSA78() {
 
   function sumOfDigits(num) {
     let res = 0;
-    if (num < 10) {
-      return num;
-    } else {
-      while (num > 0) {
-        let rem = num % 10;
-        res += rem;
-        num = parseInt(num / 10);
-      }
+    while (num !== 0) {
+      let rem = num % 10;
+      res += rem;
+      num = parseInt(num / 10);
     }
     return res > 9 ? sumOfDigits(res) : res;
   }
