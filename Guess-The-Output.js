@@ -3086,4 +3086,32 @@ function MCQ119() {
   Non-primitive type duplicates will not be filtered out as indexOf() method uses strict equality ( === ), array.indexOf({ name: "VK" }) will return -1 as object are compared by their references.   
   */
 }
-MCQ119();
+// MCQ119();
+
+// 👉 MCQ-120
+function MCQ120() {
+  function Person(name) {
+    this.name = name;
+  }
+  Person.prototype.country = "India";
+
+  function Child(name) {
+    Person.call(this, name);
+  }
+  Child.prototype = Object.create(Person.prototype);
+  Child.prototype.constructor = Child;
+
+  const baby = new Child("Baby");
+
+  console.log(baby.name);
+  console.log(baby.country);
+
+  // 👍A) Baby undefined       💡B) undefined India
+  // 💖C) Baby India           😀D) undefined undefined
+
+  /* 
+  Answer is C) Baby India because of the Prototype Inheritance The prototype is an object that is associated with every functions and objects by default in JavaScript,
+  Every object includes __proto__ property that points to prototype object of a function that created the object and With the help of Prototype Chaining, Child Object is inheriting the properties of Parent Object.
+  */
+}
+MCQ120();
