@@ -3114,4 +3114,34 @@ function MCQ120() {
   Every object includes __proto__ property that points to prototype object of a function that created the object and With the help of Prototype Chaining, Child Object is inheriting the properties of Parent Object.
   */
 }
-MCQ120();
+// MCQ120();
+
+// 👉 MCQ-121
+function MCQ121() {
+  const str = "hello";
+  let resultChar = "";
+  let maxCount = 1;
+  const obj = {};
+
+  for (let char of str) {
+    if (obj[char]) {
+      obj[char] += 1;
+      if (obj[char] > maxCount) {
+        maxCount = obj[char];
+        resultChar = char;
+      }
+    } else {
+      obj[char] = 1;
+    }
+  }
+
+  console.log(resultChar);
+
+  // 👍A) h       💡B) e
+  // 💖C) l       😀D) o
+
+  /* 
+  Answer is C) l because the above code is to find the maximum char from the string "hello" => Output: "l".   
+  */
+}
+MCQ121();
