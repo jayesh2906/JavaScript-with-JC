@@ -3144,4 +3144,35 @@ function MCQ121() {
   Answer is C) l because the above code is to find the maximum char from the string "hello" => Output: "l".   
   */
 }
-MCQ121();
+// MCQ121();
+
+// 👉 MCQ-122
+function MCQ122() {
+  const arr = [1, 2, 3, 4, 5, 1, 2];
+  const result = [];
+
+  const obj = arr.reduce((acc, curr) => {
+    return {
+      ...acc,
+      [curr]: (acc[curr] || 0) + 1,
+    };
+  }, {});
+
+  for (let [key, val] of Object.entries(obj)) {
+    if (val === 1) {
+      result.push(+key);
+    }
+  }
+
+  console.log(result);
+
+  // 👍A) [1, 2, 3, 4, 5]
+  // 💡B) [1, 2]
+  // 💖C) [1, 2, 3, 4, 5, 1, 2]
+  // 😀D) [3, 4, 5]
+
+  /* 
+  Answer is D) [3, 4, 5] because the above code is to find the elements occurring only once in the array. Input: [1, 2, 3, 4, 5, 1, 2] => Output: [ 3, 4, 5 ].   
+  */
+}
+MCQ122();
