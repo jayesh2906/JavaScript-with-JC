@@ -3175,4 +3175,26 @@ function MCQ122() {
   Answer is D) [3, 4, 5] because the above code is to find the elements occurring only once in the array. Input: [1, 2, 3, 4, 5, 1, 2] => Output: [ 3, 4, 5 ].   
   */
 }
-MCQ122();
+// MCQ122();
+
+// 👉 MCQ-123
+function MCQ123() {
+  const one = false || {} || null;
+  const two = null || false || "";
+  const three = [] || 0 || true;
+
+  console.log(one, two, three);
+
+  // 👍A) null null true
+  // 💡B) {} "" []
+  // 💖C) false null []
+  // 😀D) null "" true
+
+  /* 
+  Answer is B) {} "" [] because With the || operator, we can return the first truthy operand. If all values are falsy, the last operand gets returned.
+  (false || {} || null): the empty object {} is a truthy value. This is the first (and only) truthy value, which gets returned. one is equal to {}.
+  (null || false || ""): all operands are falsy values. This means that the last operand, "" gets returned. two is equal to "".
+  ([] || 0 || ""): the empty array[] is a truthy value. This is the first truthy value, which gets returned. three is equal to [].
+  */
+}
+MCQ123();
