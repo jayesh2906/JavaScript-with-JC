@@ -3197,4 +3197,26 @@ function MCQ123() {
   ([] || 0 || ""): the empty array[] is a truthy value. This is the first truthy value, which gets returned. three is equal to [].
   */
 }
-MCQ123();
+// MCQ123();
+
+// 👉 MCQ-124
+function MCQ124() {
+  const isAdmin = true;
+
+  const person = {
+    name: "jayesh",
+    ...(isAdmin && { admin: true }),
+  };
+
+  console.log(person);
+
+  // 👍A) {name: 'jayesh', admin: true}
+  // 💡B) {name: 'jayesh', { admin: true }}
+  // 💖C) {name: 'jayesh'}
+  // 😀D) Error
+
+  /* 
+  Answer is A) {name: 'jayesh', admin: true} because the above code is to conditionally add property to an object.
+  */
+}
+MCQ124();
