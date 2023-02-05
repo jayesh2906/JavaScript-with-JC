@@ -3219,4 +3219,26 @@ function MCQ124() {
   Answer is A) {name: 'jayesh', admin: true} because the above code is to conditionally add property to an object.
   */
 }
-MCQ124();
+// MCQ124();
+
+// 👉 MCQ-125
+function MCQ125() {
+  const num1 = 1;
+  const num2 = "1";
+  const obj1 = { name: "JC" };
+  const obj2 = { name: "JC" };
+
+  console.log(Object.is(num1, num2));
+  console.log(Object.is(obj1, obj2));
+
+  // 👍A) true true
+  // 💡B) true false
+  // 💖C) false false
+  // 😀D) false true
+
+  /* 
+  Answer is C) false false because Object.is() determines whether two values are the same value. Object.is() is similar to the === operator. 
+  The only difference between Object.is() and === is in their treatment of signed zeros and NaN values.
+  */
+}
+MCQ125();
