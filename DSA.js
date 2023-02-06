@@ -1847,6 +1847,33 @@ function DSA46() {
 
   console.log(difference(arr1, arr2)); // [ 5, 6 ]
   console.log(difference(arr2, arr1)); // [ 7, 8 ]
+
+  function difference2() {
+    const arr1 = ["a", "b", "c", "d", "e", "f"];
+    const arr2 = ["c", "e", "z"];
+    const result = [];
+    let i = 0;
+    let j = 0;
+    let k = 0;
+
+    while (i < arr1.length && j < arr2.length) {
+      if (arr1[i] === arr2[j]) {
+        i++;
+        j++;
+      } else if (arr1[i] < arr2[j]) {
+        result[k++] = arr1[i++];
+      } else {
+        j++;
+      }
+    }
+
+    while (i < arr1.length) {
+      result[k++] = arr1[i++];
+    }
+
+    console.log(result);
+  }
+  difference2();
 }
 // DSA46();
 
@@ -3267,3 +3294,35 @@ function DSA88() {
   console.log(removeDuplicateswithIndex(str2));
 }
 // DSA88();
+
+// 👉 89) Implement the chessBoard pattern
+/*
+W B W B W B W B
+B W B W B W B w
+W B W B W B W B
+B W B W B W B w
+W B W B W B W B
+B W B W B W B w
+W B W B W B W B
+B W B W B W B w
+*/
+function DSA89() {
+  let chessBoard = [];
+
+  for (let i = 0; i < 8; i++) {
+    let temp = [];
+    for (let j = 0; j < 8; j++) {
+      if ((i + j) % 2 === 0) {
+        temp.push("W");
+      } else {
+        temp.push("B");
+      }
+    }
+    chessBoard.push(temp);
+  }
+
+  chessBoard.map((row) => {
+    console.log(...row);
+  });
+}
+// DSA89();
