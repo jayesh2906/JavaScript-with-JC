@@ -3241,4 +3241,24 @@ function MCQ125() {
   The only difference between Object.is() and === is in their treatment of signed zeros and NaN values.
   */
 }
-MCQ125();
+// MCQ125();
+
+// 👉 MCQ-126
+function MCQ126() {
+  let a = null;
+  let b = undefined;
+
+  console.log(a == b);
+  console.log(a === b);
+
+  // 👍A) true true
+  // 💡B) true false
+  // 💖C) false false
+  // 😀D) false true
+
+  /* 
+  Answer is B) true false because Loose Equality Operator (==) checks whether the values are same, as null and undefined both are falsy values, a == b will return true. 
+  Strict Equality Operator (===) compares value as well as type of operands, typeof null is "object" whereas typeof undefined is "undefined", a === b will return false.
+  */
+}
+MCQ126();
