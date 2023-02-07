@@ -3261,4 +3261,25 @@ function MCQ126() {
   Strict Equality Operator (===) compares value as well as type of operands, typeof null is "object" whereas typeof undefined is "undefined", a === b will return false.
   */
 }
-MCQ126();
+// MCQ126();
+
+// 👉 MCQ-127
+function MCQ127() {
+  const arr1 = [1, 2, 3];
+  const arr2 = arr1.reverse();
+  arr2.push(4);
+
+  console.log(arr1);
+  console.log(arr2);
+
+  // 👍A) [3, 2, 1, 4] [3, 2, 1, 4]
+  // 💡B) [3, 2, 1] [3, 2, 1, 4]
+  // 💖C) [1, 2, 3, 4] [3, 2, 1, 4]
+  // 😀D) [1, 2, 3] [3, 2, 1, 4]
+
+  /* 
+  Answer is A) [3, 2, 1, 4] [3, 2, 1, 4] because The reverse() method reverses an array and returns the reference to the same array,
+  The reverse() method returns reference to the original array, so mutating the returned array will mutate the original array as well.
+  */
+}
+MCQ127();
