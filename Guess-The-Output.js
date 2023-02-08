@@ -3282,4 +3282,26 @@ function MCQ127() {
   The reverse() method returns reference to the original array, so mutating the returned array will mutate the original array as well.
   */
 }
-MCQ127();
+// MCQ127();
+
+// 👉 MCQ-128
+function MCQ128() {
+  const map = new Map();
+
+  map.set("a", 1);
+  map.set("b", 2);
+  map.set("c", 3);
+  map.set("a", 7);
+
+  console.log(map.get("a"));
+  console.log(map.size);
+
+  // 👍A) 7 4      💡B) 1 4
+  // 💖C) 1 3      😀D) 7 3
+
+  /* 
+  Answer is D) 7 3 because Map objects are collections of key-value pairs. A key in the Map may only occur once; it is unique in the Map's collection.
+  map.set("a", 7) will override key "a" with value "7" and the size of map object will be 3.
+  */
+}
+MCQ128();
