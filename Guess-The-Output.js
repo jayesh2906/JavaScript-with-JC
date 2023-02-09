@@ -3304,4 +3304,28 @@ function MCQ128() {
   map.set("a", 7) will override key "a" with value "7" and the size of map object will be 3.
   */
 }
-MCQ128();
+// MCQ128();
+
+// 👉 MCQ-129
+function MCQ129() {
+  const str = "Jayesh";
+
+  function foo(str) {
+    if (str.length < 2) {
+      return str;
+    }
+
+    return foo(str.slice(1)) + str[0];
+  }
+
+  const result = foo(str);
+  console.log(result);
+
+  // 👍A) "hseyaJ"      💡B) "aJ"
+  // 💖C) "Jayesh"      😀D) "Ja"
+
+  /* 
+  Answer is A) hseyaJ because the above code will reverse the name "Jayesh".
+  */
+}
+MCQ129();
