@@ -3328,4 +3328,25 @@ function MCQ129() {
   Answer is A) hseyaJ because the above code will reverse the name "Jayesh".
   */
 }
-MCQ129();
+// MCQ129();
+
+// 👉 MCQ-130
+function MCQ130() {
+  const add = (x) => x + x;
+
+  function addition(num = 2, val = add(num)) {
+    console.log(num, val);
+  }
+
+  addition(3);
+
+  // 👍A) 2 4            💡B) 3 6
+  // 💖C) 2 6            😀D) 3 Error
+
+  /* 
+  Answer is B) 3 6 because While calling addition function we have passed 3 as the argument for "num" and We didn't pass an argument for "val". 
+  Since we didn't pass a value for the "val" argument, it got the default value: the returned value of the add function. 
+  To add function, we pass num, which has the value of 3. add returns 6, which is the value of "val".
+  */
+}
+MCQ130();
