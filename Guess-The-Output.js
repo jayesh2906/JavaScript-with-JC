@@ -3349,4 +3349,33 @@ function MCQ130() {
   To add function, we pass num, which has the value of 3. add returns 6, which is the value of "val".
   */
 }
-MCQ130();
+// MCQ130();
+
+// 👉 MCQ-131
+function MCQ131() {
+  const calc = {
+    total: 0,
+    add: function (num) {
+      this.total += num;
+      return this;
+    },
+    sub: function (num) {
+      this.total -= num;
+      return this;
+    },
+    mul: function (num) {
+      this.total *= num;
+      return this;
+    },
+  };
+
+  console.log(calc.add(10).sub(5).mul(10).total);
+
+  // 👍A) 0   💡B) -50   💖C) 50   😀D) Error
+
+  /* 
+  Answer is C) 50 because Method chaining. Method chaining is a chain of methods where each method shares the same reference means each method returns an object, allowing the calls to be 
+  chained together in a single statement. Method chaining is used to write more readable code.
+  */
+}
+MCQ131();
