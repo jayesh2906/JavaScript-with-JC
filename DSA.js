@@ -2822,79 +2822,79 @@ function DSA75() {
 
 // 👉 76) Spell out numbers ( convert numbers which are less than 100 into words ).
 /* 
-spellNumber(1) => "one"
-spellNumber(12) => "twele"
-spellNumber(17) => "seventeen"
-spellNumber(21) => "twenty one"
-spellNumber(40) => "fourty"
-spellNumber(99) => "ninty nine"
+spellNumber(50) => 'Fifty' 
+spellNumber(99) => 'Ninety Nine' 
+spellNumber(14632) => 'Fourteen Thousand Six Hundred Thirty Two' 
+spellNumber(7483647) => 'Seventy Four Lakh Eighty Three Thousand Six Hundred Forty Seven' 
+spellNumber(997751076) => 'Ninety Nine Crore Seventy Seven Lakh Fifty One Thousand Seventy Six'
 */
 function DSA76() {
-  function spellNumber(number) {
-    if (number > 99) {
-      return "Greater than 99";
+  const lessThan20 = [
+    "",
+    "One ",
+    "Two ",
+    "Three ",
+    "Four ",
+    "Five ",
+    "Six ",
+    "Seven ",
+    "Eight ",
+    "Nine ",
+    "Ten ",
+    "Eleven ",
+    "Twele ",
+    "Thirteen ",
+    "Fourteen ",
+    "Fifteen ",
+    "Sixteen ",
+    "Seventeen ",
+    "Eighteen ",
+    "Nineteen ",
+  ];
+
+  const tenPlace = [
+    "",
+    "",
+    "Twenty ",
+    "Thirty ",
+    "Fourty ",
+    "Fifty ",
+    "Sixty ",
+    "Seventy ",
+    "Eighty ",
+    "Ninety ",
+  ];
+
+  function convertToDigit(n, suffix) {
+    let str = "";
+    if (n === 0) {
+      return str;
     }
-    const lessThan20 = [
-      "Zero",
-      "One",
-      "Two",
-      "Three",
-      "Four",
-      "Five",
-      "Six",
-      "Seven",
-      "Eight",
-      "Nine",
-      "Ten",
-      "Eleven",
-      "Twele",
-      "Thirteen",
-      "Fourteen",
-      "Fifteen",
-      "Sixteen",
-      "Seventeen",
-      "Eighteen",
-      "Nineteen",
-    ];
 
-    const tenPlace = [
-      "",
-      "",
-      "Twenty",
-      "Thirty",
-      "Fourty",
-      "Fifty",
-      "Sixty",
-      "Seventy",
-      "Eighty",
-      "Ninety",
-    ];
-
-    let result = "";
-
-    if (number < 20) {
-      result = lessThan20[number];
+    if (n > 19) {
+      str += tenPlace[parseInt(n / 10)] + lessThan20[n % 10] + suffix;
     } else {
-      let unit = number % 10;
-      let ten = parseInt(number / 10);
-      if (unit === 0) {
-        result = tenPlace[ten];
-      } else {
-        result = tenPlace[ten] + " " + (unit ? lessThan20[unit] : "");
-      }
+      str += lessThan20[n % 10] + suffix;
     }
 
-    return result;
+    return str;
   }
 
-  console.log(spellNumber(0));
-  console.log(spellNumber(1));
-  console.log(spellNumber(12));
-  console.log(spellNumber(17));
-  console.log(spellNumber(21));
-  console.log(spellNumber(40));
+  function spellNumber(n) {
+    let res = "";
+    res += convertToDigit(parseInt(n / 10000000) % 100, "Crore ");
+    res += convertToDigit(parseInt(n / 100000) % 100, "Lakh ");
+    res += convertToDigit(parseInt(n / 1000) % 100, "Thousand ");
+    res += convertToDigit(parseInt(n / 100) % 10, "Hundred ");
+    res += convertToDigit(n % 100, " ");
+    return res;
+  }
+
+  console.log(spellNumber(50));
   console.log(spellNumber(99));
-  console.log(spellNumber(100));
+  console.log(spellNumber(14632));
+  console.log(spellNumber(7483647));
+  console.log(spellNumber(997751076));
 }
 // DSA76();
 
