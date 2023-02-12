@@ -3378,4 +3378,25 @@ function MCQ131() {
   chained together in a single statement. Method chaining is used to write more readable code.
   */
 }
-MCQ131();
+// MCQ131();
+
+// 👉 MCQ-132
+function MCQ132() {
+  const success = "{email} logged-in";
+  const user = "jc@gmail.com";
+
+  let display = success.replace("{email}", user);
+
+  console.log(display);
+
+  // 👍A) "undefined logged-in"
+  // 💡B) "jc@gmail.com logged-in"
+  // 💖C) "{email} logged-in"
+  // 😀D) "null logged-in"
+
+  /* 
+  Answer is B) "jc@gmail.com logged-in" because The replace() method returns a new string with one, some, or all matches of a pattern replaced by a replacement. 
+  If pattern is a string, only the first occurrence will be replaced. The original string is left unchanged.
+  */
+}
+MCQ132();
