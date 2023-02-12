@@ -2125,7 +2125,7 @@ function DSA53() {
 }
 // DSA53();
 
-// 👉 54) Moving selected item at tne end of an array ( move all 0 to end I.M.P )
+// 👉 54) Moving selected item at the end of an array ( move all 0 to end I.M.P )
 /*
 const arr = [1, 2, 3, 4, 3, 5, 3, 6, 7]; selected item = 3
 output => [1, 2, 4, 5, 6, 7, 3, 3, 3];
