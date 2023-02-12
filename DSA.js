@@ -3004,16 +3004,14 @@ function DSA79() {
   let sum = 0;
 
   for (let num of array) {
-    if (isNaN(obj[num])) {
-      sum = sum + num;
-      obj[num] = 1;
-    } else {
-      if (obj[num] > 0) {
-        sum = sum - num;
-        obj[num] = obj[num] - 1;
-      } else {
-        obj[num] = obj[num] + 1;
+    if (obj[num]) {
+      if (obj[num] === 1) {
+        sum -= num;
       }
+      obj[num] = obj[num] + 1;
+    } else {
+      sum += num;
+      obj[num] = 1;
     }
   }
 
