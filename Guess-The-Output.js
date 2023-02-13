@@ -3399,4 +3399,26 @@ function MCQ132() {
   If pattern is a string, only the first occurrence will be replaced. The original string is left unchanged.
   */
 }
-MCQ132();
+// MCQ132();
+
+// 👉 MCQ-133
+function MCQ133() {
+  const age = 24;
+  const key = "age";
+
+  const person = {
+    name: "Jayesh",
+    [key]: age,
+  };
+
+  console.log(person.name);
+  console.log(person.age);
+
+  // 👍A) "Jayesh" 24       💡B) "Jayesh" undefined
+  // 💖C) "Jayesh" "age"    😀D) "Jayesh" Error
+
+  /* 
+  Answer is A) "Jayesh" 24 because the above code is to add dynamic key to an object. "[]" is used to add dynamic key to an object.
+  */
+}
+MCQ133();
