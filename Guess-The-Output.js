@@ -3421,4 +3421,28 @@ function MCQ133() {
   Answer is A) "Jayesh" 24 because the above code is to add dynamic key to an object. "[]" is used to add dynamic key to an object.
   */
 }
-MCQ133();
+// MCQ133();
+
+// 👉 MCQ-134
+function MCQ134() {
+  function sum(x, y) {
+    if (y !== undefined) {
+      return x + y;
+    } else {
+      return function (y) {
+        return x + y;
+      };
+    }
+  }
+
+  console.log(sum(2, 3));
+  console.log(sum(2)(3));
+
+  // 👍A) 2 5      💡B) 5 NaN
+  // 💖C) 5 5      😀D) NaN 5
+
+  /* 
+  Answer is C) 5 5 because of Currying. Currying is a technique to convert multiple arguments function into a single argument functions (unary functions) in a sequence.
+  */
+}
+MCQ134();
