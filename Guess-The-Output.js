@@ -3445,4 +3445,23 @@ function MCQ134() {
   Answer is C) 5 5 because of Currying. Currying is a technique to convert multiple arguments function into a single argument functions (unary functions) in a sequence.
   */
 }
-MCQ134();
+// MCQ134();
+
+// 👉 MCQ-135
+function MCQ135() {
+  var result;
+  for (var i = 5; i > 0; i--) {
+    result = result + i;
+  }
+
+  console.log(result);
+
+  // 👍A) 14      💡B) 15
+  // 💖C) 10      😀D) NaN
+
+  /* 
+  Answer is D) NaN because at first line declaring "result" variable without initialization will store result value as undefined.
+  + operator applies an implicit coercion to an integer to an operand when the other is a number undefined is coerced to NaN.
+  */
+}
+MCQ135();
