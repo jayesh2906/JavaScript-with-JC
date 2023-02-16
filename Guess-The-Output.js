@@ -3464,4 +3464,30 @@ function MCQ135() {
   + operator applies an implicit coercion to an integer to an operand when the other is a number undefined is coerced to NaN.
   */
 }
-MCQ135();
+// MCQ135();
+
+// 👉 MCQ-136
+function MCQ136() {
+  const arr = [{ key: 1 }, { key: 1 }, { key: 2 }];
+  const result = [];
+  const map = new Map();
+
+  for (let item of arr) {
+    if (!map.has(item.key)) {
+      result.push(item);
+      map.set(item.key, item);
+    }
+  }
+
+  console.log(result);
+
+  // 👍A) [{ key: 1 }, { key: 2 }]
+  // 💡B) [{ key: 1 }, { key: 1 }, { key: 2 }]
+  // 💖C) [{ key: 2 }]
+  // 😀D) [{ key: 1 }, { key: 1 }]
+
+  /* 
+  Answer is A) [{ key: 1 }, { key: 2 }] because the above code is to remove duplicate objects from an array.
+  */
+}
+MCQ136();
