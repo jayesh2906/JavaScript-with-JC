@@ -3490,4 +3490,27 @@ function MCQ136() {
   Answer is A) [{ key: 1 }, { key: 2 }] because the above code is to remove duplicate objects from an array.
   */
 }
-MCQ136();
+// MCQ136();
+
+// 👉 MCQ-137
+function MCQ137() {
+  const arr1 = [1, 2, 3];
+  const arr2 = [1, 2, 4];
+
+  const result = arr1.concat(
+    arr2.filter((num) => {
+      return !arr1.includes(num);
+    })
+  );
+  console.log(result);
+
+  // 👍A) [1, 2, 1, 2, 3, 4]
+  // 💡B) [3, 4]
+  // 💖C) [1, 2, 3, 4]
+  // 😀D) [1, 2]
+
+  /* 
+  Answer is C) [1, 2, 3, 4] because the above code is to find the union of two arrays.
+  */
+}
+MCQ137();
