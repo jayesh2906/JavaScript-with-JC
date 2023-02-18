@@ -811,23 +811,31 @@ Output:
 6 => [1,2,3,4,5,6]
 */
 function DSA19() {
-  const arr = [2, 6, 1, 9, 4, 5, 3];
+  const arr = [2, 6, 1, 3, 1, 3, 4, 7, 8, 9, 10, 11];
 
   function longestCoinsecutive(arr) {
-    let max = 0;
-    let count = 0;
     arr.sort((a, b) => a - b);
-    for (let i = 0; i < arr.length; i++) {
-      if (i > 0 && arr[i] === arr[i - 1] + 1) {
-        count++;
-      } else if (i > 0 && arr[i] === arr[i - 1]) {
+    let longestSeq = [arr[0]];
+    let temp = [arr[0]];
+
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] === arr[i - 1]) {
         continue;
+      } else if (arr[i] === arr[i - 1] + 1) {
+        temp.push(arr[i]);
       } else {
-        count = 1;
+        if (temp.length > longestSeq.length) {
+          longestSeq = temp;
+          temp = [arr[i]];
+        }
       }
-      max = Math.max(max, count);
     }
-    return max;
+
+    if (temp.length > longestSeq.length) {
+      longestSeq = temp;
+    }
+
+    return longestSeq;
   }
 
   console.log(longestCoinsecutive(arr));
