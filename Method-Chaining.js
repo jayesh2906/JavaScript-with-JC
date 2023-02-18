@@ -107,3 +107,29 @@ const result2 = CalculatorFunc()
   .subtract(20)
   .result();
 console.log(result2); // 40
+
+// 👉 Method Chaining question to implement.
+function Calc(num) {
+  this.total = num;
+  this.add = function (num) {
+    this.total += num;
+    return this;
+  };
+  this.sub = function (num) {
+    this.total -= num;
+    return this;
+  };
+  this.value = function () {
+    return this.total;
+  };
+}
+
+function add(num) {
+  return new Calc(num);
+}
+
+function sub(num) {
+  return new Calc(num);
+}
+
+console.log(add(2).sub(3).value());
