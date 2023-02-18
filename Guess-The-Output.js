@@ -3513,4 +3513,27 @@ function MCQ137() {
   Answer is C) [1, 2, 3, 4] because the above code is to find the union of two arrays.
   */
 }
-MCQ137();
+// MCQ137();
+
+// 👉 MCQ-138
+function MCQ138() {
+  const str = "Hello";
+  str[1] = "a";
+
+  const arr = ["H", "e", "l", "l", "o"];
+  arr[1] = "a";
+
+  console.log(str);
+  console.log(arr);
+
+  // 👍A) "Hello" ["H", "e", "l", "l", "o"]
+  // 💡B) "Hello" ["H", "a", "l", "l", "o"]
+  // 💖C) "Hallo" ["H", "a", "l", "l", "o"]
+  // 😀D) "Hallo" ["H", "e", "l", "l", "o"]
+
+  /* 
+  Answer is B) "Hello" ["H", "a", "l", "l", "o"] because We cannot assign a new character to an index in String by square bracket notation.
+  As Strings are immutable, by doing that we will be updating the content of String reference which cannot be possible in case of immutability.
+  */
+}
+MCQ138();
