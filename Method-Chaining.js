@@ -108,7 +108,7 @@ const result2 = CalculatorFunc()
   .result();
 console.log(result2); // 40
 
-// 👉 Method Chaining question to implement.
+// 👉 Method Chaining Question to implement.
 function Calc(num) {
   this.total = num;
   this.add = function (num) {
@@ -132,4 +132,4 @@ function sub(num) {
   return new Calc(num);
 }
 
-console.log(add(2).sub(3).value());
+console.log(add(4).sub(3).value()); // 1
