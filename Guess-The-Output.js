@@ -3536,4 +3536,22 @@ function MCQ138() {
   As Strings are immutable, by doing that we will be updating the content of String reference which cannot be possible in case of immutability.
   */
 }
-MCQ138();
+// MCQ138();
+
+// 👉 MCQ-139
+function MCQ139() {
+  var output = (function (x) {
+    delete x;
+    return x;
+  })(0);
+
+  console.log(output);
+
+  // 👍A) undefined        💡B) true
+  // 💖C) Function(){}     😀D) 0
+
+  /* 
+  Answer is D) 0 because delete operator is used to delete a property from an object. Here x is not a property of an object it’s local variable. delete operator doesn’t affect local variables.
+  */
+}
+MCQ139();
