@@ -3548,10 +3548,51 @@ function MCQ139() {
   console.log(output);
 
   // 👍A) undefined        💡B) true
-  // 💖C) Function(){}     😀D) 0
+  // 💖C) Function(){}     😀D) 0 1, "truexyz", 2, 1
 
   /* 
   Answer is D) 0 because delete operator is used to delete a property from an object. Here x is not a property of an object it’s local variable. delete operator doesn’t affect local variables.
   */
 }
-MCQ139();
+// MCQ139();
+
+// 👉 MCQ-140
+function MCQ140() {
+  var str = true;
+  console.log(str + 0);
+  console.log(str + "xyz");
+  console.log(str + true);
+  console.log(str + false);
+
+  // 👍A) 1, NaN, 2, 1
+  // 💡B) "true0" "truexyz" 2 1
+  // 💖C) 1, "truexyz", 2, 1
+  // 😀D) 1, "truexyz", 1, 0
+
+  /* 
+  Answer is C) 1, "truexyz", 2, 1 because general rules of plus operator are:-
+  Number + Number -> Addition
+  Boolean + Number -> Addition
+  Boolean + Boolean -> Addition
+  Number + String -> Concatenation
+  String + Boolean -> Concatenation
+  String + String -> Concatenation
+  */
+}
+// MCQ140();
+
+// 👉 MCQ-141
+function MCQ141() {
+  const calc = eval("10*10+5");
+
+  console.log(calc);
+
+  // 👍A) "105"     💡B) 105
+  // 💖C) 150       😀D) "10*10+5"
+
+  /* 
+  Answer is B) 105 because eval method evaluates codes that's passed as a string. If it's an expression, it evaluates the expression. 
+  The expression is 10 * 10 + 5 returns the number 105.
+  */
+}
+MCQ141();
