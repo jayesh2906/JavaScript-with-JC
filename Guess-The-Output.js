@@ -3595,4 +3595,26 @@ function MCQ141() {
   The expression is 10 * 10 + 5 returns the number 105.
   */
 }
-MCQ141();
+// MCQ141();
+
+// 👉 MCQ-142
+function MCQ142() {
+  const user = {
+    fName: "Jayesh",
+    lName: "Choudhary",
+    email: null,
+  };
+
+  let res = Object.values(user).every((val) => val);
+
+  console.log(res);
+
+  // 👍A) true        💡B) undefined
+  // 💖C) false       😀D) null
+
+  /* 
+  Answer is C) false because The every() method tests whether all elements in an array pass the test implemented by the provided callback function.
+  email is null hence the output will be false.
+  */
+}
+MCQ142();
