@@ -3617,4 +3617,24 @@ function MCQ142() {
   email is null hence the output will be false.
   */
 }
-MCQ142();
+// MCQ142();
+
+// 👉 MCQ-143
+function MCQ143() {
+  function getNumber() {
+    return 2, 4, 5;
+  }
+
+  var number = getNumber();
+
+  console.log(number);
+
+  // 👍A) 2        💡B) 4
+  // 💖C) 5        😀D) undefined
+
+  /* 
+  Answer is C) 5 because The above code will return the last value which is 5 and ignore all the other values.
+  To return multiple values we can use array of values [2, 4, 5].
+  */
+}
+MCQ143();
