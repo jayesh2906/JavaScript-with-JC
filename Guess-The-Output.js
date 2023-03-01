@@ -3637,4 +3637,29 @@ function MCQ143() {
   To return multiple values we can use array of values [2, 4, 5].
   */
 }
-MCQ143();
+// MCQ143();
+
+// 👉 MCQ-144
+function MCQ144() {
+  function mul(x) {
+    return function (y) {
+      return [
+        x * y,
+        function (z) {
+          return x * y + z;
+        },
+      ];
+    };
+  }
+
+  console.log(mul(2)(3)[0]);
+  console.log(mul(2)(3)[1](4));
+
+  // 👍A) 6 10           💡B) undefined undefined
+  // 💖C) 6 undefined    😀D) ReferenceError
+
+  /* 
+  Answer is A) 6 10 because of Closure, Inner function can access all the variables and functions of it's outer function even after the execution context of outer function has been completely removed from the call stack.   
+  */
+}
+MCQ144();
