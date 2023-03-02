@@ -3662,4 +3662,28 @@ function MCQ144() {
   Answer is A) 6 10 because of Closure, Inner function can access all the variables and functions of it's outer function even after the execution context of outer function has been completely removed from the call stack.   
   */
 }
-MCQ144();
+// MCQ144();
+
+// 👉 MCQ-145
+function MCQ145() {
+  let players = [
+    { name: "VK", role: "Batsman" },
+    { name: "HP", role: "All-Rounder" },
+    { name: "RJ", role: "All-Rounder" },
+  ];
+
+  let result = players.some((player) => {
+    return player.role === "Batsman";
+  });
+
+  console.log(result);
+
+  // 👍A) true        💡B) undefined
+  // 💖C) false       😀D) null
+
+  /* 
+  Answer is A) true because The some() method tests whether at least one element in the array passes the test implemented by the provided callback function.
+  player name "Vk" has role of "Batsman" is present in players array. 
+  */
+}
+MCQ145();
