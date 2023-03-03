@@ -3686,4 +3686,22 @@ function MCQ145() {
   player name "Vk" has role of "Batsman" is present in players array. 
   */
 }
-MCQ145();
+// MCQ145();
+
+// 👉 MCQ-146
+function MCQ146() {
+  const numbers = [1, 2, 3, 4, 5];
+  const [y] = numbers;
+
+  console.log(y);
+
+  // 👍A) [1]
+  // 💡B) [1, 2, 3, 4, 5]
+  // 💖C) 1
+  // 😀D) [[1, 2, 3, 4, 5]]
+
+  /* 
+  Answer is C) 1 because through destructuring We can unpack values from arrays or properties from objects. y is equal to the first value in the array, which is the number 1.
+  */
+}
+MCQ146();
