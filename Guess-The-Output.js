@@ -3704,4 +3704,25 @@ function MCQ146() {
   Answer is C) 1 because through destructuring We can unpack values from arrays or properties from objects. y is equal to the first value in the array, which is the number 1.
   */
 }
-MCQ146();
+// MCQ146();
+
+// 👉 MCQ-147
+function MCQ147() {
+  const a1 = [1, 2, 3, 4];
+  const a2 = [1, 2, 5, 6];
+
+  let res1 = a1.filter((num) => !a2.includes(num));
+  let res2 = a2.filter((num) => !a1.includes(num));
+
+  console.log([...res1, ...res2]);
+
+  // 👍A) [1, 2, 3, 4]
+  // 💡B) [3, 4, 5, 6]
+  // 💖C) [1, 2]
+  // 😀D) [1, 2, 5, 6]
+
+  /* 
+  Answer is B) [3, 4, 5, 6] because The above code is to find unique elements from two arrays.
+  */
+}
+MCQ147();
