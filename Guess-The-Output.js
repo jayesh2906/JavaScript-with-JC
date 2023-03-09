@@ -3725,4 +3725,29 @@ function MCQ147() {
   Answer is B) [3, 4, 5, 6] because The above code is to find unique elements from two arrays.
   */
 }
-MCQ147();
+// MCQ147();
+
+// 👉 MCQ-148
+function MCQ148() {
+  const arr = [1, 2, 3, 4];
+  let i = 0;
+  let j = arr.length - 1;
+
+  while (i < j) {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+    i++;
+    j--;
+  }
+
+  console.log(arr);
+
+  // 👍A) [1, 2, 3, 4]
+  // 💡B) [3, 4, 1, 2]
+  // 💖C) [2, 4, 1, 3]
+  // 😀D) [4, 3, 2, 1]
+
+  /* 
+  Answer is D) [4, 3, 2, 1] because The above code is to reverse an array.
+  */
+}
+MCQ148();
