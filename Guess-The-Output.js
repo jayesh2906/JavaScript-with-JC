@@ -3750,4 +3750,23 @@ function MCQ148() {
   Answer is D) [4, 3, 2, 1] because The above code is to reverse an array.
   */
 }
-MCQ148();
+// MCQ148();
+
+// 👉 MCQ-149
+function MCQ149() {
+  const str = "JavaScript-with-JC";
+  const res1 = str.startsWith("Java");
+  const res2 = str.startsWith("java");
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) true true    💡B) true false
+  // 💖C) false true   😀D) false false
+
+  /* 
+  Answer is B) true false because startsWith() method determines whether a string begins with the characters of a specified string, returning true or false as appropriate.
+  This method is case-sensitive.
+  */
+}
+MCQ149();
