@@ -3769,4 +3769,32 @@ function MCQ149() {
   This method is case-sensitive.
   */
 }
-MCQ149();
+// MCQ149();
+
+// 👉 MCQ-150
+function MCQ150() {
+  const arr = [0, 2, 1, 2, 0];
+  let count = 0;
+
+  for (let num of arr) {
+    if (num !== 0) {
+      arr[count++] = num;
+    }
+  }
+
+  while (count < arr.length) {
+    arr[count++] = 0;
+  }
+
+  console.log(arr);
+
+  // 👍A) [0, 0, 2, 1, 2]
+  // 💡B) [0, 2, 1, 2, 0]
+  // 💖C) [2, 1, 2, 0, 0]
+  // 😀D) [2, 1, 2]
+
+  /* 
+  Answer is C) [2, 1, 2, 0, 0] because the above code is to move all 0 to end of an array.
+  */
+}
+MCQ150();
