@@ -3797,4 +3797,19 @@ function MCQ150() {
   Answer is C) [2, 1, 2, 0, 0] because the above code is to move all 0 to end of an array.
   */
 }
-MCQ150();
+// MCQ150();
+
+// 👉 MCQ-151
+function MCQ151() {
+  let str = "abcba";
+  let res = str.split("").reverse().join("");
+
+  console.log(str === res);
+
+  // 👍A) true         💡B) false
+
+  /* 
+  Answer is A) true because the above code is to check whether a String is Palindrome or not.
+  */
+}
+MCQ151();
