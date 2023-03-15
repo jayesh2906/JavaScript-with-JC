@@ -3834,8 +3834,7 @@ function MCQ152() {
   // 💖C) [1, 0]     😀D) [0, 1]
 
   /* 
-  Answer is D) [0, 1] because the above code is to find pairs of number's index whose sum is equal to given number.
-  2(at index 0) + 7(at index 1) is eual to target 9.
+  Answer is D) [0, 1] because the above code is to find pairs of number's index whose sum is equal to given number. 2(at index 0) + 7(at index 1) is equal to target 9.
   */
 }
 MCQ152();
