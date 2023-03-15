@@ -3812,4 +3812,30 @@ function MCQ151() {
   Answer is A) true because the above code is to check whether a String is Palindrome or not.
   */
 }
-MCQ151();
+// MCQ151();
+
+// 👉 MCQ-152
+function MCQ152() {
+  const nums = [2, 7, 11, 15];
+  const target = 9;
+  const output = [];
+
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        output.push([i, j]);
+      }
+    }
+  }
+
+  console.log(...output);
+
+  // 👍A) [0, 2]     💡B) [2, 0]
+  // 💖C) [1, 0]     😀D) [0, 1]
+
+  /* 
+  Answer is D) [0, 1] because the above code is to find pairs of number's index whose sum is equal to given number.
+  2(at index 0) + 7(at index 1) is eual to target 9.
+  */
+}
+MCQ152();
