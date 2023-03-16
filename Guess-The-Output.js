@@ -3860,7 +3860,7 @@ function MCQ153() {
   // 💖C) [1, 1] [3, 4]      😀D) [2, 3, 4] [1, 1, 2]
 
   /* 
-  Answer is B) [2, 3, 4] [3, 4] because the above code is to implement the pollyfill of skip function.
+  Answer is B) [2, 3, 4] [3, 4] because the above code is to implement the polyfill of skip function.
   */
 }
 MCQ153();
