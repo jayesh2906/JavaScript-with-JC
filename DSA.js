@@ -598,7 +598,22 @@ function DSA13() {
   }
   console.log("No. of Pairs", count);
 
-  // 2) Using one for loop and map
+  // 2) Using hashMap
+
+  const hashMap = new Map();
+  const output = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let diff = sum - arr[i];
+    if (hashMap.has(diff)) {
+      output.push([hashMap.get(diff), arr[i]]);
+    }
+    hashMap.set(arr[i], arr[i]);
+  }
+
+  console.log(output, output.length);
+
+  // 3) Using one for loop and map
   let result = [];
   let map = new Map();
 
