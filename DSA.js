@@ -599,7 +599,6 @@ function DSA13() {
   console.log("No. of Pairs", count);
 
   // 2) Using hashMap
-
   const hashMap = new Map();
   const output = [];
 
