@@ -3837,4 +3837,30 @@ function MCQ152() {
   Answer is D) [0, 1] because the above code is to find pairs of number's index whose sum is equal to given number. 2(at index 0) + 7(at index 1) is equal to target 9.
   */
 }
-MCQ152();
+// MCQ152();
+
+// 👉 MCQ-153
+function MCQ153() {
+  Array.prototype.skip = function (arg) {
+    let array = this;
+    if (typeof arg === "function") {
+      return array.filter((num) => !arg(num));
+    } else {
+      return array.filter((num) => num !== arg);
+    }
+  };
+
+  let res1 = [1, 1, 2, 3, 4].skip(1);
+  let res2 = [1, 1, 2, 3, 4].skip((num) => num < 3);
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) [1, 1] [1, 1, 2]   💡B) [2, 3, 4] [3, 4]
+  // 💖C) [1, 1] [3, 4]      😀D) [2, 3, 4] [1, 1, 2]
+
+  /* 
+  Answer is B) [2, 3, 4] [3, 4] because the above code is to implement the pollyfill of skip function.
+  */
+}
+MCQ153();
