@@ -3881,7 +3881,7 @@ function MCQ154() {
   // 💖C) true     😀D) TypeError
 
   /* 
-  Answer is C) true because the above code is to Check whether two array are equal or not, does not matter the position of their items.
+  Answer is C) true because the above code is to Check whether two array are equal or not, does not matter the position of their elements.
   */
 }
 MCQ154();
