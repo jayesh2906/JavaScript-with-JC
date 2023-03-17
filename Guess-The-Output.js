@@ -3863,4 +3863,25 @@ function MCQ153() {
   Answer is B) [2, 3, 4] [3, 4] because the above code is to implement the polyfill of skip function.
   */
 }
-MCQ153();
+// MCQ153();
+
+// 👉 MCQ-154
+function MCQ154() {
+  const x = [1, 2, 3, 4, 5];
+  const y = [5, 2, 1, 4, 3];
+
+  x.sort((a, b) => a - b);
+  y.sort((a, b) => a - b);
+
+  let res = JSON.stringify(x) === JSON.stringify(y);
+
+  console.log(res);
+
+  // 👍A) false    💡B) ReferenceError
+  // 💖C) true     😀D) TypeError
+
+  /* 
+  Answer is C) true because the above code is to Check whether two array are equal or not, does not matter the position of their items.
+  */
+}
+MCQ154();
