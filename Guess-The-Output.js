@@ -3884,4 +3884,27 @@ function MCQ154() {
   Answer is C) true because the above code is to Check whether two array are equal or not, does not matter the position of their elements.
   */
 }
-MCQ154();
+// MCQ154();
+
+// 👉 MCQ-155
+function MCQ155() {
+  const str = "Consistency Is the Key";
+  const choices = "aeiou";
+  let count = 0;
+
+  for (let char of str) {
+    if (choices.includes(char.toLowerCase())) {
+      count++;
+    }
+  }
+
+  console.log(count);
+
+  // 👍A) 5            💡B) 6
+  // 💖C) 3            😀D) 4
+
+  /* 
+  Answer is B) 6 because the above code is to find vowels count in the given string. 
+  */
+}
+MCQ155();
