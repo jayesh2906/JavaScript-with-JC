@@ -3907,4 +3907,22 @@ function MCQ155() {
   Answer is B) 6 because the above code is to find vowels count in the given string. 
   */
 }
-MCQ155();
+// MCQ155();
+
+// 👉 MCQ-156
+function MCQ156() {
+  const arr = [1, 2, 3];
+
+  const res = Array.from(arr, (x) => 2 * x);
+
+  console.log(res);
+
+  // 👍A) [2, 4, 6]    💡B) [1, 2, 3]
+  // 💖C) [1, 2, 6]    😀D) [2, 2, 3]
+
+  /* 
+  Answer is A) [2, 4, 6] because The Array.from() method creates a new shallow-copied Array instance from an iterable or array-like object.
+  Syntax :- Array.from(array, mapFn), 2nd parameter mapFn is a function to call on every element of the array. 
+  */
+}
+MCQ156();
