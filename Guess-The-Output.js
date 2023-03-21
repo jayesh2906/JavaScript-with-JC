@@ -3925,4 +3925,24 @@ function MCQ156() {
   Syntax :- Array.from(array, mapFn), 2nd parameter mapFn is a function to call on every element of the array. 
   */
 }
-MCQ156();
+// MCQ156();
+
+// 👉 MCQ-157
+function MCQ157() {
+  const arr = [1, 2, 3, 1, 2];
+  const obj = {};
+
+  arr.forEach((number) => {
+    obj[number] = true;
+  });
+
+  console.log(Object.keys(obj));
+
+  // 👍A) [1, 2, 3, 1, 2]              💡B) ['1', '2', '3']
+  // 💖C) ['1', '2', '3', '1', '2']    😀D) [1, 2, 3]
+
+  /* 
+  Answer is B) ['1', '2', '3'] because in the above code, Each element of an array is stored as a key (string type) in object and Object.keys() method returns array of Object's keys. 
+  */
+}
+MCQ157();
