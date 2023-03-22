@@ -3945,4 +3945,24 @@ function MCQ157() {
   Answer is B) ['1', '2', '3'] because in the above code, Each element of an array is stored as a key (string type) in object and Object.keys() method returns array of Object's keys. 
   */
 }
-MCQ157();
+// MCQ157();
+
+// 👉 MCQ-158
+function MCQ158() {
+  const arr = [1, 2, 3, 4, 5];
+
+  const a = arr.at(1);
+  const b = arr.at(-1);
+
+  console.log(a);
+  console.log(b);
+
+  // 👍A) 1 5      💡B) 2 4
+  // 💖C) 1 4      😀D) 2 5
+
+  /* 
+  Answer is D) 2 5 because The at() method takes an integer value and returns the item at that index, allowing for positive and negative integers. 
+  Note :- Negative integers count back from the last item in the array.
+  */
+}
+MCQ158();
