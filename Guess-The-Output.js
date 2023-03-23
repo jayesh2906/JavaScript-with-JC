@@ -3965,4 +3965,24 @@ function MCQ158() {
   Note :- Negative integers count back from the last item in the array.
   */
 }
-MCQ158();
+// MCQ158();
+
+// 👉 MCQ-159
+function MCQ159() {
+  let arr = ["Java Script", "with", "JC"];
+
+  let res = arr.flatMap((ele) => ele.split(" "));
+
+  console.log(res);
+
+  // 👍A) ['Java', 'Script', 'with', 'JC']
+  // 💡B) ["Java Script", "with", "JC"]
+  // 💖C) ['Java', 'Script', ['with'], ['JC']]
+  // 😀D) ['Java Script', ['with'], ['JC']]
+
+  /* 
+  Answer is A) ['Java', 'Script', 'with', 'JC'] because The flatMap() method returns a new array formed by applying a given callback function to each element of the array, and then flattening the result by one level. 
+  It is similar to a map() followed by a flat() of depth 1. 
+  */
+}
+MCQ159();
