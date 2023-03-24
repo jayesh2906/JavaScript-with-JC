@@ -3985,4 +3985,22 @@ function MCQ159() {
   It is similar to a map() followed by a flat() of depth 1. 
   */
 }
-MCQ159();
+// MCQ159();
+
+// 👉 MCQ-160
+function MCQ160() {
+  const arr = [1, 2, 3, 4];
+
+  arr.fill(0, 1, 3);
+
+  console.log(arr);
+
+  // 👍A) [0, 0, 0, 0]   💡B) [0, 1, 3, 4]
+  // 💖C) [1, 0, 0, 4]   😀D) [1, 0, 0, 0]
+
+  /* 
+  Answer is C) [1, 0, 0, 4] because The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (excluding end index and default array.length). 
+  It returns the modified array.
+  */
+}
+MCQ160();
