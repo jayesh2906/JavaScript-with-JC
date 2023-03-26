@@ -4003,4 +4003,23 @@ function MCQ160() {
   It returns the modified array.
   */
 }
-MCQ160();
+// MCQ160();
+
+// 👉 MCQ-161
+function MCQ161() {
+  const arr = [1, 2, 3];
+
+  let sum = arr.reduceRight((acc, curr) => {
+    console.log(curr);
+    return acc + curr;
+  });
+
+  // 👍A) 3 2 1        💡B) 2 1
+  // 💖C) 1 2 3        😀D) 1 2
+
+  /* 
+  Answer is B) 2 1 because The reduceRight() is a higher order function that iterates through each value of an array (from right-to-left) and reduces array of values into single value.
+  as second argument is not passed to reduceRight() method, currentValue will start from last second element of an array. 
+  */
+}
+MCQ161();
