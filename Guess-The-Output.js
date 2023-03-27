@@ -4022,4 +4022,26 @@ function MCQ161() {
   as second argument is not passed to reduceRight() method, currentValue will start from last second element of an array. 
   */
 }
-MCQ161();
+// MCQ161();
+
+// 👉 MCQ-162
+function MCQ162() {
+  const arr1 = Array.of(3);
+  const arr2 = Array.of(1, 2, 3);
+
+  console.log(arr1);
+  console.log(arr2);
+
+  // 👍A) [3] [1, 2, 3]
+  // 💡B) [empty × 3] [3]
+  // 💖C) [3] [3]
+  // 😀D) [empty × 3] [1, 2, 3]
+
+  /* 
+  Answer is A) [3] [1, 2, 3] because The Array.of() method creates a new Array instance from a variable number of arguments.
+  Syntax :-
+  Array.of(element0)
+  Array.of(element0, element1, ..., elementN)
+  */
+}
+MCQ162();
