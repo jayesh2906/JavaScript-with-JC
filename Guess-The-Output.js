@@ -4044,4 +4044,35 @@ function MCQ162() {
   Array.of(element0, element1, ..., elementN)
   */
 }
-MCQ162();
+// MCQ162();
+
+// 👉 MCQ-163
+function MCQ163() {
+  const str1 = "JavaScript";
+  const str2 = "Jayesh";
+
+  function foo(str) {
+    let obj = {};
+
+    for (let char of str) {
+      if (obj[char]) {
+        return false;
+      } else {
+        obj[char] = true;
+      }
+    }
+
+    return true;
+  }
+
+  console.log(foo(str1));
+  console.log(foo(str2));
+
+  // 👍A) true true    💡B) true false
+  // 💖C) false true   😀D) false false
+
+  /* 
+  Answer is C) false true because the above code is to check all the chars are unique in  a given string.
+  */
+}
+MCQ163();
