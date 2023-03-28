@@ -4072,7 +4072,7 @@ function MCQ163() {
   // 💖C) false true   😀D) false false
 
   /* 
-  Answer is C) false true because the above code is to check all the chars are unique in  a given string.
+  Answer is C) false true because the above code is to check all the chars are unique in a given string.
   */
 }
 MCQ163();
