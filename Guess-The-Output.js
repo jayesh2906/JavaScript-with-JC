@@ -4075,4 +4075,35 @@ function MCQ163() {
   Answer is C) false true because the above code is to check all the chars are unique in a given string.
   */
 }
-MCQ163();
+// MCQ163();
+
+// 👉 MCQ-164
+function MCQ164() {
+  const person = {};
+
+  Object.defineProperties(person, {
+    name: {
+      value: "JC",
+      writable: true,
+    },
+    age: {
+      value: 24,
+      writable: false,
+    },
+  });
+
+  person.name = "VK";
+  person.age = 34;
+
+  console.log(person.name);
+  console.log(person.age);
+
+  // 👍A) JC 34     💡B) JC 24
+  // 💖C) VK 34     😀D) VK 24
+
+  /* 
+  Answer is D) VK 24 because The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.
+  if writable: true then value associated with the property can be modified else value can not be modified.
+  */
+}
+MCQ164();
