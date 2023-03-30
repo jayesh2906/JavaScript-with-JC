@@ -4106,4 +4106,32 @@ function MCQ164() {
   if writable: true then value associated with the property can be modified else value can not be modified.
   */
 }
-MCQ164();
+// MCQ164();
+
+// 👉 MCQ-165
+function MCQ165() {
+  const person = {
+    name: "JC",
+    age: 24,
+    skill: {
+      lang: "JavaScript",
+    },
+  };
+
+  Object.freeze(person);
+
+  let res1 = Object.isExtensible(person);
+  let res2 = Object.isExtensible(person.skill);
+
+  console.log(res1);
+  console.log(res2);
+
+  // 👍A) true true      💡B) false true
+  // 💖C) true false     😀D) false false
+
+  /* 
+  Answer is B) false true because Object.freeze() method only freezes first level properties of an object, Nested properties of an object can still be changed, added and removed.
+  The Object.isExtensible() method determines if an object is extensible, person.skill is a nested object so it can be extensible.
+  */
+}
+MCQ165();
