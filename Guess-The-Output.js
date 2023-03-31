@@ -4134,4 +4134,29 @@ function MCQ165() {
   The Object.isExtensible() method determines if an object is extensible, person.skill is a nested object so it can be extensible.
   */
 }
-MCQ165();
+// MCQ165();
+
+// 👉 MCQ-166
+function MCQ166() {
+  class Person {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+
+  Person.prototype.age = 24;
+
+  const jayesh = new Person("JC");
+
+  console.log(Object.hasOwn(jayesh, "name"));
+  console.log(Object.hasOwn(jayesh, "age"));
+
+  // 👍A) true true      💡B) true false
+  // 💖C) false false    😀D) false true
+
+  /* 
+  Answer is B) true false because The Object.hasOwn() method returns a boolean indicating whether the object has the 
+  specified property as its own property. If the specified property is inherited, or does not exist, the method returns false.
+  */
+}
+MCQ166();
