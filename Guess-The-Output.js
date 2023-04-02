@@ -4159,4 +4159,34 @@ function MCQ166() {
   specified property as its own property. If the specified property is inherited, or does not exist, the method returns false.
   */
 }
-MCQ166();
+// MCQ166();
+
+// 👉 MCQ-167
+function MCQ167() {
+  const arr = [1, 2, 3, 2, 3, 2];
+  arr.sort((a, b) => a - b);
+  const result = [];
+  let temp = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1]) {
+      temp.push(arr[i]);
+    } else {
+      temp.push(arr[i]);
+      result.push(temp);
+      temp = [];
+    }
+  }
+
+  console.log(result);
+
+  // 👍A) [ [ 2, 2, 2 ], [ 3, 3 ] ]
+  // 💡B) [ [ 1 ], [ 2, 2 ], [ 3, 3, 3 ] ]
+  // 💖C) [ [ 1 ], [ 2 ], [ 3 ] ]
+  // 😀D) [ [ 1 ], [ 2, 2, 2 ], [ 3, 3 ] ]
+
+  /* 
+  Answer is D) [ [ 1 ], [ 2, 2, 2 ], [ 3, 3 ] ] because the above is code to pair elements of an array.
+  */
+}
+MCQ167();
