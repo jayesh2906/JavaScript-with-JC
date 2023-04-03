@@ -4186,7 +4186,37 @@ function MCQ167() {
   // 😀D) [ [ 1 ], [ 2, 2, 2 ], [ 3, 3 ] ]
 
   /* 
-  Answer is D) [ [ 1 ], [ 2, 2, 2 ], [ 3, 3 ] ] because the above is code to pair elements of an array.
+  Answer is D) [ [ 1 ], [ 2, 2, 2 ], [ 3, 3 ] ] because the above code is to pair elements of an array.
   */
 }
-MCQ167();
+// MCQ167();
+
+// 👉 MCQ-168
+function MCQ168() {
+  const str = "aaaaaabbcc";
+  const map = new Map();
+  let res = "";
+
+  for (let char of str) {
+    if (map.get(char)) {
+      let count = map.get(char);
+      map.set(char, count + 1);
+    } else {
+      map.set(char, 1);
+    }
+  }
+
+  for (let [key, value] of map) {
+    res += key + value;
+  }
+
+  console.log(res);
+
+  // 👍A) "a6b2c2"     💡B) "a5b1c1"
+  // 💖C) NaN          😀D) "abc"
+
+  /* 
+  Answer is A) "a6b2c2" because the above code is of String Compression.
+  */
+}
+MCQ168();
