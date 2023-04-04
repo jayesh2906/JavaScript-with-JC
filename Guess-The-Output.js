@@ -4219,4 +4219,30 @@ function MCQ168() {
   Answer is A) "a6b2c2" because the above code is of String Compression.
   */
 }
-MCQ168();
+// MCQ168();
+
+// 👉 MCQ-169
+function MCQ169() {
+  const arr1 = [1, 100, 10, 20, 50];
+  const arr2 = [2, 30, 21, 10, 20];
+  const result = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        result.push(arr1[i]);
+        break;
+      }
+    }
+  }
+
+  console.log(result);
+
+  // 👍A) [1, 100, 50]    💡B) [2, 30, 21]
+  // 💖C) [10, 20]        😀D) [10, 20, 10, 20]
+
+  /* 
+  Answer is C) [10, 20] because the above code is to find the intersection of two arrays using Two for loops O(n2). 
+  */
+}
+MCQ169();
