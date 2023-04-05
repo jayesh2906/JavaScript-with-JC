@@ -4245,4 +4245,26 @@ function MCQ169() {
   Answer is C) [10, 20] because the above code is to find the intersection of two arrays using Two for loops O(n2). 
   */
 }
-MCQ169();
+// MCQ169();
+
+// 👉 MCQ-170
+function MCQ170() {
+  const str = "jayesh choudhary";
+  const arr = str.split(" ");
+
+  const res = arr.map((word) => {
+    return word[0].toUpperCase() + word.slice(1);
+  });
+
+  const output = res.join("");
+
+  console.log(output);
+
+  // 👍A) "Jayesh Choudhary"    💡B) "JayeshChoudhary"
+  // 💖C) "jayeshchoudhary"     😀D) "Jayeshchoudhary"
+
+  /* 
+  Answer is B) "JayeshChoudhary" because the above code is of string capatalize and join.
+  */
+}
+MCQ170();
