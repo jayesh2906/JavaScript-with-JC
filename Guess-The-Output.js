@@ -4267,4 +4267,35 @@ function MCQ170() {
   Answer is B) "JayeshChoudhary" because the above code is of string capatalize and join.
   */
 }
-MCQ170();
+// MCQ170();
+
+// 👉 MCQ-171
+function MCQ171() {
+  const obj1 = { a: 20, b: { x: 40, y: 60 } };
+  const obj2 = { a: 20, b: { x: 40, y: 60 } };
+  const obj3 = { a: 20, b: { x: 80, y: 60 } };
+
+  function compare(obj1, obj2) {
+    for (let key in obj1) {
+      if (typeof obj1[key] === "object") {
+        return compare(obj1[key], obj2[key]);
+      } else {
+        if (obj1[key] !== obj2[key]) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  console.log(compare(obj1, obj2));
+  console.log(compare(obj1, obj3));
+
+  // 👍A) true true      💡B) true false
+  // 💖C) false false    😀D) false true
+
+  /* 
+  Answer is B) true false because the above code is to compare nested object.
+  */
+}
+MCQ171();
