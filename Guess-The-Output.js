@@ -4298,4 +4298,31 @@ function MCQ171() {
   Answer is B) true false because the above code is to compare nested object.
   */
 }
-MCQ171();
+// MCQ171();
+
+// 👉 MCQ-172
+function MCQ172() {
+  let arr = ["eat", "tea", "dna", "and"];
+  let obj = {};
+
+  for (let word of arr) {
+    let key = word.split("").sort().join("");
+    if (obj[key]) {
+      obj[key] = [...obj[key], word];
+    } else {
+      obj[key] = [word];
+    }
+  }
+
+  console.log(Object.values(obj));
+
+  // 👍A) [["eat", "tea"], ["dna", "and"]]
+  // 💡B) [["tea"], ["and"]]
+  // 💖C) [["eat"], ["dna"]]
+  // 😀D) ["aet", "adn"]
+
+  /* 
+  Answer is A) [["eat", "tea"], ["dna", "and"]] because the above code is to find group of anagrams string in an array.
+  */
+}
+MCQ172();
