@@ -4325,4 +4325,27 @@ function MCQ172() {
   Answer is A) [["eat", "tea"], ["dna", "and"]] because the above code is to find group of anagrams string in an array.
   */
 }
-MCQ172();
+// MCQ172();
+
+// 👉 MCQ-173
+function MCQ173() {
+  const nums = new Set();
+
+  nums.add(1);
+  nums.add(2);
+  nums.add(3);
+  nums.add(1);
+
+  nums.delete(1);
+
+  console.log(nums.has(1));
+  console.log(nums.size);
+
+  // 👍A) true 3      💡B) false 3
+  // 💖C) true 2      😀D) false 2
+
+  /* 
+  Answer is D) false 2 because Set objects are collections of unique value of any type (primitive or object). A value in the Set may only occur once.
+  */
+}
+MCQ173();
