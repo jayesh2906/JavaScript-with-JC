@@ -4348,4 +4348,33 @@ function MCQ173() {
   Answer is D) false 2 because Set objects are collections of unique value of any type (primitive or object). A value in the Set may only occur once.
   */
 }
-MCQ173();
+// MCQ173();
+
+// 👉 MCQ-174
+function MCQ174() {
+  const hof = (callBack1, callBack2) => {
+    callBack1();
+    setTimeout(callBack2, 1000);
+    console.log("Three");
+  };
+
+  const callBack1 = () => {
+    console.log("One");
+  };
+
+  const callBack2 = () => {
+    console.log("Two");
+  };
+
+  hof(callBack1, callBack2);
+
+  // 👍A) One Two Three     💡B) Two Three One
+  // 💖C) One Three Two     😀D) Three Two One
+
+  /* 
+  Answer is C) One Three Two because Callback functions are first class citizens passed as an argument to higher order function,
+  and later on higher order function calls the callback function to perform some operation. 
+  callBack2 is passed to setTimeout so it will be called later after all synchronous task.
+  */
+}
+MCQ174();
