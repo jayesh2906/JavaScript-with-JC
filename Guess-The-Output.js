@@ -4377,4 +4377,36 @@ function MCQ174() {
   callBack2 is passed to setTimeout so it will be called later after all synchronous task.
   */
 }
-MCQ174();
+// MCQ174();
+
+// 👉 MCQ-175
+function MCQ175() {
+  const str1 = "Virat";
+  const str2 = "Jayesh";
+
+  const foo = (str) => {
+    const n = str.length;
+    if (n === 0) return "";
+    if (n === 1) return str;
+
+    const mid = parseInt(n / 2);
+
+    if (n % 2 === 0) {
+      return str.slice(mid - 1, mid + 1);
+    } else {
+      return str[mid];
+    }
+  };
+
+  console.log(foo(str1));
+  console.log(foo(str2));
+
+  // 👍A) "r" "y"     💡B) "r" "ye"
+  // 💖C) "ra" "y"    😀D) "ra" "ye"
+
+  /* 
+  Answer is B) "r" "ye" because the above code is to find the middle character of the word. 
+  If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+  */
+}
+MCQ175();
